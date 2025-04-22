@@ -9,9 +9,9 @@ export default function Footer() {
     <footer className="bg-[#0a0e1f] text-white py-12 px-4 md:px-8">
       <div className="container mx-auto">
         {/* Top section */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
+        <div className=" grid grid-cols-1 lg:grid-cols-2 ">
           {/* Left column */}
-          <div className="space-y-8">
+          <div className="space-y-8 ">
             {/* Logo and brand */}
             <div className="flex items-center gap-2">
               <Image src="/assets/images/icone.png" alt="Luxury Home Abidjan Logo" width={40} height={40} />
@@ -19,30 +19,30 @@ export default function Footer() {
             </div>
 
             {/* Contact info */}
-            <div className="space-y-4">
-              <div className="flex items-center gap-3 border rounded-full w-80 p-2">
-                <div className="w-8 h-8  flex items-center justify-center">
+            <div className="space-y-4 grid md:grid-cols-2 items-center">
+              <div className="p-2 py-3 flex items-center gap-3 border rounded-full ww-80">
+                <div className="flex items-center justify-center">
                   <Phone size={16} />
                 </div>
                 <span>(+225) 07 49 87 17 13</span>
               </div>
 
-              <div className="flex items-center gap-3 border rounded-full w-80 p-2">
-                <div className="w-8 h-8  flex items-center justify-center">
+              <div className="p-2 py-3 text-wrap flex items-center gap-3 border rounded-full ww-80">
+                <div className=" flex items-center justify-center">
                   <Mail size={16} />
                 </div>
                 <span>info@luxuryhomeabidjan.com</span>
               </div>
 
-              <div className="flex items-center gap-3 border rounded-full w-80 p-2">
-                <div className="w-8 h-8  flex items-center justify-center">
+              <div className="p-2 py-3 flex items-center gap-3 border rounded-full ww-80">
+                <div className="  flex items-center justify-center">
                   <Phone size={16} />
                 </div>
                 <span>(+225) 27 22 23 83 80</span>
               </div>
 
-              <div className="flex items-center gap-3 border rounded-full w-80 p-2">
-                <div className="w-8 h-8 rounded-full border border-white/30 flex items-center justify-center">
+              <div className=" py-3 flex items-center gap-3 border rounded-full ww-80 p-2">
+                <div className=" rounded-full border border-white/30 flex items-center justify-center">
                   <MapPin size={16} />
                 </div>
                 <span>Cocody Abidjan, Côte d'Ivoire</span>
@@ -51,7 +51,7 @@ export default function Footer() {
           </div>
 
           {/* Right column - Newsletter */}
-          <div className="lg:ml-auto lg:max-w-md w-full">
+          <div className="lg:ml-auto lg:max-w-md w-full ">
             <h3 className="text-2xl font-semibold mb-6">Newsletter</h3>
             <div className="space-y-4">
               <Input

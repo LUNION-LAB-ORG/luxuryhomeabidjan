@@ -1,4 +1,5 @@
-import { HeroSection } from '@/components/home/hero/hero-section';
+'use client'
+import  HeroSection  from '@/components/home/hero/hero-section';
 import Lead from '../components/home/navbar/lead';
 import { SearchBar } from '../components/home/searchbar/search-bar';
 import { WhyChooseUs } from '../components/home/why-choose-us/why-choose-us';

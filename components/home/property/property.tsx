@@ -1,8 +1,9 @@
 "use client"
 import Image from "next/image"
-import { ChevronLeft, ChevronRight, Camera } from "lucide-react"
+import { ChevronLeft, ChevronRight, Camera, ExternalLink } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { useRef } from "react"
+import Link from "next/link"
 
 type PropertyCardProps = {
   location: string
@@ -13,7 +14,7 @@ type PropertyCardProps = {
 function PropertyCard({ location, name, imageSrc }: PropertyCardProps) {
   return (
     <div className="relative min-w-[280px] max-w-[280px] overflow-hidden rounded-2xl bg-white shadow-md sm:min-w-[320px] sm:max-w-[320px]">
-      <div className="relative h-[400px] w-full">
+      <div className="relative h-[600px] w-full">
         <Image
           src={imageSrc || "/placeholder.svg"}
           alt={name}
@@ -29,9 +30,12 @@ function PropertyCard({ location, name, imageSrc }: PropertyCardProps) {
         </div>
 
         {/* Camera Icon */}
-        <div className="absolute bottom-4 right-4 flex h-8 w-8 items-center justify-center rounded-full bg-black/30 text-white backdrop-blur-sm">
-          <Camera size={16} />
-        </div>
+        <Link href='propriete/detail/1'>
+          <div className="absolute bottom-4 right-4 flex h-8 w-8 items-center justify-center rounded-full bg-black/30 text-white backdrop-blur-sm">
+            <ExternalLink  />
+          </div>
+        </Link>
+      
       </div>
     </div>
   )
@@ -98,7 +102,7 @@ export function PropertyCarousel() {
 
   return (
     <section className="py-16">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto md:px-4">
         <h2 className="mb-8 text-center text-3xl font-bold md:text-4xl">Opérations immobilières</h2>
 
         <div className="relative">

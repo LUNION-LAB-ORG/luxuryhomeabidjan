@@ -6,7 +6,7 @@ import { CircleUserRound, Menu } from "lucide-react"
 
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
+import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet"
 import Image from "next/image"
 
 const navItems = [
@@ -35,7 +35,7 @@ export function Navbar() {
         isScrolled ? "bg-white shadow-sm" : "bg-white",
       )}
     >
-      <div className="container flex h-16 items-center justify-between px-4 md:px-6">
+      <div className="container mx-auto flex h-16 items-center justify-between px-2 lg:px-6">
         {/* Logo */}
         <div className="flex items-center">
           <Link href="/" className="flex items-center gap-2">
@@ -51,7 +51,7 @@ export function Navbar() {
         </div>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex md:items-center md:gap-6">
+        <nav className="hidden lg:flex md:items-center md:gap-6">
           {navItems.map((item) => (
             <Link
               key={item.name}
@@ -64,7 +64,7 @@ export function Navbar() {
         </nav>
 
         {/* Assistance Button */}
-        <Link href="/assistance" className="hidden md:flex md:items-center md:gap-2 hover:opacity-80 transition">
+        <Link href="/assistance" className="hidden lg:flex md:items-center md:gap-2 hover:opacity-80 transition">
           <Image
             src="/assets/images/user.png"
             alt="Avatar"
@@ -72,7 +72,7 @@ export function Navbar() {
             height={24}
             className="h-6 w-6"
           />
-          <span className="text-sm font-medium text-secondary">Assistance M. LHA</span>
+          <span className="text-sm font-medium ">Assistance M. LHA</span>
         </Link>
 
         {/* Mobile Navigation */}
@@ -84,8 +84,12 @@ export function Navbar() {
             </Button>
           </SheetTrigger>
           <SheetContent side="right">
-            <div className="grid gap-6 py-6">
-            <Link href="/assistance" className="flex items-center gap-2">
+          <SheetHeader>
+          <SheetTitle>
+            
+          </SheetTitle>
+          <SheetDescription>
+          <Link href="/assistance" className="flex items-center gap-2">
             <Image
                 src="/assets/images/user.png" // Remplace par le chemin de ton image
                 alt="Avatar"
@@ -93,8 +97,13 @@ export function Navbar() {
                 height={24}
                 className="h-6 w-6"
             />
-            <span className="text-sm font-medium text-secondary">Assistance M. LHA</span>
+            <span className="text-sm font-medium ">Assistance M. LHA</span>
             </Link>
+          </SheetDescription>
+        </SheetHeader>
+
+            <div className="px-4 grid gap-6 py-6">
+          
               <div className="grid gap-3">
                 {navItems.map((item) => (
                   <Link

@@ -3,6 +3,7 @@ import Image from "next/image"
 import { ChevronLeft, ChevronRight, Bed, Bath, Square } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { useRef } from "react"
+import Link from "next/link"
 
 type ExclusivePropertyProps = {
   name: string
@@ -14,7 +15,9 @@ type ExclusivePropertyProps = {
 
 function ExclusiveProperty({ name, imageSrc, bedrooms, bathrooms, area }: ExclusivePropertyProps) {
   return (
-    <div className="relative min-w-[300px] max-w-[400px] flex-shrink-0 overflow-hidden rounded-lg">
+    <div className="relative w-4/5 md:w-3/7 min-w-[300px]] max-w-[400px]] flex-shrink-0 overflow-hidden rounded-lg">
+      <Link href='propriete/detail/1'>
+    
       <div className="relative aspect-[4/3] w-full">
         <Image
           src={imageSrc}
@@ -25,16 +28,23 @@ function ExclusiveProperty({ name, imageSrc, bedrooms, bathrooms, area }: Exclus
         />
       </div>
 
-      <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4 text-white">
-        <div className="mb-2 text-lg font-semibold">{name}</div>
+      <div className="absolute flex justify-between bottom-0 left-0 right-0 bg-black/50 backdrop-blur-sm  bg-gradient-to-t from-black/80 to-transparent p-2 md:p-6  text-white">
+
+        <div>
+        <div className="mb-2 md:text-lg font-semibold">{name}</div>
+          <Button size="sm" className="rounded-full bg-blue-600 text-white hover:bg-blue-700">
+          650.000FCFA/m²
+          </Button>
+
+        </div>
 
         <div className="mb-3 flex items-center justify-between">
           <div className="flex items-center gap-4">
-            <div className="flex items-center gap-1">
+            <div className="flex items-center gap-1 pr-2 border-r-2">
               <Bed size={16} />
               <span className="text-sm">{bedrooms}</span>
             </div>
-            <div className="flex items-center gap-1">
+            <div className="flex items-center gap-1 pr-2 border-r-2">
               <Bath size={16} />
               <span className="text-sm">{bathrooms}</span>
             </div>
@@ -44,11 +54,8 @@ function ExclusiveProperty({ name, imageSrc, bedrooms, bathrooms, area }: Exclus
             </div>
           </div>
         </div>
-
-        <Button size="sm" className="rounded-full bg-blue-600 text-white hover:bg-blue-700">
-        650.000FCFA/m²
-        </Button>
       </div>
+      </Link>
     </div>
   )
 }
@@ -130,7 +137,7 @@ export function ExclusiveListings() {
 
   return (
     <section className="py-16">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto md:px-4">
         <h2 className="mb-8 text-center text-3xl font-bold md:text-4xl">En exclusivité</h2>
 
         <div className="relative">

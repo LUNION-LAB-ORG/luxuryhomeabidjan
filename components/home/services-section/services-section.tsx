@@ -1,23 +1,57 @@
 import type React from "react"
 import Image from "next/image"
 import { Building, Home, Briefcase, Users, Lightbulb, PaintBucket } from "lucide-react"
+import { motion,useAnimation } from "motion/react"
+import { useState } from "react"
 
 type ServiceCardProps = {
   title: string
   imageSrc: string
   icon: React.ReactNode
 }
+const variants = {
+  hover: {
+    y: '-50%',
+    transition: {
+      type: "spring",
+      stiffness: 300,
+      damping: 20,
+    },
+  },
+  initial: {
+    y: 0,
+  }
+};
 
 function ServiceCard({ title, imageSrc, icon }: ServiceCardProps) {
+
+  const [isHovered, setIsHovered] = useState(false);
+  function handleMouseEnter() {
+    setIsHovered(true);
+  }
+  function handleMouseLeave() {
+    setIsHovered(false);
+  }
+  const controls = useAnimation();
+  function handleMouseEnterControls() {
+    controls.start("hover");
+  }
+  function handleMouseLeaveControls() {
+    controls.start("initial");
+  }
   return (
-    <div className="group relative overflow-hidden rounded-2xl">
+    <div
+    onMouseEnter={handleMouseEnter} 
+    onMouseLeave={handleMouseLeave}
+    
+    className="group relative overflow-hidden rounded-2xl">
       {/* Background Image */}
       <div className="relative h-80 w-full">
         <Image
           src={imageSrc || "/placeholder.svg"}
           alt={title}
           fill
-          className="object-cover transition-transform duration-500 group-hover:scale-105"
+          className="object-cover transition-transformm duration-500 ggroup-hover:scale-105"
           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
         />
         {/* Overlay */}
@@ -25,7 +59,11 @@ function ServiceCard({ title, imageSrc, icon }: ServiceCardProps) {
       </div>
 
       {/* Content */}
-      <div className="absolute bottom-0 left-0 p-6">
+      <motion.div
+       variants={variants}
+       animate={isHovered ? "hover" : "initial"}
+       transition={{ delay: 0.1 }}
+      className="absolute bottom-[-100px] left-0 p-6 pb-32 w-full group-hover:h-[50px]] group-hover:bg-black/30 group-hover:shadow-sm">
         <div className="flex items-center gap-3">
           {/* Icon Circle */}
           <div className="flex h-10 w-10 items-center justify-center rounded-full bg-white/20 backdrop-blur-sm">
@@ -35,7 +73,7 @@ function ServiceCard({ title, imageSrc, icon }: ServiceCardProps) {
           {/* Title */}
           <h3 className="text-xl font-semibold text-white">{title}</h3>
         </div>
-      </div>
+      </motion.div>
     </div>
   )
 }
@@ -76,7 +114,7 @@ export function ServicesSection() {
 
   return (
     <section className="py-16">
-      <div className="container mx-auto px-4">
+      <div className="container  mx-auto px-4">
         <h2 className="mb-12 text-center text-3xl font-bold md:text-4xl">Nos services</h2>
 
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-2">
