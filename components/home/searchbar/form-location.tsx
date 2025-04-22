@@ -227,7 +227,7 @@ export default function FormLocation({
                 />
               </div>
             </div>
-            <ReservationCalendar range={range} setRange={setRange} />
+            {/* <ReservationCalendar range={range} setRange={setRange} /> */}
           </div>
 
           <div>

@@ -87,7 +87,7 @@ export default function BlogSection() {
   }
 
   return (
-    <section className="py-12 px-4 max-w-6xl mx-auto">
+    <section className="py-12 container mx-auto px-2 md:px-4 lg:px-16">
       <h2 className="text-3xl font-bold text-center mb-8">Blog</h2>
 
       <Tabs defaultValue="residences" className="w-full">
@@ -166,7 +166,7 @@ export default function BlogSection() {
 function BlogCard({ post }: { post: BlogPost }) {
   return (
     <div className="overflow-hidden rounded-3xl group">
-      <div className="relative h-72 ">
+      <div className="relative h-[400px] ">
         <Image src={post.image} alt={post.title} fill className="object-cover" />
         <div className="absolute top-2 right-2 bg-white/80 p-1.5 rounded-full opacity-80 group-hover:opacity-100 transition-opacity">
           <ExternalLink size={16} />
