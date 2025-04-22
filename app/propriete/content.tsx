@@ -6,6 +6,9 @@ import { useMemo } from "react"
 import { parse } from "date-fns"
 import { fr } from "date-fns/locale"
 import { useSearchParams } from "next/navigation"
+import SearchPropriete from "@/components/proprite/search-propriete";
+import { SearchBar } from "@/components/home/searchbar/search-bar";
+import { SearchBarPropriete } from "@/components/home/searchbar/search-bar-propriete";
 
 
 export interface Logements {
@@ -195,6 +198,8 @@ export default function Content() {
       
   return (
     <div>
+         <SearchBarPropriete/>      
+        {/* <SearchPropriete /> */}
         {/* <CardLogements data={logements} /> */}
         {
             filtered.length > 0 ? <CardLogements data={filtered} />:
