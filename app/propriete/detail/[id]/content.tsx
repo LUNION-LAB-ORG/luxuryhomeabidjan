@@ -58,7 +58,7 @@ export default function Content(){
               <p>14 voyageurs6 chambres6 lits6 salles de bain</p>
           </div>
   
-          <div>
+          {/* <div>
               <h3>Ce que propose ce logement</h3>
               <div className="py-10 grid grid-cols-2 gap-4 max-w-md items-center">
   
@@ -93,7 +93,7 @@ export default function Content(){
                   </div>
               </div>
           
-          </div>
+          </div> */}
         </div>
       </div>
     )

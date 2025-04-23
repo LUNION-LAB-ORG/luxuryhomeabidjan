@@ -1,10 +1,11 @@
-import { Logements } from "@/app/propriete/content";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { Mobilier } from "@/app/propriete/content";
+import { BienImmobilier } from "@/app/propriete/useFiltrageBiens";
+import { ChevronLeft, ChevronRight, Heart, Star } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
-export default function CardImage({ item }: { item: Logements }) {
+export default function CardImage({ item }: { item: BienImmobilier }) {
 
     const [currentImage,setCurrentImage] = useState(0)
 
@@ -26,10 +27,10 @@ export default function CardImage({ item }: { item: Logements }) {
     },[currentImage])
   return (
     <div>
-      <div className="relative group">
+      <div className="relative ">
         <Link href='/propriete/detail/1'>
         <Image
-          alt={item.typeLogement}
+          alt={item.description}
           className="w-full object-cover h-[140px]] rounded-3xl"
           src={item.images[currentImage]}
           width={500}
@@ -51,10 +52,16 @@ export default function CardImage({ item }: { item: Logements }) {
           className="absolute group-hover:text-slate-900  group-hover:bg-amber-50 rounded-3xl p-2 right-5 top-1/2 cursor-pointer">
           <ChevronRight className="opacity-0 group-hover:opacity-100  group-hover:text-slate-900" />
         </button>
+        {/* <span className="absolute top-6 right-6" > <Heart  /></span> */}
+        
       </div>
-      <div className="px-2 pt-2">
-        <h2 className="font-semibold text-lg">{item.emplacement} </h2>
-        <h3>{item.typeLogement}</h3>
+      <div className="relative px-2 pt-2 text-slate-800">
+        <div className="flex items-center justify-between">
+        <h2 className="font-semibold text-lg">{item.ville} </h2>
+       {/* <Star fill="full"/> */}
+
+        </div>
+        <p className="  truncatee text-muted-foreground">{item.description}</p>
 
         <p>
           <span className="font-semibold">{item.prix} </span>fcfa par nuit

@@ -2,12 +2,12 @@ import Image from "next/image"
 
 export function WhyChooseUs() {
   return (
-    <section className="w-full px-2 md:px-6 py-16">
+    <section className="w-full px-2 md:px-6 py-10 md:py-16">
       <div className=" bg-black container mx-auto lg:pl-10 py-10 rounded-2xl">
         <div className="grid gap-8 lg:grid-cols-2 lg:gap-12 ">
           {/* Left Content */}
           <div className="flex flex-col justify-center space-y-6 px-4 text-white lg:pr-12">
-            <h2 className="text-4xl font-bold leading-tight tracking-tighter md:text-5xl">Pourquoi nous choisir ?</h2>
+            <h2 className="text-2xl font-bold leading-tight tracking-tighter md:text-5xl">Pourquoi nous choisir ?</h2>
 
             <div className="space-y-1 text-white/90">
               <p>
@@ -34,7 +34,7 @@ export function WhyChooseUs() {
 
             <div className=" md:pt-6">
               <div className="h-[1px] md:h-1 w-full bg-slate-300" />
-              <div className="pt-6 text-lg font-semibold uppercase tracking-wider">
+              <div className="pt-6 text-md md:text-lg font-semibold uppercase tracking-wider">
                 <p>Notre philosophie s&apos;applique à tous nos clients.</p>
                 <p>Notre fierté : votre satisfaction</p>
               </div>

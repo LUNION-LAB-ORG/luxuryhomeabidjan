@@ -6,10 +6,10 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 
 export function ValuesContactSection() {
   return (
-    <section className="bg-white  py-16 text-white  px-2 md:px-6">
+    <section className="bg-white  py-12 md:py-16 text-white  px-2 md:px-6">
       <div className="bg-black container mx-auto py-10 px-4 md:px-16 rounded-2xl">
         {/* Heading */}
-        <h2 className="mb-16 text-center text-3xl font-bold leading-tight md:text-4xl lg:text-5xl">
+        <h2 className="mb-16 text-center text-xl font-bold leading-tight md:text-4xl lg:text-5xl">
           LUXURY HOME ABIDJAN, les clés de chez vous
           <br />
           sont chez nous.
