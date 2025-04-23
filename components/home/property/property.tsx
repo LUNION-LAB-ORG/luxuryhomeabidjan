@@ -103,7 +103,7 @@ export function PropertyCarousel() {
   return (
     <section className="py-16">
       <div className="container mx-auto md:px-4">
-        <h2 className="mb-8 text-center text-3xl font-bold md:text-4xl">Opérations immobilières</h2>
+        <h2 className="mb-8 text-center text-2xl font-bold md:text-4xl">Opérations immobilières</h2>
 
         <div className="relative">
           {/* Scroll Buttons */}

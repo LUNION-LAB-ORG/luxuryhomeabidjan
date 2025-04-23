@@ -38,6 +38,10 @@ import PriceRangeSlider from "@/components/common/price-range-slader";
 import TypeLogement from "@/components/common/type-logement";
 
 const typeLogement = [
+
+
+
+
   {
     id: "appartements",
     label: "Appartements",
@@ -47,29 +51,29 @@ const typeLogement = [
     label: "Studios",
   },
   {
-    id: "Villas",
+    id: "Maison",
     label: "villas",
   },
   {
-    id: "Duplex-triplex",
+    id: "Duplex",
     label: "Duplex & Triplex",
   },
-  {
-    id: "bureaux-entrepots",
-    label: "Bureaux & Entrepots",
-  },
-  {
-    id: "commerces",
-    label: "Commerces",
-  },
-  {
-    id: "coworking",
-    label: "Coworking",
-  },
-  {
-    id: "espaces-evenementiels",
-    label: "Espaces évenementiels",
-  },
+  // {
+  //   id: "bureaux-entrepots",
+  //   label: "Bureaux & Entrepots",
+  // },
+  // {
+  //   id: "commerces",
+  //   label: "Commerces",
+  // },
+  // {
+  //   id: "coworking",
+  //   label: "Coworking",
+  // },
+  // {
+  //   id: "espaces-evenementiels",
+  //   label: "Espaces évenementiels",
+  // },
 ];
 
 export type TypeLogements = (typeof typeLogement)[number]; // 'typeof' infère le type des éléments du tableau
@@ -87,7 +91,7 @@ const FormSchema = z.object({
 interface Props {
   setIsSelectOpen: (value: boolean) => void;
   handleDialogLieuxOpen: (value: boolean) => void;
-}
+  service:string,}
 
 interface NewData {
   typeLogement: string[];
@@ -106,6 +110,7 @@ interface NewData {
 export default function FormLocation({
   setIsSelectOpen,
   handleDialogLieuxOpen,
+  service
 }: Props) {
   const [openDialogLieux, setOpenDialogLieux] = useState(false);
   const [priceRange, setPriceRange] = useState<[number, number]>([
@@ -169,6 +174,8 @@ export default function FormLocation({
     searchParams.set("emplacement", newData.emplacement);
     searchParams.set("prixDepart", newData.prix.depart.toString());
     searchParams.set("prixFin", newData.prix.fin.toString());
+    searchParams.set("status",service);
+
 
     if (newData.calandar.depart) {
       searchParams.set("reservationDebut", newData.calandar.depart);
@@ -227,7 +234,7 @@ export default function FormLocation({
                 />
               </div>
             </div>
-            {/* <ReservationCalendar range={range} setRange={setRange} /> */}
+            <ReservationCalendar range={range} setRange={setRange} />
           </div>
 
           <div>
@@ -244,6 +251,21 @@ interface PropsSelect {
   setIsSelectOpen: (open: boolean) => void;
 }
 
+const dataVille=[
+  {
+    label:"Abidjan",
+    value:"abidjan"
+  },
+  {
+    label:"Bouake",
+    value:"bouake"
+  },
+  {
+    label:"San‑Pédro",
+    value:"san-Pédro"
+  },
+
+]
 function MySelect({ field, setIsSelectOpen }: PropsSelect) {
   return (
     <Select
@@ -264,9 +286,13 @@ function MySelect({ field, setIsSelectOpen }: PropsSelect) {
        * séparé pour qu’un clic en dehors ne ferme QUE ce Select.
        */}
       <SelectContent className="select-drower">
-        <SelectItem value="abidjan">Abidjan</SelectItem>
-        <SelectItem value="bouaké">Bouaké</SelectItem>
-        <SelectItem value="san-pédro">San‑Pédro</SelectItem>
+        {
+          dataVille.map(item=>{
+            return <SelectItem key={item.value} value={item.value}>{item.label}</SelectItem>
+
+          })
+        }
+     
       </SelectContent>
     </Select>
   );

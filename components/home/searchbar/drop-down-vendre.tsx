@@ -72,7 +72,7 @@ export function DrawerVendre({setIsDrawerOpen}:props) {
   return (
     <Drawer onOpenChange={setIsDrawerOpen}>
       <DrawerTrigger asChild>
-        <Button className="hover:bg-black hover:text-slate-100 text-lg text-slate-600 font-semibold border-none shadow-none rounded-full p-3 lg:p-7" variant="outline">vendre un bien</Button>
+        <Button className="lg:hover:bg-black lg:hover:text-slate-100 lg:text-lg text-slate-600 font-semibold border-none shadow-none rounded-full p-3 lg:p-7" variant="outline">vendre un bien</Button>
       </DrawerTrigger>
       <DrawerContent className="shadcn-drawer">
         <div className="mx-auto w-full max-w-sm">
