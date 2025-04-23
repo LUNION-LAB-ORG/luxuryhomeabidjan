@@ -19,7 +19,7 @@ interface HeroCarouselProps {
   className?: string;
 }
 
-export default function HeroCarousel2({
+export default function HeroCarousel({
   slides,
   autoplayDelay = 5000,
   className = "",
@@ -46,15 +46,16 @@ export default function HeroCarousel2({
               className="object-cover"
               priority={i === 0}
             />
-            <div className="absolute bottom-24 left-1/2 -translate-x-1/2 text-white text-4xl font-bold text-center px-4 drop-shadow-xl">
+            <div className="absolute z-[2] w-full bottom-24 left-1/2 -translate-x-1/2 text-white text-4xl md:text-7xl font-bold text-center px-4 drop-shadow-xl">
               {slide.title}
             </div>
+            {/* Overlay black transparent */}
+            <div className="absolute z-[1] w-full h-full bg-gradient-to-t from-black/70 via-transparent to-transparent" />
           </div>
         ))}
       </div>
-
-      {/* Dots */}
-      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 bg-black/50 px-4 py-2 rounded-full flex items-center gap-2">
+      {/* Dots glass effect */}
+      <div className="absolute  bottom-6 left-1/2 -translate-x-1/2 backdrop-blur-md bg-[#333]/50 px-4 py-2 rounded-full flex items-center gap-2">
         {slides.map((_, i) => (
           <button
             key={i}

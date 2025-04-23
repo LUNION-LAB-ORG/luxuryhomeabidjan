@@ -3,23 +3,45 @@ import HeroCarousel from "@/components/home/carousel/HeroCarousel";
 const heroSlides = [
   {
     id: 1,
-    image:
-      "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    title: "Découvrez nos biens d'exception au cœur d'Abidjan",
+    image: "/assets/images/carrousel/carrousel_1.png",
+    title: "L’immobilier en Afrique, autrement.",
+    description: "",
   },
   {
     id: 2,
-    image:
-      "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    title: "Des villas de prestige avec vue imprenable",
-    description: "Confort et élégance dans les quartiers les plus prisés",
+    image: "/assets/images/carrousel/carrousel_2.png",
+    title: "Investir en Côte d’Ivoire",
+    description: "",
   },
   {
     id: 3,
-    image:
-      "https://images.unsplash.com/photo-1611892440504-42a792e24d32?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    title: "Appartements haut de gamme au design contemporain",
-    description: "L'alliance parfaite entre modernité et tradition",
+    image: "/assets/images/carrousel/carrousel_3.png",
+    title: "LUXURY HOME ABIDJAN Votre Partenaire Conseil",
+    description: "",
+  },
+  {
+    id: 4,
+    image: "/assets/images/carrousel/carrousel_4.png",
+    title: "Découvrez nos biens d’exception au cœur d’Abidjan",
+    description: "",
+  },
+  {
+    id: 5,
+    image: "/assets/images/carrousel/carrousel_5.png",
+    title: "Charme, Confort et Sécurité",
+    description: "",
+  },
+  {
+    id: 6,
+    image: "/assets/images/carrousel/carrousel_6.png",
+    title: "LUXURY HOME ABIDJAN Une collection exclusive",
+    description: "",
+  },
+  {
+    id: 7,
+    image: "/assets/images/carrousel/carrousel_7.png",
+    title: "Notre promesse: Vous faire revenir",
+    description: "",
   },
 ];
 export default function HeroSection() {
@@ -27,7 +49,7 @@ export default function HeroSection() {
     <div className="w-full">
       <HeroCarousel
         slides={heroSlides}
-        className="max-w-screen-xl px-4 mx-auto h-[80vh]"
+        className="max-w-screen-xl px-4 mx-auto h-[calc(100vh-120px)]"
       />
     </div>
   );
