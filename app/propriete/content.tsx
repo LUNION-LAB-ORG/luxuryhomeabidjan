@@ -7,7 +7,7 @@ import { parse } from "date-fns"
 import { fr } from "date-fns/locale"
 import { useSearchParams } from "next/navigation"
 import SearchPropriete from "@/components/proprite/search-propriete";
-import { SearchBar } from "@/components/home/searchbar/search-bar";
+import { SearchBar } from "@/components/home/searchbar/search-bar"; 
 // import { SearchBarPropriete } from "@/components/home/searchbar/search-bar-propriete";
 import useContext from "./useFiltrageBiens";
 import useFiltrageBiens from "./useFiltrageBiens";
