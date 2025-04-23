@@ -2,8 +2,9 @@
 
 import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
+import { cn } from "@/lib/utils";
 
 // Types pour les slides
 interface SlideItem {
@@ -21,7 +22,7 @@ interface HeroCarouselProps {
 
 export default function HeroCarousel({
   slides,
-  autoplayDelay = 5000,
+  autoplayDelay = 0,
   className = "",
 }: HeroCarouselProps) {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -31,9 +32,20 @@ export default function HeroCarousel({
     slideChanged: (slider) => setCurrentSlide(slider.track.details.rel),
   });
 
+  // Autoplay
+  useEffect(() => {
+    const autoplay = () => {
+      instanceRef.current?.next();
+    };
+    if (autoplayDelay > 0) {
+      const interval = setInterval(autoplay, autoplayDelay);
+      return () => clearInterval(interval);
+    }
+  }, [autoplayDelay, instanceRef]);
+
   return (
-    <div className={`relative w-full overflow-hidden ${className}`}>
-      <div ref={sliderRef} className="keen-slider h-full rounded-2xl">
+    <div className={cn("relative w-full overflow-hidden rounded-2xl", className)}>
+      <div ref={sliderRef} className="keen-slider h-full">
         {slides.map((slide, i) => (
           <div
             key={i}

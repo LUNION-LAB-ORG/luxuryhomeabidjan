@@ -1,4 +1,5 @@
 import HeroCarousel from "@/components/home/carousel/HeroCarousel";
+import HeroCarouselFade from "@/components/home/carousel/HeroCarouselFade";
 
 const heroSlides = [
   {
@@ -47,10 +48,7 @@ const heroSlides = [
 export default function HeroSection() {
   return (
     <div className="w-full">
-      <HeroCarousel
-        slides={heroSlides}
-        className="max-w-screen-xl px-4 mx-auto h-[calc(100vh-300px)] md:h-[calc(100vh-120px)]"
-      />
+      <HeroCarouselFade slides={heroSlides} autoplayDelay={5000} className="max-w-screen-xl mx-auto w-[95%] h-[calc(100vh-300px)] md:h-[calc(100vh-120px)]" />
     </div>
   );
 }
