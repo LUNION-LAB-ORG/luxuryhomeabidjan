@@ -91,7 +91,7 @@ export default function TeamSection() {
                 isEven ? "md:flex-row-reverse" : ""
               } items-center gap-6`}
             >
-              <div className={`w-full md:w-1/2 ${isEven ? "md:text-left" : "md:text-right"}`}>
+              <div className={`w-full text-center md:w-1/2 ${isEven ? "md:text-left" : "md:text-right"}`}>
                 <h3 className="text-xl font-semibold">{member.name}</h3>
                 <p className="text-gray-600 text-sm mb-2">{member.title}</p>
                 <p className="text-gray-700 text-sm">{member.description}</p>

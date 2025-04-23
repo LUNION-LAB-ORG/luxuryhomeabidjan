@@ -27,13 +27,14 @@ export default function PhilosophySection() {
   ]
 
   return (
-    <section className="py-12 px-4 max-w-6xl mx-auto">
-      <div className="text-center mb-8">
-        <h2 className="text-3xl md:text-4xl font-bold">Notre philosophie s'applique à tous nos clients.</h2>
-        <h3 className="text-2xl md:text-3xl font-bold mt-2">Notre fierté : votre satisfaction</h3>
+    <section className="py-12  ">
+      <div className="container mx-auto px-2 md:px-4 lg:px-36">
+      <div className="text-center mb-8 text-lg  md:text-3xl xl:text-5xl font-bold">
+        <h2 className="">Notre philosophie s'applique à tous nos clients.</h2>
+        <h3 className=" md:mt-2">Notre fierté : votre satisfaction</h3>
       </div>
 
-      <div className="relative rounded-3xl overflow-hidden">
+      <div className="relative  pt-10 rounded-3xl overflow-hidden">
         <Image
           src={slides[0].image}
           alt={slides[0].alt}
@@ -54,6 +55,9 @@ export default function PhilosophySection() {
           ))}
         </div>
       </div>
+
+      </div>
+ 
     </section>
   )
 }

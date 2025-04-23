@@ -40,8 +40,9 @@ export default function TestimonialsSection() {
   }
 
   return (
-    <section className="py-12 px-4 max-w-6xl mx-auto my-6 flex flex-col lg:flex-row justify-center gap-4 items-center border border-[#999999] rounded-3xl shadow-sm">
-        <div className="flex items-start gap-4">
+    <section className="px-2 xl:px-24">
+      <div className=" py-12 container mx-auto my-6 flex flex-col lg:flex-row justify-around gap-4 items-center border border-[#999999] rounded-3xl shadow-sm">
+      <div className="flex items-startt gap-4 px-10">
             <div className="flex -space-x-2">
               <Avatar className="border-2 border-background">
                 <AvatarImage src="/assets/images/illustrations/qui-sommes-nous/user1.png" alt="Avatar" />
@@ -61,8 +62,8 @@ export default function TestimonialsSection() {
               </Avatar>
             </div>
             <span className="text-muted-foreground text-sm">+ 10 commentaires</span>
-          </div>
-      <Card className="border-none">
+        </div>
+      <Card className="border-none max-w-lg">
         <CardHeader>
           <h2 className="text-3xl font-bold text-start">Ce que disent nos clients</h2>
         </CardHeader>
@@ -93,6 +94,9 @@ export default function TestimonialsSection() {
           </div>
         </CardContent>
       </Card>
+
+      </div>
+         
     </section>
   )
 }
