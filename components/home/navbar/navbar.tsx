@@ -169,7 +169,7 @@ export function Navbar() {
               </div>
             </nav>
 
-            <div className="absolute bottom-4 left-0 right-0 px-6">
+            {/* <div className="absolute bottom-4 left-0 right-0 px-6">
               <Button
                 variant="outline"
                 className="w-full justify-center gap-2 border-gray-200"
@@ -178,7 +178,7 @@ export function Navbar() {
                 <Phone className="size-4" />
                 <span>Nous contacter</span>
               </Button>
-            </div>
+            </div> */}
           </SheetContent>
         </Sheet>
       </div>
