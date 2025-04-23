@@ -9,7 +9,7 @@ import Image from "next/image";
 interface SlideItem {
   id: number;
   image: string;
-  title: string;
+  title: string | React.ReactNode;
   description?: string;
 }
 
@@ -41,12 +41,12 @@ export default function HeroCarousel({
           >
             <Image
               src={slide.image}
-              alt={slide.title}
+              alt={slide.title?.toString() || ""}
               fill
               className="object-cover"
               priority={i === 0}
             />
-            <div className="absolute z-[2] w-full bottom-24 left-1/2 -translate-x-1/2 text-white text-4xl md:text-7xl font-bold text-center px-4 drop-shadow-xl">
+            <div className="absolute z-[2] w-full bottom-24 left-1/2 -translate-x-1/2 text-white text-3xl md:text-7xl font-bold text-center px-4 drop-shadow-xl">
               {slide.title}
             </div>
             {/* Overlay black transparent */}

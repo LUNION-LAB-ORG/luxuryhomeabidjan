@@ -16,7 +16,7 @@ const heroSlides = [
   {
     id: 3,
     image: "/assets/images/carrousel/carrousel_3.png",
-    title: "LUXURY HOME ABIDJAN Votre Partenaire Conseil",
+    title: <span>LUXURY HOME ABIDJAN<br/>Votre Partenaire Conseil</span>,
     description: "",
   },
   {
@@ -34,7 +34,7 @@ const heroSlides = [
   {
     id: 6,
     image: "/assets/images/carrousel/carrousel_6.png",
-    title: "LUXURY HOME ABIDJAN Une collection exclusive",
+    title: <span>LUXURY HOME ABIDJAN<br/>Une collection exclusive</span>,
     description: "",
   },
   {
@@ -49,7 +49,7 @@ export default function HeroSection() {
     <div className="w-full">
       <HeroCarousel
         slides={heroSlides}
-        className="max-w-screen-xl px-4 mx-auto h-[calc(100vh-120px)]"
+        className="max-w-screen-xl px-4 mx-auto h-[calc(100vh-300px)] md:h-[calc(100vh-120px)]"
       />
     </div>
   );
