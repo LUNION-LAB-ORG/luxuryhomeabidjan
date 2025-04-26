@@ -3,7 +3,7 @@ import Image from "next/image"
 export default function PropertyListings() {
   return (
     <div className="container mx-auto px-2 md:px-4 py-8 bg-white">
-      <h1 className="text-center text-black font-medium text-xl mb-6">Programmes immobiliers</h1>
+      <h1 className="text-center text-black font-bold text-xl lg:text-2xl mb-6">Programmes immobiliers</h1>
 
       {/* First Property */}
       <div className="mb-6 md:px-8">
@@ -15,13 +15,13 @@ export default function PropertyListings() {
             height={500}
             className="w-full min-h-[250px] h-auto object-cover"
           />
-          <div className="absolute  lg:w-full rounded-lg md:max-w-2xl font-bold rounded-3xl bottom-5 left-5 p-4 md:p-6   bg-black/50 backdrop-blur-md  bg-gradient-to-t from-black/50 to-transparent">
+          <div className="absolute  lg:w-full md:max-w-2xl font-bold rounded-2xl lg:rounded-3xl bottom-5 left-5 p-4 md:p-6   bg-black/50 backdrop-blur-md  bg-gradient-to-t from-black/50 to-transparent">
             <p className="text-white text-sm xl:text-xl ">SONGON KASSEMBLE</p>
             <h2 className="text-white pt-2 md:pt-5 text-xl md:text-2xl xl:text-4xl">La cité Riviera STELLA</h2>
           </div>
         </div>
 
-        <div className="max-w-6xl font-semibold text-lg mx-auto flex my-10">
+        <div className="max-w-5xl font-semibold text-lg mx-auto flex my-10">
 
           <div className="flex-shrink-0 mr-4">
           <span className="text-gray-600 text-3xl xl:text-6xl font-bold">1</span>
@@ -46,13 +46,13 @@ export default function PropertyListings() {
             height={500}
             className="w-full min-h-[250px] h-auto object-cover"
           />
-          <div className="absolute  lg:w-full max-w-2xl font-bold rounded-lg md:rounded-3xl bottom-5 left-5 p-4 md:p-6   bg-black/50 backdrop-blur-md  bg-gradient-to-t from-black/50 to-transparent">
+          <div className="absolute  lg:w-full max-w-2xl font-bold rounded-2xl md:rounded-3xl bottom-5 left-5 p-4 md:p-6   bg-black/50 backdrop-blur-md  bg-gradient-to-t from-black/50 to-transparent">
             <p className="text-white text-sm xl:text-xl ">SONGON KASSEMBLE</p>
             <h2 className="text-white pt-2 md:pt-5 text-xl md:text-2xl xl:text-4xl">La cité Riviera STELLA</h2>
           </div>
         </div>
 
-        <div className="max-w-6xl font-semibold text-lg mx-auto flex my-10">
+        <div className="max-w-5xl font-semibold text-lg mx-auto flex my-10">
 
           <div className="flex-shrink-0 mr-4">
           <span className="text-gray-600 text-3xl xl:text-6xl font-bold">2</span>
@@ -62,8 +62,7 @@ export default function PropertyListings() {
             </div> */}
           </div>
           <p className="text-gray-700 leading-snug">
-          Situé dans un quartier chic et en plein essor d'Abidjan, ce programme immobilier se distingue par son architecture élégante et ses finitions haut de gamme. Conçu pour répondre aux besoins et aspirations , le projet Résidences Riviera offre un cadre de vie idéal.
-          </p>
+          Situé dans un quartier chic et en plein essor d'Abidjan, ce programme immobilier se distingue par son architecture élégante et ses finitions haut de gamme. Conçu pour répondre aux besoins et aspirations , le projet Résidences Riviera offre un cadre de vie idéal.          </p>
         </div>
       </div>
     </div>

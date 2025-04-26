@@ -2,11 +2,11 @@ import Image from "next/image"
 
 export default function AboutSection() {
   return (
-    <section className=" py-12 px-2 md:px-4 ">
+    <section className="pb-10 lg:pb-18 px-2 md:px-4 ">
       <div className="container  mx-auto md:px-4 lg:px-8">
-      <div className="text-center mb-6">
-        <h2 className="text-lg font-medium">Qui sommes-nous</h2>
-        <h1 className="text-3xl  md:text-5xl lg:text-7xl  font-bold mt-2">
+      <div className="text-center mb-6 font-bold">
+        <h2 className="text-lg lg:text-2xl">Qui sommes-nous</h2>
+        <h1 className="text-3xl md:text-5xl lg:text-7xl ">
           L'immobilier en Afrique,
           <br />
           Autrement
@@ -14,8 +14,8 @@ export default function AboutSection() {
       </div>
 
       <div className="bg-white text-lg md:text-2xl tracking-wide font-bold rounded-3xl p-6 shadow-sm border border-slate-400">
-        <div className="max-w-6xl pt-6 md:px-2 mx-auto">
-          <p className="text-gray-600 mb-6">
+        <div className="max-w-6xl pt-6 lg:px-8 mx-auto font-semibold">
+          <p className="text-zinc-600 mb-6 leading-7">
             Luxury Home Abidjan est l'histoire d'un ensemble de collaborateurs qui ont une passion commune pour la
             pierre. Notre but est d'exprimer notre propre vision de l'immobilier en Afrique. Nous sommes une agence
             animée par une vingtaine de collaborateurs et nous partageons tous un point commun : la volonté de mettre le
@@ -27,7 +27,7 @@ export default function AboutSection() {
             vendre ou à gérer, notre équipe a pour premier objectif d'apprendre à vous connaître.
           </p>
 
-          <p className="text-gray-700 text-lg md:text-3xl  font-bold ">
+          <p className="text-zinc-700 text-lg lg:text-2xl  font-bold ">
             ECOUTER afin de COMPRENDRE, CONSEILLER et ACCOMPAGNER sont les étapes clés de la démarche LHA.
           </p>
         </div>

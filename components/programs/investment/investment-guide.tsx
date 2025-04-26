@@ -2,9 +2,9 @@ import Image from "next/image";
 
 export default function InvestmentGuide() {
   return (
-    <div className="container mx-auto px-6 xl:px-16 py-12 bg-white">
+    <div className="container mx-auto px-6 xl:px-16 lg:py-16 pb-24 bg-white">
       {/* Main Heading */}
-      <div className="mb-8">
+      <div className="mb-10 lg:mb-16">
         <h1 className="font-bold text-2xl xl:text-7xl md:text-5xl  text-black leading-none mb-2">
           Investissez intelligemment,
           <br />

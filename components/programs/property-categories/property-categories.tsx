@@ -2,9 +2,9 @@ import Image from "next/image"
 
 export default function PropertyCategories() {
   return (
-    <div className="max-w-5xl mx-auto px-4 py-8 bg-white">
+    <div className="px-4 lg:px-18 mx-auto py-6 lg:py-10 bg-white">
       {/* Commercial Residences Banner */}
-      <div className="relative w-full h-48 mb-12 rounded-3xl overflow-hidden">
+      <div className="relative w-full h-[250px] mb-12 rounded-3xl overflow-hidden">
         <Image
           src="/assets/images/illustrations/programs/buildings.png"
           alt="Résidences à usage commercial"

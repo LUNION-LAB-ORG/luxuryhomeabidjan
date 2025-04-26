@@ -14,10 +14,10 @@ export default function LogoShowcase() {
   return (
     <section className="px-4 py-12 md:py-16">
       <div className="container  mx-auto">
-        <h2 className="text-3xl font-semibold text-center mb-10">Ils nous ont fait confiance</h2>
-        <div className="flex flex-wrap justify-center items-center gap-2 ggap-8 md:ggap-12">
+        <h2 className="text-2xl  font-bold text-center mb-10">Ils nous ont fait confiance</h2>
+        <div className="flex flex-wrap justify-center items-center gap-2 ">
           {partners.map((partner) => (
-            <div key={partner.name} className="w-24 h-16 md:w-20 md:h-28 flexs items-center justify-center">
+            <div key={partner.name} className="w-12 md:w-24 mdd:h-28 flexs items-center justify-center">
               <Image
                 src={partner.logo || "/placeholder.svg"}
                 alt={`${partner.name} logo`}

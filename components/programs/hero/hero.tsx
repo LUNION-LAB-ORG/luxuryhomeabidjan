@@ -6,8 +6,8 @@ export default function HeroSection() {
   {/* Images container */}
   <div className="container mx-auto px-4 sm:px-6 lg:px-8 mb-12">
     <div className="rounded-3xl overflow-hidden">
-      <div className="w-full flex flex-col md:flex-row gap-2 md:gap-4">
-        <div className="md:w-2/3 relative h-[300px] md:h-[400px]">
+      <div className="w-full flex  gap-2 md:gap-4">
+        <div className="w-2/3 relative h-[300px] md:h-[400px]">
           <Image
             src="/assets/images/illustrations/programs/bonsai.png"
             alt="Luxury home with infinity pool at sunset"
@@ -15,7 +15,7 @@ export default function HeroSection() {
             className="object-cover"
           />
         </div>
-        <div className="relative md:w-1/3 h-[300px] md:h-[400px]">
+        <div className="relative w-1/3 h-[300px] md:h-[400px]">
           <Image
             src="/assets/images/illustrations/programs/hero-right.png"
             alt="Modern luxury home with swimming pool"
@@ -27,10 +27,10 @@ export default function HeroSection() {
     </div>
   </div>
 
-  <div className="relative containerr px-4 ssm:px-6 lgg:px-8 pb-24">
+  <div className="relative containerr px-4 ssm:px-6 pb-8 lg:pb-21">
     <div className="max-w-4xl mx-auto ">
     <p className="font-bold text-xl md:text-2xl text-center mb-2">Programmes</p>
-    <h1 className="text-3xl md:text-4xl px-4 lg:px-0 text-center xl:text-7xl font-bold mb-10 lg:mb-16 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+    <h1 className="text-2xl md:text-4xl px-4 lg:px-0 text-center xl:text-7xl font-bold mb-6 lg:mb-16 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">
       Nous répondons aux problèmes de logements
     </h1>
   </div>  

@@ -1,17 +1,32 @@
-import type { NextConfig } from "next";
+// next.config.ts
+
+import type { NextConfig } from 'next'
+// import type { NextWebpackConfig } from 'next/dist/server/config-shared'
 
 const nextConfig: NextConfig = {
-  /* config options here */
   images: {
     remotePatterns: [
       {
+        protocol: 'https',
         hostname: 'images.unsplash.com',
       },
       {
+        protocol: 'https',
         hostname: 'unsplash.com',
-      }
+      },
     ],
   },
-};
 
-export default nextConfig;
+  webpack(config) {
+    config.module?.rules?.push({
+      test: /\.svg$/,
+      issuer: /\.[jt]sx?$/,
+      use: ['@svgr/webpack'],
+    })
+
+    return config
+  },
+
+}
+
+export default nextConfig

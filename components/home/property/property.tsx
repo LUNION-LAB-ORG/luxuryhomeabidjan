@@ -13,8 +13,8 @@ type PropertyCardProps = {
 
 function PropertyCard({ location, name, imageSrc }: PropertyCardProps) {
   return (
-    <div className="relative min-w-[280px] max-w-[280px] overflow-hidden rounded-2xl bg-white shadow-md sm:min-w-[320px] sm:max-w-[320px]">
-      <div className="relative h-[600px] w-full">
+    <div className="relative min-w-[280px] max-w-[280px] overflow-hidden rounded-3xl bg-white shadow-md sm:min-w-[320px] sm:max-w-[320px]">
+      <div className="relative h-[550px] w-full">
         <Image
           src={imageSrc || "/placeholder.svg"}
           alt={name}
@@ -24,15 +24,15 @@ function PropertyCard({ location, name, imageSrc }: PropertyCardProps) {
         />
 
         {/* Location and Name Overlay */}
-        <div className="absolute inset-x-0 top-0 p-4">
-          <div className="text-sm font-medium text-white">{location}</div>
-          <div className="text-lg font-semibold text-white">{name}</div>
+        <div className="absolute inset-x-0 h-full z-20 top-0 p-6 text-white bg-gradient-to-t from-black/70 via-transparent to-transparent">
+          <div className="pb-2 text-sm font-bold text-white">{location}</div>
+          <div className="text-xl lg:text-xl max-w-[210px]  font-bold">{name}</div>
         </div>
 
         {/* Camera Icon */}
         <Link href='propriete/detail/1'>
-          <div className="absolute bottom-4 right-4 flex h-8 w-8 items-center justify-center rounded-full bg-black/30 text-white backdrop-blur-sm">
-            <ExternalLink  />
+          <div className="absolute bottom-4 right-4 flex h-8 w-8 items-center justify-center rounded-full bg-slate-800 text-white backdrop-blur-sm">
+            <ExternalLink className="text-white" />
           </div>
         </Link>
       
@@ -102,8 +102,8 @@ export function PropertyCarousel() {
 
   return (
     <section className="py-16">
-      <div className="container mx-auto md:px-4">
-        <h2 className="mb-8 text-center text-2xl font-bold md:text-4xl">Opérations immobilières</h2>
+      <div className="container mx-auto md:px-4 lg:px-16">
+        <h2 className="mb-8 lg:mb-10 text-center text-3xl font-bold md:text-5xl">Opérations immobilières</h2>
 
         <div className="relative">
           {/* Scroll Buttons */}
@@ -149,8 +149,10 @@ export function PropertyCarousel() {
 
           {/* More Details Button */}
           <div className="mt-6 flex justify-center">
-            <Button variant="outline" className="rounded-full px-6">
-              Plus de détails
+            <Button variant="outline" className="rounded-full px-6 cursor-pointer">
+              <span><ExternalLink/></span>
+              <span>Plus de détails</span>
+              
             </Button>
           </div>
         </div>

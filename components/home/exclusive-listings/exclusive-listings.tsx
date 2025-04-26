@@ -15,7 +15,7 @@ type ExclusivePropertyProps = {
 
 function ExclusiveProperty({ name, imageSrc, bedrooms, bathrooms, area }: ExclusivePropertyProps) {
   return (
-    <div className="relative w-4/5 md:w-3/7 min-w-[300px]] max-w-[400px]] flex-shrink-0 overflow-hidden rounded-lg">
+    <div className="relative w-4/5 md:w-3/8 min-w-[300px]] max-w-[400px]] flex-shrink-0 overflow-hidden ">
       <Link href='propriete/detail/1'>
     
       <div className="relative aspect-[4/3] w-full">
@@ -28,7 +28,7 @@ function ExclusiveProperty({ name, imageSrc, bedrooms, bathrooms, area }: Exclus
         />
       </div>
 
-      <div className="absolute flex justify-between bottom-0 left-0 right-0 bg-black/50 backdrop-blur-sm  bg-gradient-to-t from-black/80 to-transparent p-2 md:p-6  text-white">
+      <div className="absolute flex justify-between bottom-0 left-0 right-0 bg-black/20 backdrop-blur-sm  bg-gradient-to-t from-black/80 to-transparent p-2 md:p-6  text-white">
 
         <div>
         <div className="mb-2 md:text-lg font-semibold">{name}</div>
@@ -137,8 +137,8 @@ export function ExclusiveListings() {
 
   return (
     <section className="py-12 md:py-16">
-      <div className="container mx-auto md:px-4">
-        <h2 className=" mb-8 text-center text-2xl font-bold md:text-4xl">En exclusivité</h2>
+      <div className="containerr mx-auto mdd:px-4">
+        <h2 className=" mb-8 lg:mb-10 text-center text-3xl  font-bold md:text-5xl">En exclusivité</h2>
 
         <div className="relative">
           {/* Scroll Buttons */}

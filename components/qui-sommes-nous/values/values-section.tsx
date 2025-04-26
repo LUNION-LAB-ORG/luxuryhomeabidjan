@@ -1,6 +1,6 @@
 export default function ValuesSection() {
   return (
-    <section className="py-12 md:py-16 container px-2 md:px-4 lg:px-24 mx-auto">
+    <section className="pb-8 lg:pb-16 container px-2 md:px-4 lg:px-24 mx-auto">
       <div className="bg-white rounded-3xl border border-slate-400 p-8  ">
         <div className="text-center mb-8">
           <h2 className="text-lg md:text-2xl font-bold">Nos valeurs</h2>
