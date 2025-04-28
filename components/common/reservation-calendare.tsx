@@ -33,7 +33,7 @@ interface PropsReservation {
           mode="range"
           selected={range}
           onSelect={handleSelect}
-          numberOfMonths={2}
+          numberOfMonths={1}
           disabled={(date) => date < new Date()}
           className="rounded-md border shadow"
         />

@@ -190,18 +190,18 @@ export default function FormLocation({
   }
 
   return (
-    <div className="relative overflow-auto h-[600px] pb-36 ">
+    <div className="relative text-md overflow-auto h-[600px] px-8 ppb-36 ">
       <Form {...form}>
         <form
           onSubmit={form.handleSubmit(onSubmit)}
           className=" space-y-8 p-4 pb-0 "
         >
           <div className="w-full  flex justify-center gap-5 flex-col lg:flex-row ">
-            <div className="w-full  md:max-w-sm rounded-3xl border p-5 py-7">
+            <div className="w-full  md:max-w-sm rounded-3xl border px-3 py-5">
               <TypeLogement form={form} typeLogement={typeLogement} />
             </div>
             <div className="w-full max-w-lg flex flex-col items-center gap-2">
-              <div className="w-full h-fit flex items-center space-x-2 border rounded-3xl p-5 py-7">
+              <div className="w-full h-fit flex items-center space-x-2 border rounded-3xl p-3 py-5">
                 <PieceSelector
                   form={form}
                   valuePiece={valuePiece}
