@@ -134,7 +134,7 @@ export function ServicesSection() {
 
   return (
     <section className="py-10 md:py-16">
-      <div className="container  mx-auto px-4 lg:px-16">
+      <div className="mx-auto px-4 lg:px-16">
         <h2 className="mb-12 text-center text-3xl font-bold md:text-5xl">Nos services</h2>
 
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-2">
