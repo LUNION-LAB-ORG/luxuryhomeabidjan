@@ -12,22 +12,25 @@ interface PropsPriceRange {
   
     return (
            <div className="w-full max-w-md mx-auto">
-        <p className="mb-2 font-medium">Choisissez une plage de prix :</p>
+        <p className="mb-2 font-medium">Budget </p>
+        {/* <Slider defaultValue={[0]} max={100} step={1} /> */}
+
+
         <Slider
-          min={0}
+          // min={0}
           max={15000000}
           step={1}
-          defaultValue={priceRange}
-          value={priceRange}
+          defaultValue={[0]}
+          // value={priceRange}
           onValueChange={handleChange}
           className="my-4"
-          minStepsBetweenThumbs={1}
-          // range
+          minStepsBetweenThumbs={0} // Je mets 0 pour s'assurer qu'il n'y a pas de plusieurs poignées
         />
-        <div className="flex justify-between text-sm text-muted-foreground">
+        {/* <div className="flex justify-between text-sm text-muted-foreground">
           <span>{priceRange[0]} fcfa</span>
           <span>{priceRange[1]} fcfa</span>
-        </div>
+        </div> */}
+        <div>{priceRange}</div>
       </div>   
     );
   }

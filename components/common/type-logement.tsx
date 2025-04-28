@@ -22,7 +22,7 @@ const TypeLogement:React.FC<TypeLogementProps>=({form,typeLogement})=>{
           render={() => (
             <FormItem>
               <div className="mb-4">
-                <FormLabel className="text-xl font-bold">
+                <FormLabel className="text-lg font-bold">
                   Sélectionnez le type de logement
                 </FormLabel>
               </div>
@@ -54,7 +54,7 @@ const TypeLogement:React.FC<TypeLogementProps>=({form,typeLogement})=>{
                             }}
                           />
                         </FormControl>
-                        <FormLabel className="text-sm font-normal">
+                        <FormLabel className="text-md text-gray-700 font-normal">
                           {item.label}
                         </FormLabel>
                       </FormItem>

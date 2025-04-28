@@ -16,9 +16,9 @@ const PieceSelector: React.FC<PieceSelectorProps> = ({ form, valuePiece, setValu
         name="piece"
         render={({ field }) => ( // Utilisation de 'field' à l'intérieur du render prop
           <FormItem className="w-full">
-            <FormLabel className="pb-4">Nombre de chambres</FormLabel>
+            <FormLabel className="pb-4 text-lg font-bold">Nombre de chambres</FormLabel>
             <div className="flex items-center justify-between gap-2">
-              <span>{valuePiece} pièce</span>
+              <span className="text-md text-gray-700 font-normal">{valuePiece} pièce</span>
               <FormControl>
                 <div className="flex items-center space-x-2 border p-2 rounded-3xl">
                   <Button

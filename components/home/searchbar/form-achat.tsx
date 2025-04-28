@@ -107,7 +107,7 @@ interface NewData {
   };
 }
 
-export default function FormLocation({
+export default function FormAchat({
   setIsSelectOpen,
   handleDialogLieuxOpen,
   service
@@ -196,7 +196,7 @@ export default function FormLocation({
           onSubmit={form.handleSubmit(onSubmit)}
           className=" space-y-8 p-4 pb-0 mb-0"
         >
-          <div className="w-full items-center lg:items-stretch  flex justify-center lg:justify-between  gap-5 flex-col lg:flex-row ">
+          <div className=" w-full overflow-auto pb-28 items-center lg:items-stretch  flex justify-center lg:justify-around  gap-5 flex-col lg:flex-row ">
             <div className="w-full max-w-sm rounded-3xl border border-gray-400 px-6 py-7">
               <TypeLogement form={form} typeLogement={typeLogement} />
             </div>
@@ -234,7 +234,7 @@ export default function FormLocation({
                 />
               </div>
             </div>
-            <ReservationCalendar range={range} setRange={setRange} />
+            {/* <ReservationCalendar range={range} setRange={setRange} /> */}
           </div>
 
           <div className="w-fit mx-auto flex items-center gap-2 text-white p-3 px-7 bg-black rounded-3xl">

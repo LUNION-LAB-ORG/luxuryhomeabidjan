@@ -27,15 +27,15 @@ interface PropsReservation {
     };
   
     return (
-      <div className="w-full max-w-lg mx-auto">
-        <p className="mb-2 font-medium">Dates de réservation</p>
+      <div className="w-full  px-5 py-3 border border-gray-400 rounded-3xl max-w-md mx-auto">
+        <p className="mb-2 text-lg font-bold">Dates de réservation</p>
         <Calendar
           mode="range"
           selected={range}
           onSelect={handleSelect}
           numberOfMonths={1}
           disabled={(date) => date < new Date()}
-          className="rounded-md border shadow"
+          className="rounded-mdd borderr shadoww"
         />
   
         <div className="mt-4 text-sm text-muted-foreground">
