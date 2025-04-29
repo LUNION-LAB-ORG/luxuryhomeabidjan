@@ -22,7 +22,7 @@ const TypeLogement:React.FC<TypeLogementProps>=({form,typeLogement})=>{
           render={() => (
             <FormItem>
               <div className="mb-4">
-                <FormLabel className="text-lg font-bold">
+                <FormLabel className="text-[16px] font-bold">
                   Sélectionnez le type de logement
                 </FormLabel>
               </div>
@@ -35,7 +35,7 @@ const TypeLogement:React.FC<TypeLogementProps>=({form,typeLogement})=>{
                     return (
                       <FormItem
                         key={item.id}
-                        className="flex flex-row items-start space-x-3 space-y-0"
+                        className="text-[16px] flex flex-row items-start space-x-3 space-y-0"
                       >
                         <FormControl>
                           <Checkbox

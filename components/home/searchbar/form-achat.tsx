@@ -215,7 +215,7 @@ export default function FormAchat({
                   name="emplacement"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel className="text-lg font-bold">Emplacement</FormLabel>
+                      <FormLabel className="text-[16px] font-bold">Emplacement</FormLabel>
                       <FormControl>
                         <MySelect
                           field={field}
@@ -290,7 +290,7 @@ function MySelect({ field, setIsSelectOpen }: PropsSelect) {
        * On monte `SelectContent` **dans un Portal** ou un container
        * séparé pour qu’un clic en dehors ne ferme QUE ce Select.
        */}
-      <SelectContent className="select-drower">
+      <SelectContent className="select-drower ">
         {
           dataVille.map(item=>{
             return <SelectItem key={item.value} value={item.value}>{item.label}</SelectItem>

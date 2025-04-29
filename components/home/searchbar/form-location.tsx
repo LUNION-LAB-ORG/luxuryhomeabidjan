@@ -3,8 +3,7 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
-import { Button } from "@/components/ui/button";
-import { Checkbox } from "@/components/ui/checkbox";
+
 import {
   Form,
   FormControl,
@@ -24,12 +23,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { Slider } from "@/components/ui/slider";
-import { Calendar } from "@/components/ui/calendar";
 import { DateRange } from "react-day-picker";
-import { isAfter, isBefore } from "date-fns";
-import { toast } from "sonner";
-import DialogLieux from "./dialog-lieux";
 
 import { useRouter } from "next/navigation";
 import PieceSelector from "@/components/common/piece-selector";
@@ -114,7 +108,7 @@ export default function FormLocation({
 }: Props) {
   const [openDialogLieux, setOpenDialogLieux] = useState(false);
   const [priceRange, setPriceRange] = useState<[number, number]>([
-    10000, 15000000,
+    50000, 15000000,
   ]);
   const [range, setRange] = useState<DateRange | undefined>(undefined);
   const [valuePiece, setValuePiece] = useState<number>(1);
@@ -197,7 +191,7 @@ export default function FormLocation({
           className=" space-y-8 p-4 pb-0 mb-0"
         >
           <div className="w-full items-center lg:items-stretch  flex justify-center lg:justify-between  gap-5 flex-col lg:flex-row ">
-            <div className="w-full max-w-sm rounded-3xl border border-gray-400 px-6 py-7">
+            <div className="w-full max-w-sm lg:w-full rounded-3xl border border-gray-400 px-6 py-7">
               <TypeLogement form={form} typeLogement={typeLogement} />
             </div>
             <div className="w-full max-w-sm flex gap-4 flex-col items-center">
@@ -214,8 +208,8 @@ export default function FormLocation({
                   control={form.control}
                   name="emplacement"
                   render={({ field }) => (
-                    <FormItem>
-                      <FormLabel className="text-lg font-bold">Emplacement</FormLabel>
+                    <FormItem className=" w-full">
+                      <FormLabel className="text-[16px] font-bold">Emplacement</FormLabel>
                       <FormControl>
                         <MySelect
                           field={field}
@@ -227,7 +221,7 @@ export default function FormLocation({
                   )}
                 />
               </div>
-              <div className=" w-full items-center space-x-2 border rounded-3xl p-5 py-7 border-gray-400">
+              <div className=" w-full items-center space-x-2 border rounded-3xl p-3 py-4 border-gray-400">
                 <PriceRangeSlider
                   priceRange={priceRange}
                   setPriceRange={setPriceRange}
@@ -274,17 +268,16 @@ const dataVille=[
 function MySelect({ field, setIsSelectOpen }: PropsSelect) {
   return (
     <Select
-      // open={open}
       onOpenChange={setIsSelectOpen}
       value={field.value}
       onValueChange={field.onChange}
       name={field.name}
-      // ref={field.ref}
     >
       <SelectTrigger
+      className="w-full bbg-amber-500 border-2 p-4 py-6 rounded-2xl"
       // onClick={() => setIsSelectOpen(true)}
       >
-        <SelectValue placeholder="Sélectionnez une ville" />
+        <SelectValue  placeholder="Sélectionnez une ville" />
       </SelectTrigger>
       {/**
        * On monte `SelectContent` **dans un Portal** ou un container

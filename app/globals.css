@@ -1,6 +1,17 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+
+.custom-slide {
+  width: 15vw; /* slides par défaut = petits */
+  transition: transform 0.3s ease;
+}
+
+.swiper-slide-active.custom-slide {
+  width: 70vw !important; /* slide actif = très large */
+  z-index: 10;
+}
+
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {

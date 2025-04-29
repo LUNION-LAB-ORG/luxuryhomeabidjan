@@ -9,9 +9,9 @@ type ExclusivePropertyProps = {
 
 function ExclusiveProperty({ service,desc}: ExclusivePropertyProps) {
   return (
-    <div className="relative leading-7 text-2xl flex flex-col gap-6 pb-46 pt-18 px-8 rounded-4xl text-white bg-black w-4/5 mmd:w-3/8 md:w-2/5 flex-shrink-0 overflow-hidden ">
-      <h4 className="font-bold">{service}</h4>
-      <p >{desc}</p>
+    <div className="relative leading-7 text-2xl lg:text-[26px] flex flex-col gap-6 pb-22 px-6 pt-16 lg:pb-46 lg:pt-18 lg:px-8 rounded-4xl text-white bg-black w-[90%] sm:w-[60%]  lg:w-[44%] flex-shrink-0 overflow-hidden ">
+      <h4 className="font-bold pb-6 lg:pb-10">{service}</h4>
+      <p className="" >{desc}</p>
     </div>
   )
 }
@@ -41,14 +41,14 @@ export default function ListingsInfoBienScroll() {
   return (
     <section className="py-12 md:py-16">
       <div >
-        <h3 className=" text-black font-bold text-center text-xl lg:text-2xl mb-6  lg:mb-8">À quel moment aurez-vous besoin de nous ?</h3>
+        <h3 className=" text-black font-bold text-center text-xl lg:text-[28px]  mb-6  lg:mb-8">À quel moment aurez-vous besoin de nous ?</h3>
 
         <div className="relative">
 
           {/* Scrollable Container */}
           <div
             ref={scrollContainerRef}
-            className="flex gap-4 overflow-x-auto pb-6 pt-2 pl-32 scrollbar-hide"
+            className="flex gap-4 overflow-x-auto pb-6 pt-2 pl-4 md:pl-12 lg:pl-32 scrollbar-hide"
             style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
           >
             {exclusiveProperties.map((property, index) => (

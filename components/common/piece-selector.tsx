@@ -16,11 +16,24 @@ const PieceSelector: React.FC<PieceSelectorProps> = ({ form, valuePiece, setValu
         name="piece"
         render={({ field }) => ( // Utilisation de 'field' à l'intérieur du render prop
           <FormItem className="w-full">
-            <FormLabel className="pb-4 text-lg font-bold">Nombre de chambres</FormLabel>
+            <FormLabel className="text-[16px] font-bold">Nombre de pièce</FormLabel>
             <div className="flex items-center justify-between gap-2">
-              <span className="text-md text-gray-700 font-normal">{valuePiece} pièce</span>
+              <span className="text-[16px] text-gray-700 ">{valuePiece} pièce</span>
               <FormControl>
                 <div className="flex items-center space-x-2 border p-2 rounded-3xl">
+                  {/* <span
+                  className="w-fit border-0"
+                    onClick={() => {
+                      // Utilisation de 'field' pour modifier la valeur du champ
+                      field.onChange(Math.max(field.value - 1, 1));
+                      setValuePiece(Math.max(field.value - 1, 1));
+                    }}
+                  
+                  >
+                     <ChevronLeft className="bg-red-700  " size="md" />
+
+                  </span> */}
+
                   <Button
                     className="rounded-3xl"
                     type="button"
@@ -31,9 +44,10 @@ const PieceSelector: React.FC<PieceSelectorProps> = ({ form, valuePiece, setValu
                       setValuePiece(Math.max(field.value - 1, 1));
                     }}
                   >
-                    <ChevronLeft size="md" />
+                    <ChevronLeft  size="md" />
                   </Button>
                   <Input
+
                     {...field} // Déstructure 'field' pour l'appliquer aux props de l'input
                     onChange={(e) => {
                       // Assure-toi d'utiliser 'field.onChange' pour la mise à jour de la valeur
@@ -41,7 +55,7 @@ const PieceSelector: React.FC<PieceSelectorProps> = ({ form, valuePiece, setValu
                       setValuePiece(Math.max(Number(e.target.value), 1));
                     }}
                     min={1}
-                    className="w-14 text-center"
+                    className="w-12 text-center border-none shadow-none "
                   />
                   <Button
                     className="rounded-3xl"
