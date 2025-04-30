@@ -9,39 +9,39 @@ export default function Footer() {
     <footer className="bg-[#0a0e1f] text-white py-12 px-4 md:px-8">
       <div className="container mx-auto">
         {/* Top section */}
-        <div className=" grid grid-cols-1 lg:grid-cols-2 ">
+        <div className="max-w-6xl gap-0 lg:px-8 mx-auto grid grid-cols-1 lg:grid-cols-2  text-[12px] ">
           {/* Left column */}
           <div className="space-y-8 ">
             {/* Logo and brand */}
             <div className="flex items-center gap-2">
               <Image src="/assets/images/icone.png" alt="Luxury Home Abidjan Logo" width={40} height={40} />
-              <span className="text-lg font-semibold">LUXURY HOME ABIDJAN</span>
+              <span className="text-[16px] font-semibold">LUXURY HOME ABIDJAN</span>
             </div>
 
             {/* Contact info */}
-            <div className="space-y-4 grid md:grid-cols-2 items-center">
-              <div className="p-2 py-3 flex items-center gap-3 border rounded-full ww-80">
+            <div className="bbg-yellow-700 sspace-y-4 flex justify-center md:justify-start flex-wrap gap-2 ">
+              <div className="w-fit px-5 p-2 py-3 flex items-center gap-3 border rounded-full">
                 <div className="flex items-center justify-center">
                   <Phone size={16} />
                 </div>
-                <span>(+225) 07 49 87 17 13</span>
+                <span >(+225) 07 49 87 17 13</span>
               </div>
 
-              <div className="p-2 py-3 text-wrap flex items-center gap-3 border rounded-full ww-80">
+              <div className="w-fit px-5 p-2 py-3 text-wrap flex items-center gap-3 border rounded-full ww-80">
                 <div className=" flex items-center justify-center">
                   <Mail size={16} />
                 </div>
                 <span>info@luxuryhomeabidjan.com</span>
               </div>
 
-              <div className="p-2 py-3 flex items-center gap-3 border rounded-full ww-80">
+              <div className="w-fit px-5  p-2 py-3 flex items-center gap-3 border rounded-full ww-80">
                 <div className="  flex items-center justify-center">
                   <Phone size={16} />
                 </div>
                 <span>(+225) 27 22 23 83 80</span>
               </div>
 
-              <div className=" py-3 flex items-center gap-3 border rounded-full ww-80 p-2">
+              <div className="w-fit px-5  py-3 flex items-center gap-3 border rounded-full ww-80 p-2">
                 <div className=" rounded-full border border-white/30 flex items-center justify-center">
                   <MapPin size={16} />
                 </div>
@@ -51,7 +51,7 @@ export default function Footer() {
           </div>
 
           {/* Right column - Newsletter */}
-          <div className="lg:ml-auto lg:max-w-md w-full ">
+          <div className="lg:ml-auto pt-8 lg:pt-0 lg:max-w-sm w-full ">
             <h3 className="text-2xl font-semibold mb-6">Newsletter</h3>
             <div className="space-y-4">
               <Input
@@ -67,7 +67,7 @@ export default function Footer() {
         </div>
 
         {/* Office hours */}
-        <div className="text-center my-10">
+        <div className="text-center text-[12px] my-10">
           <p>Accueil Agence : Lundi au Vendredi de 8h à 18h.</p>
         </div>
 

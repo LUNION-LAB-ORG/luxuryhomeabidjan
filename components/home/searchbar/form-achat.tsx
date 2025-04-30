@@ -3,7 +3,8 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
-
+import { Button } from "@/components/ui/button";
+import { Checkbox } from "@/components/ui/checkbox";
 import {
   Form,
   FormControl,
@@ -23,7 +24,12 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import { Slider } from "@/components/ui/slider";
+import { Calendar } from "@/components/ui/calendar";
 import { DateRange } from "react-day-picker";
+import { isAfter, isBefore } from "date-fns";
+import { toast } from "sonner";
+import DialogLieux from "./dialog-lieux";
 
 import { useRouter } from "next/navigation";
 import PieceSelector from "@/components/common/piece-selector";
@@ -101,14 +107,14 @@ interface NewData {
   };
 }
 
-export default function FormLocation({
+export default function FormAchat({
   setIsSelectOpen,
   handleDialogLieuxOpen,
   service
 }: Props) {
   const [openDialogLieux, setOpenDialogLieux] = useState(false);
   const [priceRange, setPriceRange] = useState<[number, number]>([
-    50000, 15000000,
+    10000, 15000000,
   ]);
   const [range, setRange] = useState<DateRange | undefined>(undefined);
   const [valuePiece, setValuePiece] = useState<number>(1);
@@ -190,8 +196,8 @@ export default function FormLocation({
           onSubmit={form.handleSubmit(onSubmit)}
           className=" space-y-8 p-4 pb-0 mb-0"
         >
-          <div className="w-full items-center lg:items-stretch  flex justify-center lg:justify-between  gap-5 flex-col lg:flex-row ">
-            <div className="w-full max-w-sm lg:w-full rounded-3xl border border-gray-400 px-6 py-7">
+          <div className=" w-full overflow-auto pb-28 items-center lg:items-stretch  flex justify-center lg:justify-around  gap-5 flex-col lg:flex-row ">
+            <div className="w-full max-w-sm rounded-3xl border border-gray-400 px-6 py-7">
               <TypeLogement form={form} typeLogement={typeLogement} />
             </div>
             <div className="w-full max-w-sm flex gap-4 flex-col items-center">
@@ -208,7 +214,7 @@ export default function FormLocation({
                   control={form.control}
                   name="emplacement"
                   render={({ field }) => (
-                    <FormItem className=" w-full">
+                    <FormItem>
                       <FormLabel className="text-[16px] font-bold">Emplacement</FormLabel>
                       <FormControl>
                         <MySelect
@@ -221,14 +227,14 @@ export default function FormLocation({
                   )}
                 />
               </div>
-              <div className=" w-full items-center space-x-2 border rounded-3xl p-3 py-4 border-gray-400">
+              <div className=" w-full items-center space-x-2 border rounded-3xl p-5 py-7 border-gray-400">
                 <PriceRangeSlider
                   priceRange={priceRange}
                   setPriceRange={setPriceRange}
                 />
               </div>
             </div>
-            <ReservationCalendar range={range} setRange={setRange} />
+            {/* <ReservationCalendar range={range} setRange={setRange} /> */}
           </div>
 
           <div className="w-fit mx-auto flex items-center gap-2 text-white p-3 px-7 bg-black rounded-3xl">
@@ -268,22 +274,23 @@ const dataVille=[
 function MySelect({ field, setIsSelectOpen }: PropsSelect) {
   return (
     <Select
+      // open={open}
       onOpenChange={setIsSelectOpen}
       value={field.value}
       onValueChange={field.onChange}
       name={field.name}
+      // ref={field.ref}
     >
       <SelectTrigger
-      className="w-full bbg-amber-500 border-2 p-4 py-6 rounded-2xl"
       // onClick={() => setIsSelectOpen(true)}
       >
-        <SelectValue  placeholder="Sélectionnez une ville" />
+        <SelectValue placeholder="Sélectionnez une ville" />
       </SelectTrigger>
       {/**
        * On monte `SelectContent` **dans un Portal** ou un container
        * séparé pour qu’un clic en dehors ne ferme QUE ce Select.
        */}
-      <SelectContent className="select-drower">
+      <SelectContent className="select-drower ">
         {
           dataVille.map(item=>{
             return <SelectItem key={item.value} value={item.value}>{item.label}</SelectItem>

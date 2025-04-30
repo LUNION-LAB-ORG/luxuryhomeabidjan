@@ -27,18 +27,19 @@ interface PropsReservation {
     };
   
     return (
-      <div className="w-full max-w-lg mx-auto">
-        <p className="mb-2 font-medium">Dates de réservation</p>
+      <div className="w-full py-3 border border-gray-400 rounded-3xl max-w-sm lg:w-fit mx-auto">
+        <p className="mb-2 pl-8 lg:pl-4 text-[16px] font-bold">Dates de réservation</p>
         <Calendar
           mode="range"
           selected={range}
           onSelect={handleSelect}
           numberOfMonths={1}
           disabled={(date) => date < new Date()}
-          className="rounded-md border shadow"
+          
+          className="shadoww flex justify-center"
         />
   
-        <div className="mt-4 text-sm text-muted-foreground">
+        {/* <div className="mt-4 pl-4 text-sm text-muted-foreground">
           {range?.from && range?.to ? (
             <>
               Réservation du{" "}
@@ -55,7 +56,7 @@ interface PropsReservation {
           ) : (
             <>Aucune date sélectionnée</>
           )}
-        </div>
+        </div> */}
       </div>
     );
   }
