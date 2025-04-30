@@ -133,7 +133,7 @@ export default function ServicesBody() {
   const services = [
     {
       title: "Transactions",
-      imageSrc: "/assets/images/illustrations/page-accueil/service-2.png",
+      imageSrc: "/assets/images/carrousel/carrousel_3.png",
       icon: <Building className="shrink-0" size={32} />,
       iconAction: <SquareArrowOutUpRight className="shrink-0" size={20} />,
       type: "link",
