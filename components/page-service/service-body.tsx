@@ -16,14 +16,15 @@ import ListingsInfoBienScroll from "./listings-info-bien-scroll";
 import GestionImmobilier from "./gestion-immonilier-drawer";
 import ExpertiseDrawer from "./expertise-drawer";
 import Syndic from "./syndic-drower";
+import Link from "next/link";
 type ServiceCardProps = {
   title: string;
   imageSrc: string;
   icon: React.ReactNode;
-  // iconAction: React.ReactNode;
   drawerContent:React.ReactNode;
   describe: string;
   type: "link" | "drower" | string;
+  linkTo?:string
 };
 
 // function MyComponent() {
@@ -34,10 +35,10 @@ function ServiceCard({
   title,
   imageSrc,
   icon,
-  // iconAction,
   drawerContent,
   describe,
   type,
+  linkTo
 }: ServiceCardProps) {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
@@ -86,9 +87,12 @@ function ServiceCard({
       <div className=" pt-5 flex gap-8 items-center justify-between cursor-pointer">
         <p className="text-2xl font-bold"> {describe} </p>
         {type == "link" && (
-          <span className="bg-gray-700 p-4 rounded-full text-white">
-           <SquareArrowOutUpRight className="shrink-0" size={20} />
-          </span>
+          <Link  
+          href={linkTo||''}
+          className="bg-gray-700 p-4 rounded-full text-white"
+          >
+            <SquareArrowOutUpRight className="shrink-0" size={20} />
+          </Link>
         )}
         {type == "drower" && (
           <span
@@ -133,6 +137,7 @@ export default function ServicesBody() {
       icon: <Building className="shrink-0" size={32} />,
       iconAction: <SquareArrowOutUpRight className="shrink-0" size={20} />,
       type: "link",
+      linkTo:"services/transaction",
       // componentSheet:<DrawerConseil  isDrawerOpen={isDrawerOpen} />,
       describe:
         "Découvrez nos biens à travers une collection riche en propriétés destinées tant aux particuliers qu'aux professionnels",
@@ -202,8 +207,8 @@ export default function ServicesBody() {
               imageSrc={service.imageSrc}
               icon={service.icon}
               describe={service.describe}
-              // iconAction={service.iconAction}
               type={service.type}
+              linkTo={service.linkTo}
               drawerContent={service.drawerContent}
             />
           ))}

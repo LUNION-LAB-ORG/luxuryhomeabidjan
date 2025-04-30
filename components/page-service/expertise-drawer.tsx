@@ -194,7 +194,7 @@ export default function ExpertiseDrawer() {
                 <div>
                   <Image
                     // className="w-[50px]"
-                    src="/assets/images/icons/house.svg"
+                    src="/assets/images/icons/iconHouse2.png"
                     alt="user"
                     height={60}
                     width={60}

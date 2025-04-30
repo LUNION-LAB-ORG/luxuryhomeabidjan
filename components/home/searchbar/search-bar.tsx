@@ -100,69 +100,71 @@ export function SearchBar() {
   }, []);
 
   return (
-    <div className="relative mx-auto container w-full px-2 md:px-4">
-      <div className="rounded-full bg-white border-7 border-slate-100 px-6 py-3 my-10 relative  lg:p-4 flex flex-col gap-2 lg:gap-0 lg:flex-row items-center justify-between">
+    <div className="relative mt-10 md:mt-20  mx-auto container w-full px-2 md:px-14">
+      <div className="rounded-full bg-white border-7 border-stone-100 px-5 lg:px-2 py-3 my-10 relative  lg:py-2 flex flex-col gap-2 lg:gap-0 lg:flex-row items-center justify-between">
         <div className="relative overflow-auto w-full ">
           <div
             onClick={() => setIsOpen(!isOpen)}
-            className="px-2 z-10 flex justify-between items-center cursor-pointer"
+            className="ppx-2 z-10 flex justify-between items-center cursor-pointer"
           >
-            <span className="w-ful lg:pl-26 text-md md:text-2xl font-semibold cursor-pointer">
+            <span className="w-ful lg:pl-15 text-md md:text-[28px] font-bold cursor-pointer">
               Trouver mon logement ici
             </span>
-            <div className="hidden lg:flex items-center">
-              <Image
-                // className="w-[50px]"
-                src="/assets/images/user-1.png"
-                alt="user"
-                height={30}
-                width={30}
-              />
-              <span>Accédez au filtrage</span>
+
+            <div className="flex gap-12">
+              <div className="hidden lg:flex items-center gap-4">
+                <Image
+                  // className="w-[50px]"
+                  src="/assets/images/icons/user1a.png"
+                  alt="user"
+                  height={50}
+                  width={50}
+                />
+                <span>Accédez au filtrage</span>
+              </div>
+
+              <div className="hidden lg:flex items-center gap-2 text-stone-400 p-5 px-7 bg-stone-800 rounded-4xl">
+                <Search className="h-4 w-4" />
+                <span>Rechercher</span>
+              </div>
             </div>
 
-            <div className="hidden lg:flex items-center gap-2 text-white p-5 px-7 bg-black rounded-3xl">
-              <Search className="h-4 w-4" />
-              <span>Rechercher</span>
-            </div>
             <span className="lg:hidden">
-              <Search className="h-4 w-4" />
+              <Search className="h-5 w-5 md:h-7 md:w-7" />
             </span>
           </div>
           <AnimatePresence>
-
-         
-          {isOpen && (
-            <motion.div
-              variants={variants}
-              initial="hidden"
-              animate="visible"
-              exit="exit"
-              transition={{ duration: 0.3 }}
-              className="absolute z-20 w-fit overflow-auto bg-white -top-2 lg:-top-0"
-              ref={menuRef}
-            >
-              <div className="flex ggap-5 lg:gap-0  items-center ">
-                <DrawerLocation
-                  service="location"
-                  setIsDrawerOpen={handleDrawerOpenChange}
-                  setIsSelectOpen={handleSelectChange}
-                  handleDialogLieuxOpen={handleDialogLieuxOpen}
-                />
-                <DrawerAchat
-                  service="achat"
-                  setIsDrawerOpen={handleDrawerOpenChange}
-                  setIsSelectOpen={handleSelectChange}
-                  handleDialogLieuxOpen={handleDialogLieuxOpen}
-                />
-                <div className="text-nowrap w-fit  lg:hover:bg-black lg:hover:text-slate-100 lg:text-lg text-slate-600 font-semibold border-none shadow-none rounded-full  lg:px-5 lg:py-4">
-                  <Link href="#">Vendre un bien</Link>
+            {isOpen && (
+              <motion.div
+                variants={variants}
+                initial="hidden"
+                animate="visible"
+                exit="exit"
+                transition={{ duration: 0.3 }}
+                className="absolute z-20 w-fit overflow-auto bg-white -top-2 lg:-top-0"
+                ref={menuRef}
+              >
+                <div className="flex items-center ">
+                  <DrawerLocation
+                    service="location"
+                    setIsDrawerOpen={handleDrawerOpenChange}
+                    setIsSelectOpen={handleSelectChange}
+                    handleDialogLieuxOpen={handleDialogLieuxOpen}
+                  />
+                  <DrawerAchat
+                    service="achat"
+                    setIsDrawerOpen={handleDrawerOpenChange}
+                    setIsSelectOpen={handleSelectChange}
+                    handleDialogLieuxOpen={handleDialogLieuxOpen}
+                  />
+                  <div className="text-nowrap w-fit  lg:hover:bg-black lg:hover:text-slate-100 lg:text-lg text-slate-600 font-semibold border-none shadow-none rounded-full  lg:px-5 lg:py-4">
+                    <Link href="#">Vendre un bien</Link>
+                  </div>
+                  {/* <DrawerVendre setIsDrawerOpen={handleDrawerOpenChange}/> */}
                 </div>
-                {/* <DrawerVendre setIsDrawerOpen={handleDrawerOpenChange}/> */}
-              </div>
-            </motion.div>
-          )}
-           </AnimatePresence>
+              </motion.div>
+            )}
+          </AnimatePresence>
         </div>
       </div>
     </div>

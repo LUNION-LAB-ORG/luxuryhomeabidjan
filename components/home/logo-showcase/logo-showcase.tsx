@@ -12,7 +12,7 @@ export default function LogoShowcase() {
   ]
 
   return (
-    <section className="px-4 py-12 md:py-16">
+    <section className="px-4 py-12 pt-0 md:py-16">
       <div className="container  mx-auto">
         <h2 className="text-2xl  font-bold text-center mb-10">Ils nous ont fait confiance</h2>
         <div className="flex flex-wrap justify-center items-center gap-2 ">

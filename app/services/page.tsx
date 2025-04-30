@@ -11,7 +11,6 @@ export default function Service(){
     return(
         <div>
             <HeroService/>
-            {/* <HeroSection/> */}
             <ServicesBody/>
             <BlogSection/>
         </div>
