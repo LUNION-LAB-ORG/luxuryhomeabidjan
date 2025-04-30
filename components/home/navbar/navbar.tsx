@@ -35,7 +35,7 @@ const navItems = [
   },
   { name: "Programmes", href: "/programmes", icon: <Building size={18} /> },
   { name: "Services", href: "/services", icon: <Briefcase size={18} /> },
-  // { name: "Contacts", href: "/contacts", icon: <Phone size={18} /> },
+  { name: "Contacts", href: "/contacter", icon: <Phone size={18} /> },
 ];
 export function Navbar() {
   const [isScrolled, setIsScrolled] = React.useState(false);
