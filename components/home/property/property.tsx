@@ -56,11 +56,6 @@ export function PropertyCarousel() {
 
   // Sample property data
   const properties = [
-    // {
-    //   location: "Cocody",
-    //   name: "La cité Riviera STELLA",
-    //   imageSrc: "/assets/images/illustrations/page-accueil/property-1..webp",
-    // },
     {
       location: "Cocody",
       name: "La cité Riviera STELLA",
@@ -99,7 +94,7 @@ export function PropertyCarousel() {
   ];
 
   return (
-    <section className="py-16">
+    <section className="py-8 md:py-12">
       <div className="px-4 md:px-16">
         <h2 className="mb-8 lg:mb-10 text-center text-3xl font-bold md:text-5xl">
           Opérations immobilières

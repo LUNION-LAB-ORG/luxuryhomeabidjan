@@ -63,7 +63,7 @@ export default function HeroSection() {
       <HeroCarouselFade
         slides={heroSlides}
         autoplayDelay={5000}
-        className="mx-auto w-[95%] h-[calc(100vh-300px)] md:h-[calc(100vh-120px)]"
+        className="mx-auto w-[95%] h-[calc(100vh-300px)] md:h-[calc(100vh-120px)] 2xl:h-[800px]"
       />
     </div>
   );
