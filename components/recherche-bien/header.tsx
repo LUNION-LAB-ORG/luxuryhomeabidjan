@@ -56,24 +56,26 @@ export default function HeaderRechercheBien() {
           <h2 className="text-[16px] lg:text-[24px] mb-2 font-semibold">
           Location
           </h2>
-          <h1 className="pb-12 lg:pb-22 text-2xl md:text-3xl lg:text-[80px] font-bold lg:leading-19">
+          <h1 className="pb-12 lg:pb-22 text-2xl sm:text-3xl lg:text-[80px] font-bold lg:leading-19">
           Retrouvez tout type de propriété de standing chez nous          </h1>
         </div>
-        <div className="px-4 sm:px-10 lg:px-0 mx-auto max-w-4xl flex justify-between items-center  lg:gap-16">
+        <div className="px-4 sm:px-10 lg:px-0 mx-auto max-w-xl lg:max-w-[850px]   flex justify-between items-center  lg:gap-16">
 
             {
          
          icons.map((item,index)=>{
             return(
-                <div key={index}  className=" flex flex-col items-center gap-2">
+                <div key={index}  className="flex flex-col items-center gap-2 
+            transition duration-900 ease-in-out 
+            hover:scale-115 hover:opacity-60">
                 <Image
-                className="lg:w-[50px]"
+                className="w-[25px] lg:w-[65px]"
                  width={35} 
                  height={35}
                   alt="appartement"
                    src={item.srcIcon}
                    />
-                <p>{item.name}</p>
+                <p className="text-[14px]">{item.name}</p>
             </div>        
 
             )

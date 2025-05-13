@@ -30,7 +30,9 @@ function PropertyCard({ location, name, imageSrc }: PropertyCardProps) {
         </div>
 
         {/* Camera Icon */}
-        <Link href='propriete/detail/1'>
+        <Link
+         className="cursor-pointer"
+         href='/biens-immobilier-details/1'>
           <div className="absolute bottom-4 right-4 flex h-8 w-8 items-center justify-center rounded-full bg-slate-800 text-white backdrop-blur-sm">
             <ExternalLink className="text-white" />
           </div>
