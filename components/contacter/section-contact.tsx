@@ -13,6 +13,7 @@ import {
 } from "../ui/form";
 import { Input } from "../ui/input";
 import { Button } from "../ui/button";
+import Image from "next/image";
 
 const formSchema = z.object({
   name: z.string().min(2, {
