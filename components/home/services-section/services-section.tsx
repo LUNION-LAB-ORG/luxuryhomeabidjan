@@ -127,31 +127,31 @@ export function ServicesSection() {
       title: "Expertise & Conseils en immobilier",
       imageSrc: "/assets/images/illustrations/page-accueil/service-2.png",
       icon: <Briefcase size={32} />,
-       navLink:"#"
+       navLink:"/services#expertise"
     },
     {
       title: "Syndic de copropriété ",
       imageSrc: "/assets/images/illustrations/page-accueil/service-2.png",
       icon: <Users size={32} />,
-       navLink:"#"
+       navLink:"/services#syndic"
     },
     {
       title: "Gestion immobilière",
       imageSrc: "/assets/images/illustrations/page-accueil/service-2.png",
       icon: <Home size={32} />,
-       navLink:"#"
+       navLink:"/services#immobiliere"
     },
     {
       title: "Opérations / projets immobiliers",
       imageSrc: "/assets/images/illustrations/page-accueil/service-2.png",
       icon: <Lightbulb size={32} />,
-       navLink:"#"
+       navLink:"/services#operations"
     },
     {
       title: "Home Staging",
       imageSrc: "/assets/images/illustrations/page-accueil/service-2.png",
       icon: <PaintBucket size={32} />,
-       navLink:"#"
+       navLink:"/services#staging"
     },
   ];
 

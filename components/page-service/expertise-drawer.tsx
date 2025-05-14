@@ -1,28 +1,29 @@
 import Image from "next/image";
 import ListingsInfoBienScroll from "./listings-info-bien-scroll";
 import { ChevronRight } from "lucide-react";
+import FooterService from "./footer-service";
 
 export default function ExpertiseDrawer() {
   return (
-    <div>
+    <div >
       {/* header */}
-      <div className="w-full ">
+      <div className="w-full object-cover ">
         <Image
-          className="w-full object-cover max-h-[550px]"
+          className="w-full object-cover h-[350px] lg:h-[550px]"
           alt="image lieux "
           height={500}
           width={500}
-          src="https://images.unsplash.com/photo-1662026025913-c038e4d917f9?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          src="/assets/images/img/expertise-img1.jpg"
         />
       </div>
       {/* body */}
-      <div className="text-xl text-stone-600 lg:text-[28px] leading-9">
+      <div className="text-xl text-stone-600 lg:text-[28px] lg:leading-9">
         <div className="lg:max-w-6xl px-4 lg:px-0 max-w-2xl  mx-auto">
-          <h3 className=" text-3xl md:text-4xl lg:text-[66px] text-black text-center font-bold py-8 lg:py-16">
+          <h3 className=" text-[24px] md:text-4xl lg:text-[66px] text-black text-center font-bold py-4 lg:pt-10 lg:pb-14">
             Expertise & Conseils en immobilier
           </h3>
 
-          <p className="mb-12 lg:mb-16 lg:text-[28px]">
+          <p className="mb-12 lg:mb-16 lg:text-[28px] leading-7 ">
             Luxury Home Abidjan est un cabinet d’expertise et de conseil
             immobilier qui vous accompagne dans l’évaluation et l’élaboration de
             vos projets. Nous intervenons auprès de particuliers et de
@@ -31,8 +32,8 @@ export default function ExpertiseDrawer() {
         </div>
 
         <div className="lg:max-w-6xl px-4 lg:px-0 max-w-2xl mx-auto">
-          <div className=" bg-stone-100 p-6 pt-8 lg:p-8 lg:px-10 rounded-4xl">
-            <h3 className="text-black font-bold text-center text-xl lg:text-[28px] mb-6  lg:mb-8">
+          <div className="leading-7 lg:leading-9 bg-stone-100 p-6 pt-8 lg:p-7 lg:px-10 rounded-4xl">
+            <h3 className="leading-7 lg:leading-9 text-black font-bold text-center text-xl lg:text-[26px] mb-4 lg:mb-6">
               Qu’est-ce que l’expertise immobilière ?
             </h3>
 
@@ -55,26 +56,26 @@ export default function ExpertiseDrawer() {
         {/* second partie */}
 
         <div className="px-4 lg:px-0 ">
-          <div className=" max-w-2xl lg:max-w-6xl mx-auto mb-10 pb-10 rounded-3xl bg-stone-100">
+          <div className="max-w-2xl lg:max-w-6xl mx-auto mb-10 pb-10 rounded-3xl bg-stone-100">
             <div>
               <div className="w-full">
                 <Image
-                  className="w-full max-h-[600px] rounded-t-3xl"
+                  className="w-full object-cover h-[350px] lg:h-[600px] rounded-t-3xl"
                   alt="image lieux "
                   height={500}
                   width={500}
-                  src="https://images.unsplash.com/photo-1662026025913-c038e4d917f9?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  src="/assets/images/img/expertise-img2.jpg"
                 />
               </div>
-              <div className=" px-2 sm:px-8 mb-12 lg:mb-16 ">
-                <h3 className="text-xl md:text-3xl llg:text-3xl text-black text-center font-bold">
+              <div className=" px-2 sm:px-8 mb-10 lg:mb-16 ">
+                <h3 className="pb-4 pt-2 lg:pb-0 text-xl md:text-[26px]  text-black text-center font-bold">
                   Notre expertise immobilière
                 </h3>
-                <p>
+                <p className="leading-7 lg:leading-9">
                   Elle est la conclusion officielle d’une évaluation approfondie
                   du bien basée sur l’étude de :
                 </p>
-                <ul className="px-6 lg:px-10 list-disc">
+                <ul className="px-6 lg:px-10 list-disc leading-7">
                   <li>la situation géographique et l’environnement immédiat</li>
                   <li>la situation juridique ( le titre de propriété )</li>
                   <li>la contenance ( superficie totale et bâtie )</li>
@@ -86,10 +87,10 @@ export default function ExpertiseDrawer() {
               {/* second partie */}
 
               <div>
-                <h3 className="pb-6 text-xl md:text-3xl  text-black text-center font-bold">
+                <h3 className="pb-4 lg:pb-6 text-xl md:text-[26px] text-black text-center font-bold">
                   L’expertise LHA
                 </h3>
-                <ul className="px-8 lg:px-18 list-disc">
+                <ul className="px-8 lg:px-18 list-disc leading-7 lg:leading-9">
                   <li>
                     Rassurer les acteurs économiques grâce à une analyse
                     complète, aussi bien technique qu’économique du bien mis en
@@ -105,11 +106,11 @@ export default function ExpertiseDrawer() {
           </div>
         </div>
         {/* conseil last partie*/}
-        <div className="max-w-2xl lg:max-w-6xl px-4 ssm:px-8 mx-auto">
-          <h3 className="pb-6 text-xl md:text-3xl  text-black text-center font-bold">
+        <div className="max-w-2xl lg:max-w-6xl px-4 lgm:px-0 mx-auto">
+          <h3 className="pb-4 lg:pb-6 text-xl md:text-[26px]  text-black text-center font-bold">
             LHA Conseils
           </h3>
-          <p className="mb-12 lg:mb-16">
+          <p className="mb-12 lg:mb-16 leading-7">
             Grâce à sa maîtrise de l’environnement, du Marché et de la demande,
             l’équipe LHA devient votre partenaire CONSEIL. Peu importe votre
             profil, primo accédant ou investisseur, résident ou étranger
@@ -117,9 +118,9 @@ export default function ExpertiseDrawer() {
             conseiller et vous accompagner en toute transparence tout au long de
             votre projet.
           </p>
-          <div className="flex gap-4  overflow-hidden flex-col lg:flex-row">
-            <div className="w-full lg:w-1/2 bg-stone-100 py-10  rounded-4xl max-w-6xl px-4 sm:px-8 mb-12 lg:mb-16">
-              <h3 className="pb-6 text-xl md:text-3xl llg:text-3xl text-black font-bold">
+          <div className="flex lg:gap-4  overflow-hidden flex-col lg:flex-row">
+            <div className="leading-7 lg:leading-9 relative w-full lg:w-1/2 bg-stone-100 py-10  rounded-4xl max-w-6xl px-4 sm:px-8 mb-12 lg:mb-16">
+              <h3 className=" pb-4 lg:pb-6 text-xl lg:max-w-3/4 md:text-[26px] leading-8 text-black font-bold">
                 Investissez dans l’immobilier en Côte d’Ivoire !
               </h3>
               <p>
@@ -127,7 +128,7 @@ export default function ExpertiseDrawer() {
                 afin de cerner vos besoins et objectifs. Nous vous conseillons
                 sur :
               </p>
-              <ul className="pb-4 pl-4 lg:pl-0 lg:px-10 list-disc">
+              <ul className="pb-18 pl-4 lg:pl-16list-disc">
                 <li>les types de projet</li>
                 <li>les coûts de construction</li>
                 <li>l’environnement fiscal et économique</li>
@@ -141,9 +142,10 @@ export default function ExpertiseDrawer() {
                 </li>
               </ul>
               {/* <div> <HouseIcon className="w-6 h-6 text-gray-500" /></div> */}
-              <div>
+              {/* logo home */}
+              <div className="absolute bottom-0 pb-10 py-26">
                 <Image
-                  // className="w-[50px]"
+                  className="w-[40px] lg:w-[60px]"
                   src="/assets/images/icons/house.svg"
                   alt="user"
                   height={60}
@@ -152,11 +154,11 @@ export default function ExpertiseDrawer() {
               </div>
             </div>
             {/* seconde div */}
-            <div className="w-full lg:w-1/2 bg-stone-100 py-10 rounded-4xl max-w-6xl px-4 sm:px-8 mb-12 lg:mb-16">
-              <h3 className="pb-6 text-xl md:text-3xl  text-black font-bold">
+            <div className="relative w-full lg:w-1/2 bg-stone-100 py-10 rounded-4xl max-w-6xl px-4 sm:px-8 mb-12 lg:mb-16">
+              <h3 className="pb-4 lg:pb-6 text-xl md:text-3xl  text-black font-bold">
                 LHA intervient
               </h3>
-              <div className="flex flex-col gap-8">
+              <div className="flex flex-col gap-4 lg:gap-8 leading-7 lg:leading-9">
                 <div>
                   <h4 className="text-muted-foreground font-bold">
                     Avant le projet
@@ -171,29 +173,23 @@ export default function ExpertiseDrawer() {
 
                 <div>
                   <h4 className="text-muted-foreground font-bold">
-                    Avant le projet
+                    Pendant le projet 
                   </h4>
                   <p>
-                    Conseil sur le type d’investissement, choix  du type de
-                    construction, budget financier, élaboration de projets  sur
-                    mesure, simulation de loyers futurs , simulation plus value,
-                     étude prévisionnelle. 
+                 Conseil aménagement, assistance administrative (permis de construire, plans…) 
                   </p>
                 </div>
-                <div>
+                <div className="pb-18 ">
                   <h4 className="text-muted-foreground font-bold">
-                    Avant le projet
+                    Après le projet
                   </h4>
                   <p>
-                    Conseil sur le type d’investissement, choix  du type de
-                    construction, budget financier, élaboration de projets  sur
-                    mesure, simulation de loyers futurs , simulation plus value,
-                     étude prévisionnelle. 
-                  </p>
+                     Gestion locative, vente, syndic de copropriété , commercialisation pour les professionnels.                  </p>
                 </div>
-                <div>
+                <div className="absolute bottom-0 pb-10">
                   <Image
-                    // className="w-[50px]"
+                   className="w-[40px] lg:w-[60px]"
+
                     src="/assets/images/icons/iconHouse2.png"
                     alt="user"
                     height={60}
@@ -208,31 +204,7 @@ export default function ExpertiseDrawer() {
       </div>
 
         {/* footer */}
-        <div className=" ">
-        {/* icon lhA */}
-        <div className="my-10 bg-gray-950 rounded-full mx-auto w-[100px] h-[100px] p-6 lg:w-[180px] lg:h-[180px] lg:p-10">
-          <Image
-            className="object-cover w-full h-auto sshrink-0 "
-            src="/assets/images/icone.png"
-            alt="user"
-            height={200}
-            width={200}
-          />
-        </div>
-        <div className="border-t border-gray-700 ">
-          <div className="mt-10 ml-auto max-w-xl items-end flex justify-between pr-24">
-            <div >
-              <p className="text-[14px]">Page suivante</p>
-              <p className="font-bold text-[16px] text-black">
-                Syndic de copropriété
-              </p>
-            </div>
-            <span>
-              <ChevronRight />
-            </span>
-          </div>
-        </div>
-      </div>
+      <FooterService name="Gestion immobiliere"/>
     </div>
   );
 }
