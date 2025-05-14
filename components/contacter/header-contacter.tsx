@@ -8,7 +8,7 @@ export default function HeaderPageContacter(){
       {/* div1 : Image avec hauteur fixe */}
       <div className="w-full h-[500px] relative overflow-hidden">
         <Image
-          src="/assets/images/illustrations/programs/hero-right.png"
+          src="/assets/images/backgrounds/contact.jpg"
           alt="Modern luxury home with swimming pool"
           fill
           className="object-cover"
@@ -16,7 +16,7 @@ export default function HeaderPageContacter(){
       </div>
     
       {/* div2 : Texte en dessous */}
-      <div className="max-w-7xl mx-auto py-16">
+      <div className="max-w-7xl mx-auto py-6 lg:py-16">
         <h1 className="text-2xl md:text-4xl px-4 lg:px-0 text-center lg:text-[80px] font-bold mb-6 lg:mb-8 bg-gradient-to-r from-purple-500 via-pink-700 to-pink-500 bg-clip-text text-transparent">
           Rejoignez notre communauté et aidez-nous à la définir.
         </h1>

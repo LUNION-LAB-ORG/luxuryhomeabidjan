@@ -13,6 +13,7 @@ import {
 } from "../ui/form";
 import { Input } from "../ui/input";
 import { Button } from "../ui/button";
+import Image from "next/image";
 
 const formSchema = z.object({
   name: z.string().min(2, {
@@ -38,7 +39,7 @@ export default function SectionPageContact() {
     defaultValues: {
       name: "",
       lasName: "",
-      fone: 0,
+      fone: 225,
       email: "",
       message: "",
     },
@@ -52,7 +53,7 @@ export default function SectionPageContact() {
   }
 
   return (
-    <div className="max-w-2xl lg:max-w-4xl mx-auto px-6">
+    <div className="max-w-2xl lg:max-w-4xl mx-auto px-6 ">
       <div className=" mx-auto ">
         <h2 className="text-[24px] text-center font-bold pb-8">
           Laissez nous un message en utilisant le formulaire ci-dessous
@@ -71,7 +72,7 @@ export default function SectionPageContact() {
                     </FormLabel>
                     <FormControl>
                       <Input
-                        className="rounded-xl border-2 py-7"
+                        className="rounded-xl border-2 py-4 lg:py-7"
                         placeholder="Nom"
                         {...field}
                       />
@@ -91,7 +92,7 @@ export default function SectionPageContact() {
                     </FormLabel>
                     <FormControl>
                       <Input
-                        className="rounded-xl border-2 py-7"
+                        className="rounded-xl border-2 py-4 lg:py-7"
                         placeholder="Prénom"
                         {...field}
                       />
@@ -111,7 +112,7 @@ export default function SectionPageContact() {
                     </FormLabel>
                     <FormControl>
                       <Input
-                        className="rounded-xl border-2 py-7"
+                        className="rounded-xl border-2 py-4 lg:py-7"
                         placeholder="+225"
                         {...field}
                       />
@@ -131,7 +132,7 @@ export default function SectionPageContact() {
                     </FormLabel>
                     <FormControl>
                       <Input
-                        className="rounded-xl border-2 py-7"
+                        className="rounded-xl border-2 py-4 lg:py-7"
                         placeholder="E-mail"
                         {...field}
                       />
@@ -161,7 +162,7 @@ export default function SectionPageContact() {
                   </FormItem>
                 )}
               />
-              <Button type="submit" className="px-28">Soumettre ma demande</Button>
+              <Button type="submit"  variant="secondary" className="lg:px-28 py-5 text-[18px] font-bold">Soumettre ma demande</Button>
             </form>
           </Form>
         </div>

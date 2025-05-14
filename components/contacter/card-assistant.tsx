@@ -3,12 +3,12 @@ import Image from "next/image";
 export default function CardAssistant(){
 
     return(
-        <div className="px-4 lg:px-14 mx-auto py-16">
-            <h2 className="pb-10 text-[26px] font-bold text-black text-center">
+        <div className="px-4 lg:px-14 mx-auto py-10 lg:py-16">
+            <h2 className="leading-8 lg:leading-9 pb-10 text-[26px] font-bold text-black text-center">
                 Obtenez de l'aide avec l’assistant Mr LHA
                 </h2>
-            <div className="text-stone-600 leading-8 text-[24px] sm:text-[30px] font-bold flex flex-col lg:flex-row gap-8 ">
-                <div className="relative lg:w-1/2 h-[250px] lg:h-[300px] bg-stone-100 rounded-4xl">
+            <div className="text-stone-600 leading-8 text-[22px] sm:text-[30px] font-bold flex flex-col lg:flex-row gap-8 ">
+                <div className="relative lg:w-1/2 h-[200px] lg:h-[300px] bg-stone-100 rounded-4xl">
                     <p className="relative top-[40%] max-w-xl px-4 sm:px-10 ">
                     Vous pouvez parler au conseiller de LHA via Whatsapp
                     </p>
@@ -24,7 +24,7 @@ export default function CardAssistant(){
                 </div>
 
 
-                <div className="relative lg:w-1/2 h-[300px] bg-stone-100 rounded-4xl">
+                <div className="relative lg:w-1/2 h-[250px] lg:h-[300px] bg-stone-100 rounded-4xl">
                     <p className="relative top-[40%] max-w-xl px-4 sm:px-10 ">
                     Ecrivez à Mr LHA sur les réseaux sociaux
                     </p>
