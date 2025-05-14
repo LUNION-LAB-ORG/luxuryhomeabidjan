@@ -6,7 +6,7 @@ export default function ServiceSection() {
     <div className="max-w-5xl  mx-auto my-20">
       <div className="px-4">
         <div className=" flex flex-col md:flex-row gap-10">
-        <Link href="">
+        <Link href="/recherche-bien">
             <div className="relative group">
                 <Image
                 className="rounded-4xl"
@@ -23,7 +23,7 @@ export default function ServiceSection() {
             </div>
          </Link>
        
-         <Link href="">
+         <Link href="/recherche-bien">
             <div className="relative group">
                 <Image
                 className="rounded-4xl"

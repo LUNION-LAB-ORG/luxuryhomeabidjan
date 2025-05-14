@@ -16,7 +16,7 @@ type ExclusivePropertyProps = {
 function ExclusiveProperty({ name, imageSrc, bedrooms, bathrooms, area }: ExclusivePropertyProps) {
   return (
     <div className="relative w-4/5 md:w-3/8 min-w-[300px]] max-w-[400px]] flex-shrink-0 overflow-hidden ">
-      <Link href='propriete/detail/1'>
+      <Link href='/biens-immobilier-details/1'>
     
       <div className="relative aspect-[4/3] w-full">
         <Image

@@ -9,8 +9,8 @@ type ExclusivePropertyProps = {
 
 function ExclusiveProperty({ service,desc}: ExclusivePropertyProps) {
   return (
-    <div className="relative leading-7 text-2xl lg:text-[26px] flex flex-col gap-6 pb-22 px-6 pt-16 lg:pb-46 lg:pt-18 lg:px-8 rounded-4xl text-white bg-black w-[90%] sm:w-[60%]  lg:w-[44%] flex-shrink-0 overflow-hidden ">
-      <h4 className="font-bold pb-6 lg:pb-10">{service}</h4>
+    <div className="relative leading-7 text-[18px] lg:text-[26px] flex flex-col lg:gap-6 pb-12 px-6 pt-12 lg:pb-46 lg:pt-20 lg:px-8 rounded-4xl text-white bg-black w-[90%] sm:w-[60%]  lg:w-[44%] flex-shrink-0 overflow-hidden ">
+      <h4 className="font-bold pb-6 lg:pb-8 lg:max-w-2/3">{service}</h4>
       <p className="" >{desc}</p>
     </div>
   )
@@ -41,7 +41,7 @@ export default function ListingsInfoBienScroll() {
   return (
     <section className="py-12 md:py-16">
       <div >
-        <h3 className=" text-black font-bold text-center text-xl lg:text-[28px]  mb-6  lg:mb-8">À quel moment aurez-vous besoin de nous ?</h3>
+        <h3 className="px-4 text-black font-bold text-center text-xl lg:text-[28px]  mb-6  lg:mb-8">À quel moment aurez-vous besoin de nous ?</h3>
 
         <div className="relative">
 

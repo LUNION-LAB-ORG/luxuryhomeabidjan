@@ -26,26 +26,14 @@ function PropertyCard({ location, name, imageSrc }: PropertyCardProps) {
         {/* Overlay */}
         <div className="absolute inset-0 z-[1] bg-gradient-to-b from-black/70 via-transparent to-black/30" />
 
-        {/* Location and Name */}
-        <div className="absolute inset-0 z-[2] p-6 text-white">
-          <div className="h-full flex flex-col justify-between">
-            {/* Text */}
-            <div>
-              <div className="pb-2 text-sm font-light text-white">
-                {location}
-              </div>
-              <div className="text-xl lg:text-xl max-w-[210px] font-bold">
-                {name}
-              </div>
-            </div>
-            {/* Camera Icon */}
-            <Link href="propriete/detail/1">
-              <div className="justify-self-end flex h-8 w-8 p-2 items-center justify-center rounded-full bg-black/70 text-white backdrop-blur-sm">
-                <ExternalLink className="text-white" />
-              </div>
-            </Link>
+        {/* Camera Icon */}
+        <Link
+         className="cursor-pointer"
+         href='/biens-immobilier-details/1'>
+          <div className="absolute bottom-4 right-4 flex h-8 w-8 items-center justify-center rounded-full bg-slate-800 text-white backdrop-blur-sm">
+            <ExternalLink className="text-white" />
           </div>
-        </div>
+        </Link>
       </div>
     </div>
   );
