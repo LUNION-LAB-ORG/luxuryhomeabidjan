@@ -152,7 +152,7 @@ function Card({item}:{item:Data}){
     transition: {
       type: "spring",
       stiffness: 200,
-      damping: 50,
+      damping: 20,
     },
   },
   initial: {

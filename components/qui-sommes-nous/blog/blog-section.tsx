@@ -90,29 +90,25 @@ export default function BlogSection() {
     <section className="py-12 container mx-auto px-2 md:px-4 lg:px-16">
       <h2 className="text-3xl font-bold text-center mb-8">Blog</h2>
 
-      <Tabs defaultValue="residences" className="w-full overflow-hidden">
-        <TabsList className="cursor-pointer bg-white lg:gap-46 overflow-x-auto mx-auto  mb-8">
+      <Tabs defaultValue="residences" className=" w-full overflow-hidden">
+        <TabsList className=" cursor-pointer !shadow-none bg-white lg:gap-46 mx-auto  mb-8">
           <TabsTrigger
             value="residences"
-            className=" cursor-pointer text-xl ttext-gray-700 ring-0 shadow-none border-b-primary bborder-b-2 ddata-[state=active]:border-b-2 ddata-[state=active]:border-b-primary rounded-none"
+            className=" !stroke-stone-500  !text-[14px] !lg:text-[18px] cursor-pointer   ttext-gray-700 ring-0 shadow-none border-b-primary bborder-b-2 ddata-[state=active]:border-b-2 ddata-[state=active]:border-b-primary rounded-none"
           >
-            <div>
-            <p>Résidences</p>
-            <p className="h-[1px] w-[200px] bg-black"></p>
-
-            </div>
+          Résidences
            
            
           </TabsTrigger>
           <TabsTrigger
             value="conseils"
-            className="cursor-pointer text-xl text-gray-700 ring-0 shadow-none border-b-primary ddata-[state=active]:border-b-2 ddata-[state=active]:border-primary rounded-none"
+            className="stroke-stone-500 !text-[14px] !lg:text-[18px]  cursor-pointer ml-4 text-xl text-gray-700 ring-0 shadow-none border-b-primary ddata-[state=active]:border-b-2 ddata-[state=active]:border-primary rounded-none"
           >
             Conseils
           </TabsTrigger>
           <TabsTrigger
             value="gestion"
-            className="cursor-pointer text-xl text-gray-700 ring-0 shadow-none border-b-primary ddata-[state=active]:border-b-2 ddata-[state=active]:border-primary rounded-none"
+            className="!stroke-stone-500 !text-[14px] !lg:text-[18px]  cursor-pointer ml-4 text-xl text-gray-700 ring-0 shadow-none border-b-primary ddata-[state=active]:border-b-2 ddata-[state=active]:border-primary rounded-none"
           >
             Gestion immobilière
           </TabsTrigger>

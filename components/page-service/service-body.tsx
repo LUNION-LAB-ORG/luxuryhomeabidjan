@@ -171,7 +171,7 @@ export default function ServicesBody() {
   const services = [
     {
       title: "Transactions",
-      imageSrc: "/assets/images/carrousel/carrousel_3.png",
+      imageSrc: "/assets/images/backgrounds/Slide-service1.jpg",
       icon: <Building className="shrink-0" size={32} />,
       iconAction: <SquareArrowOutUpRight className="shrink-0" size={20} />,
       type: "link",
@@ -183,7 +183,7 @@ export default function ServicesBody() {
     },
     {
       title: "Expertise & Conseils en immobilier",
-      imageSrc: "/assets/images/illustrations/page-accueil/service-2.png",
+      imageSrc: "/assets/images/backgrounds/Slide-service2.jpg",
       icon: <Briefcase className="shrink-0" size={32} />,
       drawerContent:<ExpertiseDrawer/>,
       type: "drower",
@@ -193,7 +193,7 @@ export default function ServicesBody() {
     },
     {
       title: "Gestion immobilière",
-      imageSrc: "/assets/images/illustrations/page-accueil/service-2.png",
+      imageSrc: "/assets/images/backgrounds/Slide-service4.jpg",
       icon: <Home className="shrink-0" size={32} />,
       drawerContent:<GestionImmobilier/>,
       type: "drower",
@@ -202,7 +202,7 @@ export default function ServicesBody() {
     },
     {
       title: "Syndic de copropriété ",
-      imageSrc: "/assets/images/illustrations/page-accueil/service-2.png",
+      imageSrc: "/assets/images/backgrounds/Slide-service1.jpg",
       icon: <Users className="shrink-0" size={32} />,
       drawerContent:<Syndic/>,
       type: "drower",
@@ -211,7 +211,7 @@ export default function ServicesBody() {
     },
     {
       title: "Home Staging",
-      imageSrc: "/assets/images/illustrations/page-accueil/service-2.png",
+      imageSrc: "/assets/images/backgrounds/Slide-service2.jpg",
       icon: <PaintBucket className="shrink-0" size={32} />,
       drawerContent:<GestionImmobilier/>,
       type: "link",
@@ -221,7 +221,7 @@ export default function ServicesBody() {
     },
     {
       title: "Opérations / projets immobiliers",
-      imageSrc: "/assets/images/illustrations/page-accueil/service-2.png",
+      imageSrc: "/assets/images/backgrounds/Slide-service4.jpg",
       icon: <Lightbulb className="shrink-0" size={32} />,
       drawerContent:<GestionImmobilier/>,
       type: "link",

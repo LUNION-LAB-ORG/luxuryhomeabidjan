@@ -1,5 +1,6 @@
 "use client";
 import { Swiper, SwiperSlide } from "swiper/react";
+
 import {
   Autoplay,
   EffectCoverflow,
@@ -9,16 +10,20 @@ import {
 import "swiper/css"; // Importation du CSS de base
 import "swiper/css/effect-coverflow"; // Importation du CSS pour l'effet Coverflow
 import "swiper/css/parallax"; // Importation du CSS pour l'effet Parallax
+import 'swiper/css/pagination';
 
 const images = [
-  "https://images.unsplash.com/photo-1662026025913-c038e4d917f9?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  "https://images.unsplash.com/photo-1662026025913-c038e4d917f9?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  "https://images.unsplash.com/photo-1662026025913-c038e4d917f9?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  "https://images.unsplash.com/photo-1662026025913-c038e4d917f9?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  "https://images.unsplash.com/photo-1662026025913-c038e4d917f9?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  "https://images.unsplash.com/photo-1662026025913-c038e4d917f9?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  "https://images.unsplash.com/photo-1662026025913-c038e4d917f9?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  "https://images.unsplash.com/photo-1662026025913-c038e4d917f9?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  "/assets/images/backgrounds/Slide-service1.jpg",
+  "/assets/images/backgrounds/Slide-service2.jpg",
+  "/assets/images/backgrounds/Slide-service2.jpg",
+  "/assets/images/backgrounds/Slide-service1.jpg",
+  "/assets/images/backgrounds/Slide-service2.jpg",
+  "/assets/images/backgrounds/Slide-service1.jpg",
+  "/assets/images/backgrounds/Slide-service2.jpg",
+  "/assets/images/backgrounds/Slide-service1.jpg",
+    "/assets/images/backgrounds/Slide-service1.jpg",
+  "/assets/images/backgrounds/Slide-service2.jpg",
+  "/assets/images/backgrounds/Slide-service1.jpg",
 
 ];
 
@@ -59,47 +64,61 @@ function HeroSevices() {
     //     ))}
     //   </Swiper>
 
-    <div className="w-[90%] mx-auto">
+    <div className="w-[90%]] mx-auto overflow-hidden ">
      {/* Effet nuage à gauche */}
-     <div className="absolute top-0 left-0 w-[100px] h-full bg-gradient-to-r from-white grayscale blur-2xl via-transparent to-transparent"></div>
+     {/* <div className="absolute top-0 left-0 w-[100px] h-full bg-gradient-to-r from-white grayscale blur-2xl via-transparent to-transparent"></div> */}
 
     {/* Effet nuage à droite */}
-    <div className="absolute top-0 right-0 w-[100px] h-full bg-gradient-to-l from-white via-transparent to-transparent"></div>
+    {/* <div className="absolute top-0 right-0 w-[100px] h-full bg-gradient-to-l from-white via-transparent to-transparent"></div> */}
 
 
-      <Swiper
-        modules={[Autoplay, EffectCoverflow]}
-        effect="coverflow"
-        grabCursor={true}
-        centeredSlides={true}
-       slidesPerView={3}
-        loop={true}
-        autoplay={{
-          delay: 2500,
-          disableOnInteraction: false,
-        }}
-        coverflowEffect={{
-          rotate: 0,
-          stretch: 50,
-          depth: 200,
-          modifier: 1,
-          slideShadows: true,
-        }}
-        pagination={{
-          clickable: true, // Permet de cliquer sur les points pour naviguer
-        }}
-        className="w-full h-[500px]  swiper-slide-custom"
-      >
-        {images.map((src, index) => (
-          <SwiperSlide key={index}>
-            <img
-              src={src}
-              alt={`Slide ${index}`}
-              className="w-full h-full object-cover rounded-lg"
-            />
-          </SwiperSlide>
-        ))}
-      </Swiper>
+ <Swiper
+  modules={[Autoplay, EffectCoverflow, Pagination]}
+  effect="coverflow"
+  grabCursor={true}
+  centeredSlides={true}
+  slidesPerView={3}
+  loop={true}
+  autoplay={{
+    delay: 2500,
+    disableOnInteraction: false,
+  }}
+  coverflowEffect={{
+    rotate: 0,
+    stretch: 50,
+    depth: 200,
+    modifier: 1,
+    slideShadows: true,
+  }}
+  pagination={{
+    clickable: true,
+  }}
+    breakpoints={{
+    0: {
+      slidesPerView: 1,
+    },
+    640: {
+      slidesPerView: 2, // sm
+    },
+    1024: {
+      slidesPerView: 3, // lg et +
+    },
+  }}
+
+  className="w-full h-[500px] swiper-slide-custom relative"
+>
+  {images.map((src, index) => (
+    <SwiperSlide key={index}>
+      <img
+        src={src}
+        alt={`Slide ${index}`}
+        className="w-[90%] sm:w-full  llg:min-w-[1000px] h-full object-cover rounded-[100px]"
+      />
+    </SwiperSlide>
+  ))}
+</Swiper>
+
+
     </div>
   );
 }
