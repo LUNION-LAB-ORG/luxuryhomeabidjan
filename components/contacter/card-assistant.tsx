@@ -7,9 +7,9 @@ export default function CardAssistant(){
             <h2 className="leading-8 lg:leading-9 pb-10 text-[26px] font-bold text-black text-center">
                 Obtenez de l'aide avec l’assistant Mr LHA
                 </h2>
-            <div className="text-stone-600 leading-8 text-[22px] sm:text-[30px] font-bold flex flex-col lg:flex-row gap-8 ">
+            <div className="text-stone-600 leading-7 lg:leading-10 text-[22px] sm:text-[33px] font-bold flex flex-col lg:flex-row gap-8 ">
                 <div className="relative lg:w-1/2 h-[200px] lg:h-[300px] bg-stone-100 rounded-4xl">
-                    <p className="relative top-[40%] max-w-xl px-4 sm:px-10 ">
+                    <p className="relative top-[40%] mmax-w-xl px-4 sm:px-8 ">
                     Vous pouvez parler au conseiller de LHA via Whatsapp
                     </p>
                     <div className="absolute right-[3%] bottom-[5%]">
@@ -25,7 +25,7 @@ export default function CardAssistant(){
 
 
                 <div className="relative lg:w-1/2 h-[250px] lg:h-[300px] bg-stone-100 rounded-4xl">
-                    <p className="relative top-[40%] max-w-xl px-4 sm:px-10 ">
+                    <p className="relative top-[40%] mmax-w-xl px-4 sm:px-10 ">
                     Ecrivez à Mr LHA sur les réseaux sociaux
                     </p>
                     <div className="absolute right-[5%] bottom-[10%] flex gap-3">

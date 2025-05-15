@@ -82,11 +82,9 @@ export function PropertyCarousel() {
   ];
 
   return (
-    <section className="py-8 md:py-12">
-      <div className="px-4 md:px-16">
-        <h2 className="mb-8 lg:mb-10 text-center text-3xl font-bold md:text-5xl">
-          Opérations immobilières
-        </h2>
+    <section className="py-16">
+      <div className="container mx-auto mmd:px-4 lg:px-16">
+        <h2 className="mb-8 lg:mb-10 text-center text-3xl font-bold md:text-5xl">Opérations immobilières</h2>
 
         <div className="relative">
           {/* Scrollable Container */}
@@ -106,17 +104,12 @@ export function PropertyCarousel() {
           </div>
 
           {/* More Details Button */}
-          <div className="mt-6 flex justify-center">
-            <Button
-              variant="outline"
-              className="rounded-full px-6 cursor-pointer"
-            >
-              <span>
-                <ExternalLink />
-              </span>
+          <Link href="/programmes" className="mt-6 flex justify-center">
+            <Button variant="outline" className="rounded-full px-6 cursor-pointer">
+              <span><ExternalLink/></span>
               <span>Plus de détails</span>
             </Button>
-          </div>
+          </Link>
         </div>
       </div>
     </section>
