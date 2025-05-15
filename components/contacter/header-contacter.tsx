@@ -1,8 +1,10 @@
 import Image from "next/image";
 
-export default function HeaderPageContacter() {
-  return (
-    <div className="w-full bg-gray-100 mx-auto   ssm:pt-8 ssm:px-6 llg:px-12 mb-12">
+export default function HeaderPageContacter(){
+
+    return(
+
+      <div className="w-full bg-gray-100 mx-auto   sm:pt-8 sm:px-6 lg:px-12 mb-12">
       {/* div1 : Image avec hauteur fixe */}
       <div className="w-full h-[350px] lg:h-[500px] relative overflow-hidden">
         <Image

@@ -109,13 +109,8 @@ export function PropertyCarousel() {
 
           {/* More Details Button */}
           <Link href="/programmes" className="mt-6 flex justify-center">
-            <Button
-              variant="outline"
-              className="rounded-full px-6 cursor-pointer"
-            >
-              <span>
-                <ExternalLink />
-              </span>
+            <Button variant="outline" className="rounded-full px-6 cursor-pointer">
+              <span><ExternalLink/></span>
               <span>Plus de détails</span>
             </Button>
           </Link>
