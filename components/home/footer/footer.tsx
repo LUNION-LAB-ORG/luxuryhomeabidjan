@@ -19,7 +19,52 @@ export default function Footer() {
             </div>
 
             {/* Contact info */}
-            <div className="bbg-yellow-700 sspace-y-4 flex justify-center md:justify-start flex-wrap gap-2 ">
+
+            {/* mobile */}
+             <div className="md:hidden sspace-y-4 flex justify-center md:justify-start flex-wrap gap-2 ">
+
+
+              {/* div1 */}
+              <div>
+
+                    <div className="mb-2 w-fit px-5 p-2 py-3 flex items-center gap-3 border rounded-full">
+                    <div className="flex items-center justify-center">
+                      <Phone size={16} />
+                    </div>
+                    <span >(+225) 07 49 87 17 13</span>
+                  </div>
+
+                        <div className="w-fit px-5  p-2 py-3 flex items-center gap-3 border rounded-full ww-80">
+                <div className="  flex items-center justify-center">
+                  <Phone size={16} />
+                </div>
+                <span>(+225) 27 22 23 83 80</span>
+              </div>
+
+              </div>
+              
+              {/* div2 */}
+              <div>
+                 
+                   <div className="mb-2 w-fit px-5 p-2 py-3 text-wrap flex items-center gap-3 border rounded-full ww-80">
+                    <div className=" flex items-center justify-center">
+                      <Mail size={16} />
+                    </div>
+                    <span>info@luxuryhomeabidjan.com</span>
+                  </div>
+
+                  <div className="w-fit px-5  py-3 flex items-center gap-3 border rounded-full ww-80 p-2">
+                    <div className=" rounded-full border border-white/30 flex items-center justify-center">
+                      <MapPin size={16} />
+                    </div>
+                    <span>Cocody Abidjan, Côte d'Ivoire</span>
+                  </div>
+              </div>
+             
+            </div>
+
+            {/* lg */}
+            <div className="hidden  sspace-y-4 md:flex justify-center md:justify-start flex-wrap gap-2 ">
               <div className="w-fit px-5 p-2 py-3 flex items-center gap-3 border rounded-full">
                 <div className="flex items-center justify-center">
                   <Phone size={16} />

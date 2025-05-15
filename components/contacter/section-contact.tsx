@@ -55,7 +55,7 @@ export default function SectionPageContact() {
   return (
     <div className="max-w-2xl lg:max-w-4xl mx-auto px-6 ">
       <div className=" mx-auto ">
-        <h2 className="text-[24px] text-center font-bold pb-8">
+        <h2 className="text-[18px] lg:text-[24px] text-center font-bold pb-8">
           Laissez nous un message en utilisant le formulaire ci-dessous
         </h2>
 
