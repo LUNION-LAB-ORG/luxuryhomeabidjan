@@ -157,9 +157,9 @@ export function SearchBar() {
                     setIsSelectOpen={handleSelectChange}
                     handleDialogLieuxOpen={handleDialogLieuxOpen}
                   />
-                  <div className="text-nowrap w-fit  lg:hover:bg-black lg:hover:text-slate-100 lg:text-lg text-slate-600 font-semibold border-none shadow-none rounded-full  lg:px-5 lg:py-4">
+                  {/* <div className="text-nowrap w-fit  lg:hover:bg-black lg:hover:text-slate-100 lg:text-lg text-slate-600 font-semibold border-none shadow-none rounded-full  lg:px-5 lg:py-4">
                     <Link href="#">Vendre un bien</Link>
-                  </div>
+                  </div> */}
                   {/* <DrawerVendre setIsDrawerOpen={handleDrawerOpenChange}/> */}
                 </div>
               </motion.div>
