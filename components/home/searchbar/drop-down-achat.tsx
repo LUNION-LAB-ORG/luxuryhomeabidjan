@@ -78,7 +78,7 @@ export function DrawerAchat({setIsDrawerOpen,setIsSelectOpen,handleDialogLieuxOp
   return (
       <Drawer onOpenChange={setIsDrawerOpen}>
           <DrawerTrigger asChild>
-            <Button className="lg:hover:bg-black lg:hover:text-slate-100 lg:text-lg text-slate-600 font-semibold border-none shadow-none rounded-full  lg:p-7 " variant="outline">Location d'un bien</Button>
+            <Button className="lg:hover:bg-black lg:hover:text-slate-100 lg:text-lg text-slate-600 font-semibold border-none shadow-none rounded-full  lg:p-7 " variant="outline">Achetter un bien</Button>
           </DrawerTrigger>
       <DrawerContent className="shadcn-drawer overflow-y-auto max-w-[1430] mx-auto bg-stone-100 h-[600px] lg:px-22 ppx-8 py-0 mb-0 overflow-hidden">
             <div className="mx-auto w-full max-w-7xl">
