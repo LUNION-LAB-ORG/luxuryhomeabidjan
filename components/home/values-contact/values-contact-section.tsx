@@ -263,7 +263,83 @@ export function ValuesContactSection() {
             </div>
           </div>
         </div>
-      </div>
+
+
+          {/* Values Cards */}
+          <div className="max-w-[550px] flex flex-col gap-6">
+            {/* Transparency Card */}
+            <div className="flex gap-4 rounded-3xl h-fit border-2 p-6">
+              <div className="mb-6 ">
+                <div className="relative h-20 w-20 overflow-hidden rounded-full border-2 border-gray-700">
+                  <Image src="/assets/images/user-4.png" alt="Transparency avatar" fill className="object-cover" />
+                </div>
+              </div>
+              <div>
+                    <h3 className="mb-4 text-centerr text-xl font-semibold">Transparence</h3>
+              <p className=" text-md ">
+                Notre équipe vous garantit un accès permanent à toutes les étapes clés de vos transactions immobilières.
+              </p>
+
+              </div>
+          
+            </div>
+
+            {/* Confidentiality Card */}
+
+             <div className="flex gap-4 rounded-3xl h-fit border-2 p-6">
+              <div className="mb-6 ">
+                <div className="relative h-20 w-20 overflow-hidden rounded-full border-2 border-gray-700">
+                  <Image src="/assets/images/user-4.png" alt="Transparency avatar" fill className="object-cover" />
+                </div>
+              </div>
+              <div>
+                    <h3 className="mb-4 text-centerr text-xl font-semibold">Confidentialité</h3>
+              <p className=" text-md ">
+               Parce que la discrétion est la valeur essentielle au cœur de notre métier, confiez nous en toute sérénité
+                vos projets.              </p>
+
+              </div>
+          
+            </div>
+
+            {/* Availability Card */}
+               <div className="flex gap-4 rounded-3xl h-fit border-2 p-6">
+              <div className="mb-6 ">
+                <div className="relative h-20 w-20 overflow-hidden rounded-full border-2 border-gray-700">
+                  <Image src="/assets/images/user-4.png" alt="Transparency avatar" fill className="object-cover" />
+                </div>
+              </div>
+              <div>
+                    <h3 className="mb-4 text-centerr text-xl font-semibold">Disponibilité & réactivité</h3>
+              <p className=" text-md ">
+                             Une équipe passionnée qui vous assure une prise en charge immédiate et une relation clientèle privilégiée.
+            </p>
+
+              </div>
+          
+            </div>
+
+               {/* Availability Card */}
+               <div className="flex gap-4 rounded-3xl h-fit border-2 p-6">
+              <div className="mb-6 ">
+                <div className="relative h-20 w-20 overflow-hidden rounded-full border-2 border-gray-700">
+                  <Image src="/assets/images/user-4.png" alt="Transparency avatar" fill className="object-cover" />
+                </div>
+              </div>
+              <div>
+                    <h3 className="mb-4 text-centerr text-xl font-semibold">Disponibilité & réactivité</h3>
+              <p className=" text-md ">
+                             Une équipe passionnée qui vous assure une prise en charge immédiate et une relation clientèle privilégiée.
+            </p>
+
+              </div>
+          
+            </div>
+
+
+          </div>
+
+        </div>
     </section>
   );
 }
