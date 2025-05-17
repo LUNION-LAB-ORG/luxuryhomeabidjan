@@ -161,7 +161,7 @@ export function ServicesSection() {
       icon: <Lightbulb size={32} />,
       navLink: "/services#operations",
     },
-    {
+        {
       title: "Home Staging",
       imageSrc: "/assets/images/illustrations/page-accueil/service-2.png",
       icon: <PaintBucket size={32} />,
