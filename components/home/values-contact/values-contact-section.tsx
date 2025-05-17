@@ -12,6 +12,7 @@ import {
 
 export function ValuesContactSection() {
   return (
+<<<<<<< HEAD
     <section className="bg-black py-8 md:py-12 text-white mx-4 md:mx-16 px-4 md:px-12 rounded-2xl">
       {/* Heading */}
       <h2 className="mb-16 text-center text-xl font-bold leading-tight md:text-4xl lg:text-5xl">
@@ -106,6 +107,35 @@ function ContactForm() {
                 </label>
                 <Select>
                   <SelectTrigger className="border-white/50 rounded-xl bg-black text-white w-full">
+=======
+    <section className="bg-white  py-12 md:py-16 text-white  px-2 md:px-6">
+      <div className="bg-black container mx-auto py-10 px-4 md:px-16 rounded-2xl">
+        {/* Heading */}
+        <h2 className="w-fit mbb-16 text-center text-xl font-bold leading-tight llg:mb-10 text-[24px] md:text-[30px] lg:text-[36px] ">
+         LUXURY HOME ABIDJAN,
+        </h2>
+
+        <h3 className="font-bold mb-8 lg:mb-10 text-[20px] md:text-[24px] lg:text-[28px] ">
+          les clés de chez vous sont chez nous.
+        </h3>
+        <p className="font-bold mb-8 lg:mb-10 text-[20px] md:text-[24px] lg:text-[28px] ">
+          Mettez-nous en relation avec votre projet immobilier
+        </p>
+
+        <div className="flex gap-4">
+          
+        {/* Contact Form */}
+        <div className="flex-1  rrounded-3xl bborder-2  p-8 md:p-12">
+          {/* <h3 className="mb-8 text-center text-xl font-medium">Le bien qui correspond à votre demande</h3> */}
+          <div className="flex-1 pt-16">
+            {/* Form Fields */}
+            <div>
+            <div className=" grid grid-cols-2 gap-6">
+              <div className="grid gap-4 ">
+                <label className="text-sm font-medium">Type de la demande</label>
+                <Select  >
+                  <SelectTrigger className="border-gray-800 bg-black text-white">
+>>>>>>> 16c152e (modify forme hom)
                     <SelectValue placeholder="Sélectionnez" />
                   </SelectTrigger>
                   <SelectContent>
@@ -211,6 +241,7 @@ function ContactForm() {
                 />
               </div>
 
+<<<<<<< HEAD
               <div className="grid gap-2 w-full">
                 <label className="text-sm font-medium">Budget max</label>
                 <Input
@@ -253,7 +284,89 @@ function ContactForm() {
               />
             </div>
           </div>
+=======
+            </div> 
+          </div>  
+>>>>>>> 16c152e (modify forme hom)
         </div>
+
+
+          {/* Values Cards */}
+          <div className="max-w-[550px] flex flex-col gap-6">
+            {/* Transparency Card */}
+            <div className="flex gap-4 rounded-3xl h-fit border-2 p-6">
+              <div className="mb-6 ">
+                <div className="relative h-20 w-20 overflow-hidden rounded-full border-2 border-gray-700">
+                  <Image src="/assets/images/user-4.png" alt="Transparency avatar" fill className="object-cover" />
+                </div>
+              </div>
+              <div>
+                    <h3 className="mb-4 text-centerr text-xl font-semibold">Transparence</h3>
+              <p className=" text-md ">
+                Notre équipe vous garantit un accès permanent à toutes les étapes clés de vos transactions immobilières.
+              </p>
+
+              </div>
+          
+            </div>
+
+            {/* Confidentiality Card */}
+
+             <div className="flex gap-4 rounded-3xl h-fit border-2 p-6">
+              <div className="mb-6 ">
+                <div className="relative h-20 w-20 overflow-hidden rounded-full border-2 border-gray-700">
+                  <Image src="/assets/images/user-4.png" alt="Transparency avatar" fill className="object-cover" />
+                </div>
+              </div>
+              <div>
+                    <h3 className="mb-4 text-centerr text-xl font-semibold">Confidentialité</h3>
+              <p className=" text-md ">
+               Parce que la discrétion est la valeur essentielle au cœur de notre métier, confiez nous en toute sérénité
+                vos projets.              </p>
+
+              </div>
+          
+            </div>
+
+            {/* Availability Card */}
+               <div className="flex gap-4 rounded-3xl h-fit border-2 p-6">
+              <div className="mb-6 ">
+                <div className="relative h-20 w-20 overflow-hidden rounded-full border-2 border-gray-700">
+                  <Image src="/assets/images/user-4.png" alt="Transparency avatar" fill className="object-cover" />
+                </div>
+              </div>
+              <div>
+                    <h3 className="mb-4 text-centerr text-xl font-semibold">Disponibilité & réactivité</h3>
+              <p className=" text-md ">
+                             Une équipe passionnée qui vous assure une prise en charge immédiate et une relation clientèle privilégiée.
+            </p>
+
+              </div>
+          
+            </div>
+
+               {/* Availability Card */}
+               <div className="flex gap-4 rounded-3xl h-fit border-2 p-6">
+              <div className="mb-6 ">
+                <div className="relative h-20 w-20 overflow-hidden rounded-full border-2 border-gray-700">
+                  <Image src="/assets/images/user-4.png" alt="Transparency avatar" fill className="object-cover" />
+                </div>
+              </div>
+              <div>
+                    <h3 className="mb-4 text-centerr text-xl font-semibold">Disponibilité & réactivité</h3>
+              <p className=" text-md ">
+                             Une équipe passionnée qui vous assure une prise en charge immédiate et une relation clientèle privilégiée.
+            </p>
+
+              </div>
+          
+            </div>
+
+
+          </div>
+
+        </div>
+
       </div>
     </div>
   );

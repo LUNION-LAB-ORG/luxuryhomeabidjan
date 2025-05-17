@@ -138,7 +138,7 @@ export function ExclusiveListings() {
   return (
     <section className="py-12 md:py-16">
       <div className="containerr mx-auto mdd:px-4">
-        <h2 className=" mb-8 lg:mb-10 text-center text-3xl  font-bold md:text-5xl">En exclusivité</h2>
+        <h2 className="font-bold px-2 sm:px-4 lg:px-14 text-[24px] md:text-[30px] lg:text-[36px] mb-6 lg:mb-10">Découvrez nos coups de cœur</h2>
 
         <div className="relative">
           {/* Scroll Buttons */}

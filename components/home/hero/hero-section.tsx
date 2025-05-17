@@ -59,12 +59,8 @@ const heroSlides = [
 ];
 export default function HeroSection() {
   return (
-    <div className="w-full">
-      <HeroCarouselFade
-        slides={heroSlides}
-        autoplayDelay={5000}
-        className="mx-auto w-[95%] h-[calc(100vh-300px)] md:h-[calc(100vh-120px)] 2xl:h-[800px]"
-      />
+    <div className="w-full ooverflow-hidden">
+      <HeroCarouselFade slides={heroSlides} autoplayDelay={5000} className="max-w-full w-full mx-auto ww-[95%] h-[calc(100vh-300px)] md:h-[calc(100vh-120px)]" />
     </div>
   );
 }
