@@ -14,11 +14,11 @@ export default function Home() {
     <div>
       <HeroSection />
       <SearchBar />
+      <ExclusiveListings />
       <WhyChooseUs />
       <ServicesSection />
       <PropertyCarousel />
       <ValuesContactSection />
-      <ExclusiveListings />
       <LogoShowcase />
       <MrLHA />
     </div>
