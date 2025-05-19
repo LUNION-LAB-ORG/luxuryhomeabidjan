@@ -122,7 +122,7 @@ function ContactForm() {
           Mettez-nous en relation avec votre projet immobilier
         </p>
 
-        <div className="flex gap-4">
+        <div className="flex flex-col lg:flex-row gap-4">
           
         {/* Contact Form */}
         <div className="flex-1  rrounded-3xl bborder-2  p-8 md:p-12">
