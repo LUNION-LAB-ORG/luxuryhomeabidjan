@@ -33,7 +33,7 @@ export default function HeroCarouselFade({
   }, [currentSlide, autoplayDelay, slides.length]);
 
   return (
-    <div className={cn("bg-blue-800 relative w-full h-full overflow-hidden", className)}>
+    <div className={cn("relative w-full h-full overflow-hidden", className)}>
       {slides.map((slide, i) => (
         <div
           key={slide.id}
