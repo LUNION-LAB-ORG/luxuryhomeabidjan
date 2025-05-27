@@ -23,7 +23,7 @@ export default function QuiSommesNous(){
             <Equipe/>
             {/* <ValuesSection/> */}
             <PhilosophySection/>
-            <TeamSection/>
+            {/* <TeamSection/> */}
             <LogoShowcase/>
             <TestimonialsSection/>
             <BlogSection/>
