@@ -59,7 +59,7 @@ export default function HeaderRechercheBien() {
           <h1 className="pb-12 lg:pb-22 text-2xl sm:text-3xl lg:text-[80px] font-bold lg:leading-19">
           Retrouvez tout type de propriété de standing chez nous          </h1>
         </div>
-        <div className="px-4 sm:px-10 lg:px-0 mx-auto max-w-xl lg:max-w-[850px]   flex justify-between items-center  lg:gap-16">
+        {/* <div className="px-4 sm:px-10 lg:px-0 mx-auto max-w-xl lg:max-w-[850px]   flex justify-between items-center  lg:gap-16">
 
             {
          
@@ -83,7 +83,7 @@ export default function HeaderRechercheBien() {
 
             }
           
-        </div>
+        </div> */}
      
       </div>
     </section>

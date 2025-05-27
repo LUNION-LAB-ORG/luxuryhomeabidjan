@@ -1,3 +1,4 @@
+import PropertyFilter from "@/components/filter/PropertyFilter";
 import LogoShowcase from "@/components/home/logo-showcase/logo-showcase";
 import { SearchBar } from "@/components/home/searchbar/search-bar";
 import HeroSection from "@/components/page-service/hero/hero-section";
@@ -9,7 +10,7 @@ export default function TransactionPage(){
     return(
         <div>
          <HeroSection/>
-         <SearchBar /> 
+         <PropertyFilter/>
          <ServiceSection/> 
          <LogoShowcase/>
          <TestimonialsSection/>
