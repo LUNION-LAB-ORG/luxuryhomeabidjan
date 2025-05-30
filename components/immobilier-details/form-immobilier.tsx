@@ -41,7 +41,6 @@ const formSchema = z.object({
   }),
 });
 
-
 export default function FormImmobilier() {
   const [openDemandeVisite, setOpenDemandeVisite] = useState(false);
   const [openServiceCommercial, setOpenServiceCommercial] = useState(false);
@@ -52,9 +51,9 @@ export default function FormImmobilier() {
   return (
     <section className="mx-auto px-4 lg:px-20 lg:pb-6">
       <div
-        className={`mb-10 lg:mb-20  lg:p-10 lg:py-12  ${openDemandeVisite 
-    ? "py-10 px-4" 
-    : "p-3 lg:p-10 lg:py-12 "} ${styleVisite} border-stone-400 rounded-[50px] lg:rounded-[70px]`}
+        className={`mb-10 lg:mb-20  lg:p-10 lg:py-12  ${
+          openDemandeVisite ? "py-10 px-4" : "p-3 lg:p-10 lg:py-12 "
+        } ${styleVisite} border-stone-400 rounded-[50px] lg:rounded-[70px]`}
       >
         <div
           onClick={() => setOpenDemandeVisite((prev) => !prev)}
@@ -62,7 +61,14 @@ export default function FormImmobilier() {
         >
           <span>Demander une visite</span>
           <span className="text-stone-700">
-            {openDemandeVisite ? <X size={35} className="w-[30px] h-[30px] lg:w-[35px] lg:h-[35px]"/> : <Plus className="w-[30px] h-[30px] lg:w-[35px] lg:h-[35px]" />}
+            {openDemandeVisite ? (
+              <X
+                size={35}
+                className="w-[30px] h-[30px] lg:w-[35px] lg:h-[35px]"
+              />
+            ) : (
+              <Plus className="w-[30px] h-[30px] lg:w-[35px] lg:h-[35px]" />
+            )}
           </span>
         </div>
         {/* contenu hidden */}
@@ -70,9 +76,9 @@ export default function FormImmobilier() {
       </div>
       {/* div 2 */}
       <div
-        className={`mb-10 llg:mb-24 ${openServiceCommercial 
-    ? "py-10 px-4 " 
-    : "p-3 lg:p-10 lg:py-12"} ${styleService} border-stone-400 rounded-[50px] lg:rounded-[70px]`}
+        className={`mb-10 llg:mb-24 ${
+          openServiceCommercial ? "py-10 px-4 " : "p-3 lg:p-10 lg:py-12"
+        } ${styleService} border-stone-400 rounded-[50px] lg:rounded-[70px]`}
       >
         <div
           onClick={() => setOpenServiceCommercial((prev) => !prev)}
@@ -80,7 +86,11 @@ export default function FormImmobilier() {
         >
           <span className="lg:px-10">Services commercial</span>
           <span className="text-stone-700">
-            {openServiceCommercial ? <X className="w-[30px] h-[30px] lg:w-[35px] lg:h-[35px]" /> : <Plus className="w-[30px] h-[30px] lg:w-[35px] lg:h-[35px]" />}
+            {openServiceCommercial ? (
+              <X className="w-[30px] h-[30px] lg:w-[35px] lg:h-[35px]" />
+            ) : (
+              <Plus className="w-[30px] h-[30px] lg:w-[35px] lg:h-[35px]" />
+            )}
           </span>
         </div>
         {openServiceCommercial && <ServiceCommercial />}
@@ -241,4 +251,3 @@ export function DemanderVisite() {
     </div>
   );
 }
-

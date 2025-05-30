@@ -15,25 +15,21 @@ export default function InvestmentGuide() {
           investissements prospérer
         </p>
       </div>
-    
+
       {/* card 1 */}
       <div className="flex flex-col xl:flex-row xl:gap-5">
-      {/* mobil */}
-          <div className="xl:hidden w-fulll flex flex-col mx-auto">
+        {/* mobil */}
+        <div className="xl:hidden w-fulll flex flex-col mx-auto">
           <div className=" z-10 relative flex gap-4 xl:text-2xl font-bold">
-              <span className="text-slate-500 font-bold xl:text-4xl">1</span>
-              <h2 className="text-black">
-                Définir son projet et ses objectifs
-              </h2>
-            </div>
+            <span className="text-slate-500 font-bold xl:text-4xl">1</span>
+            <h2 className="text-black">Définir son projet et ses objectifs</h2>
+          </div>
 
-           {/* Step 2 */}
-           <div className=" z-10 relative flex gap-4 xl:text-2xl font-bold">
-              <span className="text-slate-500 font-bold xl:text-4xl">2</span>
-              <h2 className="text-black">
-                Définir son projet et ses objectifs
-              </h2>
-            </div>
+          {/* Step 2 */}
+          <div className=" z-10 relative flex gap-4 xl:text-2xl font-bold">
+            <span className="text-slate-500 font-bold xl:text-4xl">2</span>
+            <h2 className="text-black">Définir son projet et ses objectifs</h2>
+          </div>
         </div>
 
         <div className="flex flex-row flex-wrap  md:flex-nowrap items-center justify-center gap-4">
@@ -96,8 +92,8 @@ export default function InvestmentGuide() {
             <div className="w-16 flex-grow border-t border-white opacity-0 mml-4"></div>
           </div>
 
-           {/* Step 2 */}
-           <div className="flex items-center">
+          {/* Step 2 */}
+          <div className="flex items-center">
             <div className=" z-10 relative flex gap-4 xl:text-2xl font-bold after:w-24 after:bg-green-900 after:h-[1px] after:absolute after:-right-16 after:top-[60%] after:z-0">
               <span className="text-slate-500 font-bold xl:text-4xl">2</span>
               <h2 className="text-black">
@@ -109,28 +105,23 @@ export default function InvestmentGuide() {
         </div>
       </div>
 
-       {/* card 2 */}
-       <div className="mt-10 flex flex-col xl:flex-row xl:gap-5">
-
-          {/* mobil */}
-          <div className="xl:hidden w-fulll flex flex-col mx-auto">
+      {/* card 2 */}
+      <div className="mt-10 flex flex-col xl:flex-row xl:gap-5">
+        {/* mobil */}
+        <div className="xl:hidden w-fulll flex flex-col mx-auto">
           <div className=" z-10 relative flex gap-4 xl:text-2xl font-bold">
-              <span className="text-slate-500 font-bold xl:text-4xl">1</span>
-              <h2 className="text-black">
-                Définir son projet et ses objectifs
-              </h2>
-            </div>
+            <span className="text-slate-500 font-bold xl:text-4xl">1</span>
+            <h2 className="text-black">Définir son projet et ses objectifs</h2>
+          </div>
 
-           {/* Step 2 */}
-           <div className=" z-10 relative flex gap-4 xl:text-2xl font-bold">
-              <span className="text-slate-500 font-bold xl:text-4xl">2</span>
-              <h2 className="text-black">
-                Définir son projet et ses objectifs
-              </h2>
-            </div>
+          {/* Step 2 */}
+          <div className=" z-10 relative flex gap-4 xl:text-2xl font-bold">
+            <span className="text-slate-500 font-bold xl:text-4xl">2</span>
+            <h2 className="text-black">Définir son projet et ses objectifs</h2>
+          </div>
         </div>
 
-       <div className="hidden xl:flex flex-col md:flex-row items-center justify-between">
+        <div className="hidden xl:flex flex-col md:flex-row items-center justify-between">
           {/* Step 3 Title */}
           <div className="flex items-center ">
             <div className=" z-10 relative flex gap-4 xl:text-2xl font-bold after:w-24 after:bg-green-900 after:h-[1px] after:absolute after:-right-16 after:top-[60%] after:z-0">
@@ -142,8 +133,8 @@ export default function InvestmentGuide() {
             <div className="w-16 flex-grow border-t border-white opacity-0 mml-4"></div>
           </div>
 
-           {/* Step 3 Title */}
-           <div className="flex items-center">
+          {/* Step 3 Title */}
+          <div className="flex items-center">
             <div className=" z-10 relative flex gap-4 xl:text-2xl font-bold after:w-24 after:bg-green-900 after:h-[1px] after:absolute after:-right-16 after:top-[60%] after:z-0">
               <span className="text-slate-500 font-bold xl:text-4xl">4</span>
               <h2 className="text-black">

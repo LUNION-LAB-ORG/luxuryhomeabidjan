@@ -1,6 +1,5 @@
 import Image from "next/image";
 import ListingsInfoBienScroll from "./listings-info-bien-scroll";
-import { ChevronRight } from "lucide-react";
 import FooterService from "./footer-service";
 
 export default function ExpertiseDrawer() {

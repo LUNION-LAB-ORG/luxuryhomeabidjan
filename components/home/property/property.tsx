@@ -1,15 +1,15 @@
-"use client"
-import Image from "next/image"
-import { ChevronLeft, ChevronRight, Camera, ExternalLink } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { useRef } from "react"
-import Link from "next/link"
+"use client";
+import Image from "next/image";
+import { ExternalLink } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { useRef } from "react";
+import Link from "next/link";
 
 type PropertyCardProps = {
-  location: string
-  name: string
-  imageSrc: string
-}
+  location: string;
+  name: string;
+  imageSrc: string;
+};
 
 function PropertyCard({ location, name, imageSrc }: PropertyCardProps) {
   return (
@@ -22,49 +22,30 @@ function PropertyCard({ location, name, imageSrc }: PropertyCardProps) {
           className="object-cover"
           sizes="(max-width: 640px) 280px, 320px"
         />
-
         {/* Location and Name Overlay */}
         <div className="absolute inset-x-0 h-full z-20 top-0 p-6 text-white bg-gradient-to-t from-black/70 via-transparent to-transparent">
           <div className="pb-2 text-sm font-bold text-white">{location}</div>
-          <div className="text-xl lg:text-xl max-w-[210px]  font-bold">{name}</div>
+          <div className="text-xl lg:text-xl max-w-[210px]  font-bold">
+            {name}
+          </div>
         </div>
 
         {/* Camera Icon */}
-        <Link
-         className="cursor-pointer"
-         href='/biens-immobilier-details/1'>
+        <Link className="cursor-pointer" href="/biens-immobilier-details/1">
           <div className="absolute bottom-4 right-4 flex h-8 w-8 items-center justify-center rounded-full bg-slate-800 text-white backdrop-blur-sm">
             <ExternalLink className="text-white" />
           </div>
         </Link>
-      
       </div>
     </div>
-  )
+  );
 }
 
 export function PropertyCarousel() {
-  const scrollContainerRef = useRef<HTMLDivElement>(null)
-
-  const scrollLeft = () => {
-    if (scrollContainerRef.current) {
-      scrollContainerRef.current.scrollBy({ left: -340, behavior: "smooth" })
-    }
-  }
-
-  const scrollRight = () => {
-    if (scrollContainerRef.current) {
-      scrollContainerRef.current.scrollBy({ left: 340, behavior: "smooth" })
-    }
-  }
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
 
   // Sample property data
   const properties = [
-    // {
-    //   location: "Cocody",
-    //   name: "La cité Riviera STELLA",
-    //   imageSrc: "/assets/images/illustrations/page-accueil/property-1..webp",
-    // },
     {
       location: "Cocody",
       name: "La cité Riviera STELLA",
@@ -100,39 +81,16 @@ export function PropertyCarousel() {
       name: "La cité Riviera STELLA",
       imageSrc: "/assets/images/illustrations/page-accueil/property-8.jpg",
     },
-  ]
+  ];
 
   return (
     <section className="py-16">
       <div className="container mx-auto mmd:px-4 lg:px-16">
-        <h2 className="font-bold mb-8 lg:mb-10 text-[24px] md:text-[30px] lg:text-[36px] ttext-3xl mmd:text-5xl">Opérations immobilières</h2>
+        <h2 className="font-bold mb-8 lg:mb-10 text-[24px] md:text-[30px] lg:text-[36px] ttext-3xl mmd:text-5xl">
+          Opérations immobilières
+        </h2>
 
         <div className="relative">
-          {/* Scroll Buttons */}
-          {/* <div className="absolute -left-4 top-1/2 z-10 hidden -translate-y-1/2 md:block">
-            <Button
-              variant="outline"
-              size="icon"
-              className="h-10 w-10 rounded-full bg-white shadow-md"
-              onClick={scrollLeft}
-            >
-              <ChevronLeft className="h-6 w-6" />
-              <span className="sr-only">Scroll left</span>
-            </Button>
-          </div>
-
-          <div className="absolute -right-4 top-1/2 z-10 hidden -translate-y-1/2 md:block">
-            <Button
-              variant="outline"
-              size="icon"
-              className="h-10 w-10 rounded-full bg-white shadow-md"
-              onClick={scrollRight}
-            >
-              <ChevronRight className="h-6 w-6" />
-              <span className="sr-only">Scroll right</span>
-            </Button>
-          </div> */}
-
           {/* Scrollable Container */}
           <div
             ref={scrollContainerRef}
@@ -151,15 +109,18 @@ export function PropertyCarousel() {
 
           {/* More Details Button */}
           <Link href="/programmes" className="mt-6 flex justify-center">
-            <Button variant="outline" className="rounded-full px-6 cursor-pointer">
-              <span><ExternalLink/></span>
+            <Button
+              variant="outline"
+              className="rounded-full px-6 cursor-pointer"
+            >
+              <span>
+                <ExternalLink />
+              </span>
               <span>Plus de détails</span>
-              
             </Button>
           </Link>
         </div>
       </div>
     </section>
-  )
+  );
 }
-

@@ -1,10 +1,9 @@
-import HeroSection from "@/components/location/hero/hero-section";
+import Content from "./content";
 
-
-export default function Location(){
+export default async function Location(){
     return(
-        <div>
-            <HeroSection/>
-        </div>
+        <>
+            <Content/>
+        </>
     );
 }

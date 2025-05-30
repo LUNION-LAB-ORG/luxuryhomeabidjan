@@ -12,7 +12,6 @@ import Image from "next/image";
 import Link from "next/link";
 
 export default function BodyImmobilierDetail() {
-
   return (
     <section className="container  mx-auto px-4 lg:px-14">
       <div className="lg:flex">
@@ -28,10 +27,10 @@ export default function BodyImmobilierDetail() {
             <span>Marcory Zone 4 rue Paul Langevin Abidjan, Côte d'Ivoire</span>
           </div>
           {/* liste equipement  */}
-          <ListEquipement/>
-        
+          <ListEquipement />
+
           {/* bon a savoir  */}
-          <div id="bonSavoir"  className="pb-6">
+          <div id="bonSavoir" className="pb-6">
             <p className="p-4 py-6 bg-stone-100 rounded-3xl">
               Profitant d'un emplacement idéal au cœur de la Riviera Golf
               Beverly Hills à quelques minutes seulement des écoles françaises,
@@ -48,7 +47,7 @@ export default function BodyImmobilierDetail() {
         </div>
         {/* container right */}
         <div className="hidden lg:block">
-         <DivConatinerRight/>
+          <DivConatinerRight />
         </div>
       </div>
     </section>
@@ -59,7 +58,6 @@ function ListEquipement() {
   const divRef = useRef<HTMLDivElement | null>(null);
   const [isFixed, setIsFixed] = useState(false);
 
-  
   useEffect(() => {
     const element = divRef.current;
     if (!element) return;
@@ -80,98 +78,98 @@ function ListEquipement() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-return (
-      <div
-        ref={divRef}
-        className={`overflow-x-scroll text-nowrap flex gap-4 md:text-xl  text-stone-500 ${
-          isFixed ? "ccontainer  mx-auto px-4 lg:px-14 bg-white fixed top-14 ppt-10 py-5 left-0 w-full z-10 shadow-md" : "pb-10"
-        }`}
-        >
-          <button
-          className="cursor-pointer"
-              onClick={() => {
-                const section = document.getElementById('bonSavoir');
-                section?.scrollIntoView({ behavior: 'smooth' });
-              }}
-          >Bon à savoir</button>
-          <button
-          className="cursor-pointer"
-          onClick={() => {
-            const section = document.getElementById('equipement');
-            section?.scrollIntoView({ behavior: 'smooth' });
-          }}
-          >Equipements</button>
-          <button
-          className="cursor-pointer"
-          >Emplacement</button>
-          <button
-          className="cursor-pointer"
-            onClick={() => {
-              const section = document.getElementById('bonSavoir');
-              section?.scrollIntoView({ behavior: 'smooth' });
-            }}
-          >Environs de l'établissement</button>
-          {/* <button>Avis</button> */}
-      </div> 
-    ) 
+  return (
+    <div
+      ref={divRef}
+      className={`overflow-x-scroll text-nowrap flex gap-4 md:text-xl  text-stone-500 ${
+        isFixed
+          ? " mx-auto px-4 lg:px-14 bg-white fixed top-14 py-5 left-0 w-full z-10 shadow-md"
+          : "pb-10"
+      }`}
+    >
+      <button
+        className="cursor-pointer"
+        onClick={() => {
+          const section = document.getElementById("bonSavoir");
+          section?.scrollIntoView({ behavior: "smooth" });
+        }}
+      >
+        Bon à savoir
+      </button>
+      <button
+        className="cursor-pointer"
+        onClick={() => {
+          const section = document.getElementById("equipement");
+          section?.scrollIntoView({ behavior: "smooth" });
+        }}
+      >
+        Equipements
+      </button>
+      <button className="cursor-pointer">Emplacement</button>
+      <button
+        className="cursor-pointer"
+        onClick={() => {
+          const section = document.getElementById("bonSavoir");
+          section?.scrollIntoView({ behavior: "smooth" });
+        }}
+      >
+        Environs de l'établissement
+      </button>
+    </div>
+  );
 }
 
-
-function DivConatinerRight () {
+function DivConatinerRight() {
   const [date, setDate] = useState<Date>();
 
-
- return (
-       <div className=" lg:w-[400px] p-5">
-          <div 
-            className="border rounded-3xl p-6 text-stone-700"
-          >
-            <h3 className="font-bold">Coût de location</h3>
-            <p className="text-[24px] font-bold">2 000 000 FCFA</p>
-            <p className="text-stone-700">par mois</p>
-            <div className="space-y-2">
-              <Label>Disponibilité</Label>
-              <Popover>
-                <PopoverTrigger asChild>
-                  <Button
-                    variant={"outline"}
-                    className={cn(
-                      "w-full justify-start text-left font-normal",
-                      !date && "text-muted-foreground"
-                    )}
-                  >
-                    <CalendarIcon className="mr-2 h-4 w-4" />
-                    {date ? (
-                      format(date, "PPP", { locale: fr })
-                    ) : (
-                      <span>Sélectionnez une date</span>
-                    )}
-                  </Button>
-                </PopoverTrigger>
-                <PopoverContent className="w-auto p-0" align="start">
-                  <Calendar
-                    mode="single"
-                    selected={date}
-                    onSelect={setDate}
-                    initialFocus
-                    disabled={(date) => {
-                      const today = new Date();
-                      today.setHours(0, 0, 0, 0);
-                      return (
-                        date < today || date.getDay() === 0 // Disable Sundays
-                      );
-                    }}
-                  />
-                </PopoverContent>
-              </Popover>
-            </div>
-            <Link href="1/reservation" >
-             <Button className="cursor-pointer">Vérifier la disponibilité</Button>
-            </Link>
-         
-          </div>
-        </div> 
- ) 
+  return (
+    <div className=" lg:w-[400px] p-5">
+      <div className="border rounded-3xl p-6 text-stone-700">
+        <h3 className="font-bold">Coût de location</h3>
+        <p className="text-[24px] font-bold">2 000 000 FCFA</p>
+        <p className="text-stone-700">par mois</p>
+        <div className="space-y-2">
+          <Label>Disponibilité</Label>
+          <Popover>
+            <PopoverTrigger asChild>
+              <Button
+                variant={"outline"}
+                className={cn(
+                  "w-full justify-start text-left font-normal",
+                  !date && "text-muted-foreground"
+                )}
+              >
+                <CalendarIcon className="mr-2 h-4 w-4" />
+                {date ? (
+                  format(date, "PPP", { locale: fr })
+                ) : (
+                  <span>Sélectionnez une date</span>
+                )}
+              </Button>
+            </PopoverTrigger>
+            <PopoverContent className="w-auto p-0" align="start">
+              <Calendar
+                mode="single"
+                selected={date}
+                onSelect={setDate}
+                initialFocus
+                disabled={(date) => {
+                  const today = new Date();
+                  today.setHours(0, 0, 0, 0);
+                  return (
+                    date < today || date.getDay() === 0 // Disable Sundays
+                  );
+                }}
+              />
+            </PopoverContent>
+          </Popover>
+        </div>
+        <Link href="1/reservation">
+          <Button className="cursor-pointer">Vérifier la disponibilité</Button>
+        </Link>
+      </div>
+    </div>
+  );
 }
 
 function Equipement() {
@@ -214,7 +212,7 @@ function Equipement() {
     },
   ];
   return (
-    <section id="equipement" >
+    <section id="equipement">
       <div>
         <h2>Equipements</h2>
         <div className="py-10 text-[14px] flex gap-4 flex-wrap">
@@ -325,5 +323,3 @@ function Etablissement() {
     </section>
   );
 }
-
-

@@ -33,7 +33,6 @@ export default function Equipement() {
     <div className="max-w-7xl mx-auto px-4 sm:px-6 pb-18 lg:pb-24 lg:px-10 font-semibold text-stone-800">
       <div>
         <h2 className="text-[25px] py-10 lg:pt-0 text-center font-bold">Equipements</h2>
-
         <div className="grid grid-cols-[repeat(auto-fit,minmax(200px,1fr))] gap-4  sm:grid-cols-3 lg:gap-13 ">
           {data.map((item, index) => (
             <div className="max-w-[350px] flex items-center justify-between" key={index}>

@@ -1,24 +1,3 @@
-import Image from "next/image";
-
-const icons =[
-    {
-        name:"Appartements",
-        srcIcon:"/assets/images/icons/recherch-bien-appartements.png",
-    },
-    {
-        name:"Villas",
-        srcIcon:"/assets/images/icons/recherch-bien-villas.png",
-    },
-    {
-        name:"Building",
-        srcIcon:"/assets/images/icons/recherch-bien-building.png",
-    },
-    {
-        name:"Magasins",
-        srcIcon:"/assets/images/icons/recherch-bien-magazins.png",
-    }
-
-]
 
 export default function HeaderRechercheBien() {
   return (
@@ -54,10 +33,11 @@ export default function HeaderRechercheBien() {
         {/* Text content */}
         <div className="text-center px-4 lg:px-8 mx-auto pt-16 lg:pt-22">
           <h2 className="text-[16px] lg:text-[24px] mb-2 font-semibold">
-          Location
+            Location
           </h2>
           <h1 className="pb-12 lg:pb-22 text-2xl sm:text-3xl lg:text-[80px] font-bold lg:leading-19">
-          Retrouvez tout type de propriété de standing chez nous          </h1>
+            Retrouvez tout type de propriété de standing chez nous{" "}
+          </h1>
         </div>
         {/* <div className="px-4 sm:px-10 lg:px-0 mx-auto max-w-xl lg:max-w-[850px]   flex justify-between items-center  lg:gap-16">
 
@@ -84,7 +64,6 @@ export default function HeaderRechercheBien() {
             }
           
         </div> */}
-     
       </div>
     </section>
   );
