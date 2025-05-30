@@ -1,18 +1,6 @@
 import Image from "next/image";
 
 export default function PropertyCategories() {
-  const [counter, setCounter] = useState<number>(0);
-  const [isHovering, setIsHovering] = useState<number | null>(null);
-
-  // Gestion de l'animation automatique
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCounter((prev) => (prev === items.length - 1 ? 0 : prev + 1));
-    }, 1000);
-
-    return () => clearInterval(interval);
-  }, []);
-
   return (
     <div className="px-4 lg:px-18 mx-auto py-6 lg:py-10 bg-white">
       {/* Commercial Residences Banner */}
