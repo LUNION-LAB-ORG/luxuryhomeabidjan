@@ -1,7 +1,6 @@
 "use client"
 
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
-import { Card } from "@/components/ui/card"
 
 const facialExpressions = [
   { id: 1, name: "Thumbs Up", src: "/assets/images/illustrations/assistance/1.png" },

@@ -22,14 +22,16 @@ function PropertyCard({ location, name, imageSrc }: PropertyCardProps) {
           className="object-cover"
           sizes="(max-width: 640px) 280px, 320px"
         />
-
-        {/* Overlay */}
-        <div className="absolute inset-0 z-[1] bg-gradient-to-b from-black/70 via-transparent to-black/30" />
+        {/* Location and Name Overlay */}
+        <div className="absolute inset-x-0 h-full z-20 top-0 p-6 text-white bg-gradient-to-t from-black/70 via-transparent to-transparent">
+          <div className="pb-2 text-sm font-bold text-white">{location}</div>
+          <div className="text-xl lg:text-xl max-w-[210px]  font-bold">
+            {name}
+          </div>
+        </div>
 
         {/* Camera Icon */}
-        <Link
-         className="cursor-pointer"
-         href='/biens-immobilier-details/1'>
+        <Link className="cursor-pointer" href="/biens-immobilier-details/1">
           <div className="absolute bottom-4 right-4 flex h-8 w-8 items-center justify-center rounded-full bg-slate-800 text-white backdrop-blur-sm">
             <ExternalLink className="text-white" />
           </div>
@@ -84,7 +86,9 @@ export function PropertyCarousel() {
   return (
     <section className="py-16">
       <div className="container mx-auto mmd:px-4 lg:px-16">
-        <h2 className="font-bold mb-8 lg:mb-10 text-[24px] md:text-[30px] lg:text-[36px] ttext-3xl mmd:text-5xl">Opérations immobilières</h2>
+        <h2 className="font-bold mb-8 lg:mb-10 text-[24px] md:text-[30px] lg:text-[36px] ttext-3xl mmd:text-5xl">
+          Opérations immobilières
+        </h2>
 
         <div className="relative">
           {/* Scrollable Container */}
@@ -105,8 +109,13 @@ export function PropertyCarousel() {
 
           {/* More Details Button */}
           <Link href="/programmes" className="mt-6 flex justify-center">
-            <Button variant="outline" className="rounded-full px-6 cursor-pointer">
-              <span><ExternalLink/></span>
+            <Button
+              variant="outline"
+              className="rounded-full px-6 cursor-pointer"
+            >
+              <span>
+                <ExternalLink />
+              </span>
               <span>Plus de détails</span>
             </Button>
           </Link>

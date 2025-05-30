@@ -2,20 +2,18 @@
 
 import React, { useEffect, useRef, useState } from "react";
 import { useRouter, useSearchParams,usePathname } from "next/navigation";
-import { SearchInput } from "./SearchInput";
-import { MultiSelectAction } from "./MultiSelectAction";
-import { MultiSelectType } from "./MultiSelectType";
-import { SelectPiece } from "./SelectPiece";
-import { SelectZone } from "./SelectZone";
-import { BudgetSlider } from "./BudgetSlider";
-import { SelectDate } from "./SelectDate";
 import { Button } from "../ui/button";
-import { BadgeX, CircleX, Filter, RectangleEllipsis, Search, SquareChevronDown, SquareChevronRight } from "lucide-react";
+import { CircleX, Filter, RectangleEllipsis, SquareChevronDown, SquareChevronRight } from "lucide-react";
+import { SearchInput } from "../filter/SearchInput";
+import { MultiSelectAction } from "../filter/MultiSelectAction";
+import { MultiSelectType } from "../filter/MultiSelectType";
+import { SelectPiece } from "../filter/SelectPiece";
+import { SelectZone } from "../filter/SelectZone";
+import { BudgetSlider } from "../filter/BudgetSlider";
+import { SelectDate } from "../filter/SelectDate";
 
-export default function PropertyFilter() {
+export default function PropertyFilterHom() {
   const [OpenfilterMobil, setOpenfilterMobil] = useState(false);
-  const divRef = useRef<HTMLDivElement | null>(null);
-  const [isFixed, setIsFixed] = useState(false);
 
   const router = useRouter();
   const searchParams = useSearchParams();
@@ -90,33 +88,13 @@ export default function PropertyFilter() {
     setDate(undefined);
   };
 
-  useEffect(() => {
-    const element = divRef.current;
-    if (!element) return;
-
-    const elementOffsetTop = element.offsetTop;
-
-    const handleScroll = () => {
-      // Si on scrolle en dessous de la div → fixed
-      if (window.scrollY >= elementOffsetTop) {
-        setIsFixed(true);
-      } else {
-        // Si on remonte au-dessus → normal
-        setIsFixed(false);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   return (
     <div
-    ref={divRef}
     id="filtres"
     className="space-y-4  p-4 lg:px-16 lg:py-10">
       {/* lg */}
-     <div className={`hidden lg:block max-w-sm sm:max-w-full shadow-xl mx-auto p-5 rounded-[50px] ${isFixed?" fixed top-14 mx-auto bg-white px-4 lg:mx-14 py-5 left-0  z-10 shadow-md":""}`}>
+     <div className={`hidden lg:block max-w-sm sm:max-w-full shadow-xl mx-auto p-5 rounded-[50px]`}>
         <div className=" flex items-center gap-10 text-xl">
           <p>filter</p>
           {
@@ -170,29 +148,8 @@ export default function PropertyFilter() {
      
      </div>
       {/* mobile */}
-      <div className={`lg:hidden max-w-sm w-full shadow-xl mx-auto p-5 rounded-[50px] ${isFixed?" fixed w-[1000px] top-14 mx-auto bg-white px-4 lg:mx-14 py-5 left-0  z-10 shadow-md":""}`}>
-        <div className={`flex justify-between items-center gap-10 text-xl ${OpenfilterMobil?"pb-5":""}`}>
-          <p>filter</p>
-          {
-            OpenfilterMobil ?
-            <div
-            onClick={() => setOpenfilterMobil(!OpenfilterMobil)}
-           >
-             <BadgeX />
-           </div>:
-             <div
-             className="flex items-center gap-16 "
-             onClick={() => setOpenfilterMobil(!OpenfilterMobil)}
-            >
-             <Search className="w-6 h-6 " />
-             <SquareChevronDown />
-  
-            </div>  
-          }
-               
-        </div>
-
-        <div className={`lg:flex gap-5 ${!OpenfilterMobil && !!Filter?"hidden":""}`}>
+      <div className={`lg:hidden max-w-sm w-full shadow-xl mx-auto p-5 rounded-[50px]`}>
+        <div className={`lg:flex gap-5`}>
           <div className="flex-1 grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-center sm:justify-start flex-wrap gap-6 lg:gap-4">
             <SearchInput value={keyword} onChange={setKeyword} />
             <MultiSelectAction selected={actions} onChange={setActions} />
@@ -221,6 +178,7 @@ export default function PropertyFilter() {
               </Button>
             </div>
           </div>
+
         </div>
      
       </div>

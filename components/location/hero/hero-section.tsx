@@ -1,4 +1,4 @@
-import Image from "next/image"
+import Image from "next/image";
 
 export default function HeroSection() {
   return (
@@ -8,12 +8,12 @@ export default function HeroSection() {
         <div className="flex flex-col md:flex-row justify-center items-center gap-4 md:gap-8 mb-16">
           <div className="w-64 h-64 md:w-96 md:h-96 overflow-hidden">
             <Image
-            src="/assets/images/illustrations/location/hero.png"
-            alt="Modern property exterior"
-            fill
-            priority
-            sizes="100vw"
-            className="object-contain rounded-lg"
+              src="/assets/images/illustrations/location/hero.png"
+              alt="Modern property exterior"
+              fill
+              priority
+              sizes="100vw"
+              className="object-contain rounded-lg"
             />
           </div>
         </div>
@@ -22,10 +22,10 @@ export default function HeroSection() {
         <div className="text-center max-w-4xl mx-auto">
           <p className="text-xl mb-4">Location</p>
           <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold leading-tight">
-          Retrouvez tout type de propriété de standing chez nous
+            Retrouvez tout type de propriété de standing chez nous
           </h1>
         </div>
       </div>
     </section>
-  )
+  );
 }

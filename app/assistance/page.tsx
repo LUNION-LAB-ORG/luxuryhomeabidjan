@@ -4,7 +4,7 @@ import HeroSection from "@/components/assistance/hero/hero-section";
 import SocialMediaSection from "@/components/assistance/social-media/social-media-section";
 
 
-export default function Assistance(){
+export default async function  Assistance(){
     return(
         <div>
             <HeroSection/>

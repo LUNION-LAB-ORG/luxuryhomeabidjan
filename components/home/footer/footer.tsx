@@ -1,8 +1,17 @@
-import Image from "next/image"
-import Link from "next/link"
-import { Phone, Mail, MapPin, Facebook, Twitter, Instagram, Linkedin, Music } from "lucide-react"
-import { Input } from "@/components/ui/input"
-import { Button } from "@/components/ui/button"
+import Image from "next/image";
+import Link from "next/link";
+import {
+  Phone,
+  Mail,
+  MapPin,
+  Facebook,
+  Twitter,
+  Instagram,
+  Linkedin,
+  Music,
+} from "lucide-react";
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
 
 export default function Footer() {
   return (
@@ -14,53 +23,54 @@ export default function Footer() {
           <div className="space-y-8 ">
             {/* Logo and brand */}
             <div className="flex items-center gap-2">
-              <Image src="/assets/images/icone.png" alt="Luxury Home Abidjan Logo" width={40} height={40} />
-              <span className="text-[16px] font-semibold">LUXURY HOME ABIDJAN</span>
+              <Image
+                src="/assets/images/icone.png"
+                alt="Luxury Home Abidjan Logo"
+                width={40}
+                height={40}
+              />
+              <span className="text-[16px] font-semibold">
+                LUXURY HOME ABIDJAN
+              </span>
             </div>
 
             {/* Contact info */}
 
             {/* mobile */}
-             <div className="md:hidden sspace-y-4 flex justify-center md:justify-start flex-wrap gap-2 ">
-
-
+            <div className="md:hidden sspace-y-4 flex justify-center md:justify-start flex-wrap gap-2 ">
               {/* div1 */}
               <div>
-
-                    <div className="mb-2 w-fit px-5 p-2 py-3 flex items-center gap-3 border rounded-full">
-                    <div className="flex items-center justify-center">
-                      <Phone size={16} />
-                    </div>
-                    <span >(+225) 07 49 87 17 13</span>
+                <div className="mb-2 w-fit px-5 p-2 py-3 flex items-center gap-3 border rounded-full">
+                  <div className="flex items-center justify-center">
+                    <Phone size={16} />
                   </div>
-
-                        <div className="w-fit px-5  p-2 py-3 flex items-center gap-3 border rounded-full ww-80">
-                <div className="  flex items-center justify-center">
-                  <Phone size={16} />
+                  <span>(+225) 07 49 87 17 13</span>
                 </div>
-                <span>(+225) 27 22 23 83 80</span>
+
+                <div className="w-fit px-5  p-2 py-3 flex items-center gap-3 border rounded-full ww-80">
+                  <div className="  flex items-center justify-center">
+                    <Phone size={16} />
+                  </div>
+                  <span>(+225) 27 22 23 83 80</span>
+                </div>
               </div>
 
-              </div>
-              
               {/* div2 */}
               <div>
-                 
-                   <div className="mb-2 w-fit px-5 p-2 py-3 text-wrap flex items-center gap-3 border rounded-full ww-80">
-                    <div className=" flex items-center justify-center">
-                      <Mail size={16} />
-                    </div>
-                    <span>info@luxuryhomeabidjan.com</span>
+                <div className="mb-2 w-fit px-5 p-2 py-3 text-wrap flex items-center gap-3 border rounded-full ww-80">
+                  <div className=" flex items-center justify-center">
+                    <Mail size={16} />
                   </div>
+                  <span>info@luxuryhomeabidjan.com</span>
+                </div>
 
-                  <div className="w-fit px-5  py-3 flex items-center gap-3 border rounded-full ww-80 p-2">
-                    <div className=" rounded-full border border-white/30 flex items-center justify-center">
-                      <MapPin size={16} />
-                    </div>
-                    <span>Cocody Abidjan, Côte d'Ivoire</span>
+                <div className="w-fit px-5  py-3 flex items-center gap-3 border rounded-full ww-80 p-2">
+                  <div className=" rounded-full border border-white/30 flex items-center justify-center">
+                    <MapPin size={16} />
                   </div>
+                  <span>Cocody Abidjan, Côte d'Ivoire</span>
+                </div>
               </div>
-             
             </div>
 
             {/* lg */}
@@ -69,7 +79,7 @@ export default function Footer() {
                 <div className="flex items-center justify-center">
                   <Phone size={16} />
                 </div>
-                <span >(+225) 07 49 87 17 13</span>
+                <span>(+225) 07 49 87 17 13</span>
               </div>
 
               <div className="w-fit px-5 p-2 py-3 text-wrap flex items-center gap-3 border rounded-full ww-80">
@@ -120,13 +130,22 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-center border-t border-b border-white/10 py-6 my-6">
           {/* Navigation */}
           <div className="flex gap-8 mb-6 md:mb-0">
-            <Link href="/nos-biens" className="hover:text-gray-300 transition-colors">
+            <Link
+              href="/nos-biens"
+              className="hover:text-gray-300 transition-colors"
+            >
               Nos biens
             </Link>
-            <Link href="/recrutement" className="hover:text-gray-300 transition-colors">
+            <Link
+              href="/recrutement"
+              className="hover:text-gray-300 transition-colors"
+            >
               Recrutement
             </Link>
-            <Link href="/proprietaires" className="hover:text-gray-300 transition-colors">
+            <Link
+              href="/proprietaires"
+              className="hover:text-gray-300 transition-colors"
+            >
               Propriétaires
             </Link>
           </div>
@@ -155,17 +174,22 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row justify-between text-sm text-gray-400">
           <div>© 2025 Lunion-Lab.com Tous droits réservés.</div>
           <div className="flex gap-4 mt-4 md:mt-0">
-            <Link href="/conditions" className="hover:text-white transition-colors">
+            <Link
+              href="/conditions"
+              className="hover:text-white transition-colors"
+            >
               Conditions générales
             </Link>
             <span>•</span>
-            <Link href="/confidentialite" className="hover:text-white transition-colors">
+            <Link
+              href="/confidentialite"
+              className="hover:text-white transition-colors"
+            >
               Avis de confidentialité
             </Link>
           </div>
         </div>
       </div>
     </footer>
-  )
+  );
 }
-

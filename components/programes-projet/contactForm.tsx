@@ -13,11 +13,11 @@ export default function ContactForm() {
         {/* form */}
         <div className="flex flex-col gap-2">
           <SelectForm />
-          <Input  type="name" placeholder="Votre nom" />
+          <Input type="name" placeholder="Votre nom" />
           <Input type="name" placeholder="Votre prénom" />
           <Input type="email" placeholder="Votre email" />
           <Input type="number" placeholder="Votre numéro" />
-          <Button type="submit"  >Soumettre ma demande</Button>
+          <Button type="submit">Soumettre ma demande</Button>
         </div>
       </div>
     </div>

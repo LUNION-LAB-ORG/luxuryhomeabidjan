@@ -26,7 +26,6 @@ export default function HeroCarousel({
   className = "",
 }: HeroCarouselProps) {
   const [currentSlide, setCurrentSlide] = useState(0);
-
   const [sliderRef, instanceRef] = useKeenSlider<HTMLDivElement>({
     loop: true,
     slideChanged: (slider) => setCurrentSlide(slider.track.details.rel),
@@ -44,7 +43,9 @@ export default function HeroCarousel({
   }, [autoplayDelay, instanceRef]);
 
   return (
-    <div className={cn("relative w-full overflow-hidden rounded-2xl", className)}>
+    <div
+      className={cn("relative w-full overflow-hidden rounded-2xl", className)}
+    >
       <div ref={sliderRef} className="keen-slider h-full">
         {slides.map((slide, i) => (
           <div

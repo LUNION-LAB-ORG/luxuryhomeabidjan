@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { AspectRatio } from "../ui/aspect-ratio";
 
 export default function CardAdresse() {
   return (

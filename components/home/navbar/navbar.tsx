@@ -5,7 +5,6 @@ import Link from "next/link";
 import {
   Briefcase,
   Building,
-  CircleUserRound,
   Home,
   Menu,
   Phone,

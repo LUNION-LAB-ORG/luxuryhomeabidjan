@@ -1,6 +1,4 @@
 import Image from "next/image";
-import ListingsInfoBienScroll from "./listings-info-bien-scroll";
-import { ChevronRight } from "lucide-react";
 import FooterService from "./footer-service";
 
 export default function GestionImmobilier() {
@@ -17,7 +15,7 @@ export default function GestionImmobilier() {
         />
       </div>
       {/* body */}
-      <div >
+      <div>
         <div className="max-w-3xl lg:max-w-6xl px-4 lg:px-0   mx-auto">
           <h3 className=" text-[24px] md:text-4xl lg:text-[66px] text-black text-center font-bold py-4 lg:pt-10 lg:pb-14">
             La Gestion chez LHA
@@ -39,7 +37,7 @@ export default function GestionImmobilier() {
 
         <div className="px-4">
           <div className="max-w-3xl lg:max-w-6xl mx-auto lg:mb-16 pb-10 rounded-3xl ">
-            <div >
+            <div>
               <div className="w-full">
                 <Image
                   className="w-full object-cover h-[350px] lg:h-[600px] rounded-t-4xl lg:rounded-t-[50px]"
@@ -121,7 +119,7 @@ export default function GestionImmobilier() {
       </div>
 
       {/* footer */}
-        <FooterService name=" Syndic de copropriété"/>
+      <FooterService name=" Syndic de copropriété" />
     </div>
   );
 }

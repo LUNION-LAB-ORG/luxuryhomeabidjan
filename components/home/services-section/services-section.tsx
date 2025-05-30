@@ -5,11 +5,10 @@ import {
   Building,
   Home,
   Briefcase,
-  Users,
   Lightbulb,
   PaintBucket,
 } from "lucide-react";
-import { motion, useAnimation } from "motion/react";
+import { motion } from "motion/react";
 import { useState } from "react";
 import Link from "next/link";
 
@@ -17,7 +16,7 @@ type ServiceCardProps = {
   title: string;
   imageSrc: string;
   icon: React.ReactNode;
-  navLink: string
+  navLink: string;
 };
 const variants = {
   hover: {
@@ -68,61 +67,45 @@ function ServiceCard({ title, imageSrc, icon, navLink }: ServiceCardProps) {
   function handleMouseLeave() {
     setIsHovered(false);
   }
-  const controls = useAnimation();
-  function handleMouseEnterControls() {
-    controls.start("hover");
-  }
-  function handleMouseLeaveControls() {
-    controls.start("initial");
-  }
-  const style= navLink=="/services#expertise" ?"w-full":"md:w-[49%]"
+  const style = navLink == "/services#expertise" ? "w-full" : "md:w-[49%]";
   return (
-    <Link 
-    className={`w-full ${style} `}
-    href={navLink}
-    >
+    <Link className={`w-full ${style} `} href={navLink}>
       <div
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
         className="group relative overflow-hidden rounded-2xl"
       >
         {/* Background Image */}
-        {
-
-          navLink=="/services#expertise"?
-             <motion.div
-          variants={variantsExpert}
-          animate={isHovered ? "hover" : "initial"}
-          transition={{ delay: 0.2, duration: 0.5 }}
-        
-        className="relative h-[400px] md:h-[350px] lg:h-[460px] w-fulll"
-        >
-          <Image
-            src={imageSrc || "/placeholder.svg"}
-            alt={title}
-            fill
-            className="object-cover transition-transformm duration-500 ggroup-hover:scale-105"
-            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-          />
-          {/* Overlay */}
-          <div className="absolute " />
-        </motion.div>:
-           <div
-        className="relative h-[400px] md:h-[350px] lg:h-[460px] w-fulll"
-        >
-          <Image
-            src={imageSrc || "/placeholder.svg"}
-            alt={title}
-            fill
-            className="object-cover transition-transformm duration-500 ggroup-hover:scale-105"
-            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-          />
-          {/* Overlay */}
-          <div className="absolute " />
-           </div>
-
-        }
-     
+        {navLink == "/services#expertise" ? (
+          <motion.div
+            variants={variantsExpert}
+            animate={isHovered ? "hover" : "initial"}
+            transition={{ delay: 0.2, duration: 0.5 }}
+            className="relative h-[400px] md:h-[350px] lg:h-[460px] w-fulll"
+          >
+            <Image
+              src={imageSrc || "/placeholder.svg"}
+              alt={title}
+              fill
+              className="object-cover transition-transformm duration-500 ggroup-hover:scale-105"
+              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+            />
+            {/* Overlay */}
+            <div className="absolute " />
+          </motion.div>
+        ) : (
+          <div className="relative h-[400px] md:h-[350px] lg:h-[460px] w-fulll">
+            <Image
+              src={imageSrc || "/placeholder.svg"}
+              alt={title}
+              fill
+              className="object-cover transition-transformm duration-500 ggroup-hover:scale-105"
+              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+            />
+            {/* Overlay */}
+            <div className="absolute " />
+          </div>
+        )}
 
         {/* Content */}
         <motion.div
@@ -164,31 +147,31 @@ export function ServicesSection() {
       title: "Transactions",
       imageSrc: "/assets/images/illustrations/page-accueil/service-2.png",
       icon: <Building size={32} />,
-      navLink:"/services/transaction"
+      navLink: "/services/transaction",
     },
-      {
+    {
       title: "Gestion & Syndic  ",
       imageSrc: "/assets/images/illustrations/page-accueil/service-2.png",
       icon: <Home size={32} />,
-       navLink:"/services#immobiliere"
+      navLink: "/services#immobiliere",
     },
-       {
+    {
       title: "Opérations / projets",
       imageSrc: "/assets/images/illustrations/page-accueil/service-2.png",
       icon: <Lightbulb size={32} />,
-       navLink:"/services#operations"
+      navLink: "/services#operations",
     },
-        {
+    {
       title: "Home Staging",
       imageSrc: "/assets/images/illustrations/page-accueil/service-2.png",
       icon: <PaintBucket size={32} />,
-       navLink:"/services#staging"
+      navLink: "/services#staging",
     },
     {
       title: "Expertise & Conseils",
       imageSrc: "/assets/images/illustrations/page-accueil/expert.jpg",
       icon: <Briefcase size={32} />,
-       navLink:"/services#expertise"
+      navLink: "/services#expertise",
     },
     // {
     //   title: "Syndic de copropriété ",
@@ -196,14 +179,13 @@ export function ServicesSection() {
     //   icon: <Users size={32} />,
     //    navLink:"/services#syndic"
     // },
-
   ];
 
   return (
     <section className="py-10 md:py-16 ">
       <div className="ccontainer mx-auto px-4 lg:px-16">
         <h2 className="mb-6 lg:mb-10 font-bold px-2 sm:px-4 lg:px-14 text-[24px] md:text-[30px] lg:text-[36px]">
-         Explorez nos services
+          Explorez nos services
         </h2>
 
         <div className="ggrid flex justify-between flex-col md:flex-wrap gap-6 md:gap-y-6 md:gap-x-2 md:flex-row ">

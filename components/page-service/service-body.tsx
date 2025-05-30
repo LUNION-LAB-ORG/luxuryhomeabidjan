@@ -2,13 +2,12 @@
 import type React from "react";
 import Image from "next/image";
 import { Building, Briefcase, Plus, SquareArrowOutUpRight, Home, Users, Lightbulb, PaintBucket, X } from "lucide-react";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { Button } from "../ui/button";
 import {
   Drawer,
   DrawerClose,
   DrawerContent,
-  DrawerFooter,
   DrawerHeader,
   DrawerTitle,
 } from "../ui/drawer";
@@ -18,7 +17,6 @@ import ExpertiseDrawer from "./expertise-drawer";
 import Syndic from "./syndic-drower";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
-// import { useRouter } from "next/router";
 type ServiceCardProps = {
   title: string;
   imageSrc: string;
@@ -29,10 +27,6 @@ type ServiceCardProps = {
   linkTo?:string;
   id:string|undefined
 };
-
-// function MyComponent() {
-//   return <HouseIcon className="w-6 h-6 text-gray-500" />;
-// }
 
 function ServiceCard({
   title,
@@ -161,12 +155,6 @@ function ServiceCard({
 }
 
 export default function ServicesBody() {
-  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
-
-  const handleDrawerOpenChange = () => {
-    setIsDrawerOpen((prev) => !prev);
-  };
-
 
   const services = [
     {

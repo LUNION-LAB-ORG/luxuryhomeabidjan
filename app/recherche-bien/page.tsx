@@ -1,19 +1,21 @@
 import PropertyFilter from "@/components/filter/PropertyFilter";
 import { ExclusiveListings } from "@/components/home/exclusive-listings/exclusive-listings";
-import { SearchBar } from "@/components/home/searchbar/search-bar";
-import TestimonialsSection from "@/components/qui-sommes-nous/testimonials/testimonials-section";
+import TypeBien from "@/components/immobilier-details/TypeBien";
 import HeaderRechercheBien from "@/components/recherche-bien/header";
 import SectionCard from "@/components/recherche-bien/section-card";
+import { Suspense } from "react";
 
 
 export default async function page(){
     return(
         <div>
          <HeaderRechercheBien/>
-         <PropertyFilter/>
-         {/* <SearchBar />    */}
+         <Suspense fallback={<div>Chargement...</div>}>
+           <PropertyFilter/>
+         </Suspense>
          <SectionCard/>
          <ExclusiveListings />
+         <TypeBien/>
         </div>
     )
 }

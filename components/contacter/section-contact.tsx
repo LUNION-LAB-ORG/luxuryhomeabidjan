@@ -13,7 +13,6 @@ import {
 } from "../ui/form";
 import { Input } from "../ui/input";
 import { Button } from "../ui/button";
-import Image from "next/image";
 
 const formSchema = z.object({
   name: z.string().min(2, {
@@ -154,7 +153,6 @@ export default function SectionPageContact() {
                       <textarea
                         placeholder="Entrez votre Message "
                         className="resize-none min-h-[150px] rounded-2xl p-2 border-2"
-
                         {...field}
                       />
                     </FormControl>
@@ -162,7 +160,13 @@ export default function SectionPageContact() {
                   </FormItem>
                 )}
               />
-              <Button type="submit"  variant="secondary" className="lg:px-28 py-5 text-[18px] font-bold">Soumettre ma demande</Button>
+              <Button
+                type="submit"
+                variant="secondary"
+                className="lg:px-28 py-5 text-[18px] font-bold"
+              >
+                Soumettre ma demande
+              </Button>
             </form>
           </Form>
         </div>

@@ -42,9 +42,7 @@ export default function ListingsInfoBienScroll() {
     <section className="py-12 md:py-16">
       <div >
         <h3 className="px-4 text-black font-bold text-center text-xl lg:text-[28px]  mb-6  lg:mb-8">À quel moment aurez-vous besoin de nous ?</h3>
-
         <div className="relative">
-
           {/* Scrollable Container */}
           <div
             ref={scrollContainerRef}
