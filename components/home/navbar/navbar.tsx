@@ -51,11 +51,11 @@ export function Navbar() {
   return (
     <header
       className={cn(
-        "sticky top-0 z-50 w-full transition-all duration-200",
+        "sticky top-0 z-50 w-full transition-all duration-200 h-[var(--nav-height)] flex items-center",
         isScrolled ? "backdrop-blur-md bg-white/80 shadow-sm" : "bg-white"
       )}
     >
-      <div className="container mx-auto flex h-16 items-center justify-between px-4 lg:px-6">
+      <div className="container mx-auto flex items-center justify-between px-4 lg:px-6">
         {/* Logo */}
         <div className="flex items-center">
           <Link href="/" className="flex items-center gap-2">
