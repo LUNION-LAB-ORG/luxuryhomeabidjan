@@ -9,7 +9,7 @@ export function WhyChooseUs() {
         <div className="flex flex-col justify-center space-y-6 text-[#F5F5F5] max-w-xl">
           <h2 className="text-2xl font-bold leading-tight tracking-tighter md:text-5xl">Pourquoi nous choisir ?</h2>
 
-          <div className="space-y-1 text-white/90">
+          <div className="space-y-1 text-white/90 text-justify">
             <p>
               Parce que la Côte d&apos;Ivoire connaît un engouement et une effervescence immobilière incroyable, une
               demande toujours grandissante : vous proposer les meilleurs biens disponibles sur le marché

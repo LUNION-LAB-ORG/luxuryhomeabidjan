@@ -1,7 +1,5 @@
 "use client";
 
-import * as React from "react";
-import Link from "next/link";
 import {
   Briefcase,
   Building,
@@ -10,8 +8,9 @@ import {
   Phone,
   Users,
 } from "lucide-react";
+import Link from "next/link";
+import * as React from "react";
 
-import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import {
   Sheet,
@@ -22,8 +21,11 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
+import { cn } from "@/lib/utils";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
+import WhatsappIcon from "@/components/whatsapp-icon";
+import { company } from "@/config";
 
 const navItems = [
   { name: "Accueil", href: "/", icon: <Home size={18} /> },
@@ -89,19 +91,17 @@ export function Navbar() {
         </nav>
 
         {/* Assistance Button */}
-        <Link
-          href="/assistance"
-          className="hidden border bg-white border-gray-200 rounded-xl shadow-md py-1 px-4 lg:flex justify-center items-center gap-2 hover:opacity-80 transition"
+        <Button
+          asChild
+          variant="outline"
+          size="lg"
+          className=""
         >
-          <Image
-            src="/assets/images/user.png"
-            alt="Avatar"
-            width={24}
-            height={24}
-            className="size-10"
-          />
-          <span className="text-sm font-bold text-blue-500">Assistance M. LHA</span>
-        </Link>
+          <Link target="_blank" href={`https://wa.me/${company.whatsapp}`} className="hidden border bg-white border-gray-200 rounded-xl shadow-md py-1 px-4 lg:flex justify-center items-center gap-2 hover:opacity-80 transition">
+            <WhatsappIcon className="size-7" />
+            <span className="text-sm font-bold text-blue-500">Assistance M. LHA</span>
+          </Link>
+        </Button>
 
         {/* Mobile Navigation */}
         <Sheet>
@@ -111,7 +111,7 @@ export function Navbar() {
               size="icon"
               className="lg:hidden rounded-full hover:bg-gray-100 transition-colors duration-200"
             >
-              <Menu className="size-8" />
+              <Menu className="size-2" />
               <span className="sr-only">Toggle menu</span>
             </Button>
           </SheetTrigger>
