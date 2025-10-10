@@ -57,7 +57,7 @@ export function Navbar() {
         isScrolled ? "backdrop-blur-md bg-white/80 shadow-sm" : "bg-white"
       )}
     >
-      <div className="container mx-auto flex items-center justify-between px-4 lg:px-6">
+      <div className="container-8xl flex items-center justify-between px-4 lg:px-6">
         {/* Logo */}
         <div className="flex items-center">
           <Link href="/" className="flex items-center gap-2">
