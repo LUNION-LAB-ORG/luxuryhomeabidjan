@@ -1,0 +1,9 @@
+services:
+  LuxuryHomeAbidjan-Production:
+    env_file:
+      - .env
+    build:
+      context: .
+    image: luxury-home-abidjan-production
+    ports:
+      - "${DOCKER_PORT}:3000"

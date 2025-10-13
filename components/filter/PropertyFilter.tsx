@@ -1,16 +1,16 @@
 "use client";
 
-import React, { useEffect, useRef, useState } from "react";
-import { useRouter, useSearchParams,usePathname } from "next/navigation";
-import { SearchInput } from "./SearchInput";
+import { BadgeX, CircleX, Filter, RectangleEllipsis, Search, SquareChevronDown } from "lucide-react";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
+import { useEffect, useRef, useState } from "react";
+import { Button } from "../ui/button";
+import { BudgetSlider } from "./BudgetSlider";
 import { MultiSelectAction } from "./MultiSelectAction";
 import { MultiSelectType } from "./MultiSelectType";
+import { SearchInput } from "./SearchInput";
+import { SelectDate } from "./SelectDate";
 import { SelectPiece } from "./SelectPiece";
 import { SelectZone } from "./SelectZone";
-import { BudgetSlider } from "./BudgetSlider";
-import { SelectDate } from "./SelectDate";
-import { Button } from "../ui/button";
-import { BadgeX, CircleX, Filter, RectangleEllipsis, Search, SquareChevronDown, SquareChevronRight } from "lucide-react";
 
 export default function PropertyFilter() {
   const [OpenfilterMobil, setOpenfilterMobil] = useState(false);
@@ -71,12 +71,12 @@ export default function PropertyFilter() {
     setOpenfilterMobil(false)
 
     if (pathname.includes('/recherche-bien')) {
-        router.push(`?${params.toString()}`,{ scroll: false });
-        const el = document.getElementById('filtres');
-        if (el) el.scrollIntoView({ behavior: 'smooth' });
-      } else {
-        router.push(`/recherche-bien?${params.toString()}`);
-      }
+      router.push(`?${params.toString()}`, { scroll: false });
+      const el = document.getElementById('filtres');
+      if (el) el.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      router.push(`/recherche-bien?${params.toString()}`);
+    }
   };
 
   // Reset filters
@@ -112,31 +112,31 @@ export default function PropertyFilter() {
 
   return (
     <div
-    ref={divRef}
-    id="filtres"
-    className="space-y-4  p-4 lg:px-16 lg:py-10">
+      ref={divRef}
+      id="filtres"
+      className="space-y-4  p-4 lg:px-16 lg:py-10">
       {/* lg */}
-     <div className={`hidden lg:block max-w-sm sm:max-w-full shadow-xl mx-auto p-5 rounded-[50px] ${isFixed?" fixed top-14 mx-auto bg-white px-4 lg:mx-14 py-5 left-0  z-10 shadow-md":""}`}>
+      <div className={`hidden lg:block max-w-sm sm:max-w-full shadow-xl mx-auto p-5 rounded-[50px] ${isFixed ? " fixed top-14 mx-auto bg-white px-4 lg:mx-14 py-5 left-0  z-10 shadow-md" : ""}`}>
         <div className=" flex items-center gap-10 text-xl">
           <p>filter</p>
           {
             OpenfilterMobil ?
-            <div
-            onClick={() => setOpenfilterMobil(!OpenfilterMobil)}
-           >
-           <CircleX />
-           </div>:
-             <div
-             onClick={() => setOpenfilterMobil(!OpenfilterMobil)}
-            >
-             <RectangleEllipsis />
-  
-            </div>  
+              <div
+                onClick={() => setOpenfilterMobil(!OpenfilterMobil)}
+              >
+                <CircleX />
+              </div> :
+              <div
+                onClick={() => setOpenfilterMobil(!OpenfilterMobil)}
+              >
+                <RectangleEllipsis />
+
+              </div>
           }
-               
+
         </div>
 
-        <div className={`lg:flex gap-5 ${!OpenfilterMobil?"hidden":""}`}>
+        <div className={`lg:flex gap-5 ${!OpenfilterMobil ? "hidden" : ""}`}>
           <div className="flex-1 grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-center sm:justify-start flex-wrap gap-6 lg:gap-4">
             <SearchInput value={keyword} onChange={setKeyword} />
             <MultiSelectAction selected={actions} onChange={setActions} />
@@ -146,7 +146,7 @@ export default function PropertyFilter() {
             <BudgetSlider value={budget} onChange={setBudget} />
             <SelectDate value={date} onChange={setDate} />
           </div>
-        {/* boutton recherche */}
+          {/* boutton recherche */}
           <div className=" rounded-full px-3 -full mx-auto  w-fit">
             <div className="flex gap-4 items-center mt-4">
               <button
@@ -159,7 +159,7 @@ export default function PropertyFilter() {
 
               <Button
                 className="cursor-pointer"
-                onClick={applyFilters} 
+                onClick={applyFilters}
               >
                 Recherche
               </Button>
@@ -167,32 +167,32 @@ export default function PropertyFilter() {
           </div>
 
         </div>
-     
-     </div>
+
+      </div>
       {/* mobile */}
-      <div className={`lg:hidden max-w-sm w-full shadow-xl mx-auto p-5 rounded-[50px] ${isFixed?" fixed w-[1000px] top-14 mx-auto bg-white px-4 lg:mx-14 py-5 left-0  z-10 shadow-md":""}`}>
-        <div className={`flex justify-between items-center gap-10 text-xl ${OpenfilterMobil?"pb-5":""}`}>
+      <div className={`lg:hidden max-w-sm w-full shadow-xl mx-auto p-5 rounded-[50px] ${isFixed ? " fixed w-[1000px] top-14 mx-auto bg-white px-4 lg:mx-14 py-5 left-0  z-10 shadow-md" : ""}`}>
+        <div className={`flex justify-between items-center gap-10 text-xl ${OpenfilterMobil ? "pb-5" : ""}`}>
           <p>filter</p>
           {
             OpenfilterMobil ?
-            <div
-            onClick={() => setOpenfilterMobil(!OpenfilterMobil)}
-           >
-             <BadgeX />
-           </div>:
-             <div
-             className="flex items-center gap-16 "
-             onClick={() => setOpenfilterMobil(!OpenfilterMobil)}
-            >
-             <Search className="w-6 h-6 " />
-             <SquareChevronDown />
-  
-            </div>  
+              <div
+                onClick={() => setOpenfilterMobil(!OpenfilterMobil)}
+              >
+                <BadgeX />
+              </div> :
+              <div
+                className="flex items-center gap-16 "
+                onClick={() => setOpenfilterMobil(!OpenfilterMobil)}
+              >
+                <Search className="w-6 h-6 " />
+                <SquareChevronDown />
+
+              </div>
           }
-               
+
         </div>
 
-        <div className={`lg:flex gap-5 ${!OpenfilterMobil && !!Filter?"hidden":""}`}>
+        <div className={`lg:flex gap-5 ${!OpenfilterMobil && !!Filter ? "hidden" : ""}`}>
           <div className="flex-1 grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-center sm:justify-start flex-wrap gap-6 lg:gap-4">
             <SearchInput value={keyword} onChange={setKeyword} />
             <MultiSelectAction selected={actions} onChange={setActions} />
@@ -202,7 +202,7 @@ export default function PropertyFilter() {
             <BudgetSlider value={budget} onChange={setBudget} />
             <SelectDate value={date} onChange={setDate} />
           </div>
-        {/* boutton recherche */}
+          {/* boutton recherche */}
           <div className=" rounded-full px-3 -full mx-auto  w-fit">
             <div className="flex gap-4 items-center mt-4">
               <button
@@ -215,14 +215,14 @@ export default function PropertyFilter() {
 
               <Button
                 className="cursor-pointer"
-                onClick={applyFilters} 
+                onClick={applyFilters}
               >
                 Recherche
               </Button>
             </div>
           </div>
         </div>
-     
+
       </div>
     </div>
   );

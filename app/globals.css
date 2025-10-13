@@ -46,6 +46,7 @@
 }
 
 :root {
+  --nav-height: 4rem;
   --primary: oklch(0.205 0 0); /* Noir */
   --primary-foreground: oklch(0.985 0 0); /* Blanc */
 
@@ -123,7 +124,17 @@
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
+  }
+
+  .container-8xl {
+    @apply max-w-[1440px] w-full mx-auto px-4 md:px-6 ;
+  }
+
+  .fullwidth-right {
+    @apply ml-auto mr-0 pl-4 md:pl-6;
+    max-width: calc(50vw + 720px);
   }
 }

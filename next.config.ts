@@ -4,6 +4,7 @@ import type { NextConfig } from 'next'
 // import type { NextWebpackConfig } from 'next/dist/server/config-shared'
 
 const nextConfig: NextConfig = {
+  output: 'standalone',
   images: {
     remotePatterns: [
       {
