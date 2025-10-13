@@ -1,19 +1,17 @@
 "use client";
 import Autoplay from "embla-carousel-autoplay";
 
-import {Card, CardContent} from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 import {
 	Carousel,
 	CarouselContent,
-	CarouselItem,
 	CarouselNext,
-	CarouselPrevious,
+	CarouselPrevious
 } from "@/components/ui/carousel";
+import { Bath, Bed, Square } from "lucide-react";
 import Image from "next/image";
-import {ChevronLeft, ChevronRight, Bed, Bath, Square} from "lucide-react";
-import {Button} from "@/components/ui/button";
-import {useRef} from "react";
 import Link from "next/link";
+import { useRef } from "react";
 
 type ExclusivePropertyProps = {
 	name: string;
@@ -24,12 +22,12 @@ type ExclusivePropertyProps = {
 };
 
 function ExclusiveProperty({
-	                           name,
-	                           imageSrc,
-	                           bedrooms,
-	                           bathrooms,
-	                           area,
-                           }: ExclusivePropertyProps) {
+	name,
+	imageSrc,
+	bedrooms,
+	bathrooms,
+	area,
+}: ExclusivePropertyProps) {
 	return (
 		<div
 			className="overflow-hidden  rounded-xl m-2 relative h-[300px] md:h-[400px] lg:h-[450px] w-4/5 md:w-2/4 lg:w-1/3 flex-shrink-0">
@@ -59,15 +57,15 @@ function ExclusiveProperty({
 					<div className="mb-3 flex items-center justify-between">
 						<div className="flex items-center gap-4">
 							<div className="flex items-center gap-1 pr-2 border-r-2">
-								<Bed size={16}/>
+								<Bed size={16} />
 								<span className="text-sm">{bedrooms}</span>
 							</div>
 							<div className="flex items-center gap-1 pr-2 border-r-2">
-								<Bath size={16}/>
+								<Bath size={16} />
 								<span className="text-sm">{bathrooms}</span>
 							</div>
 							<div className="flex items-center gap-1">
-								<Square size={16}/>
+								<Square size={16} />
 								<span className="text-sm">{area} m²</span>
 							</div>
 						</div>
@@ -79,7 +77,7 @@ function ExclusiveProperty({
 }
 
 export function ExclusiveListings() {
-	const plugin = useRef(Autoplay({delay: 2000, stopOnInteraction: true}));
+	const plugin = useRef(Autoplay({ delay: 2000, stopOnInteraction: true }));
 
 	const exclusiveProperties = [
 		{

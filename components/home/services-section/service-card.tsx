@@ -3,7 +3,7 @@ import React from 'react';
 import Image from "next/image";
 import Link from "next/link";
 import { cn } from '@/lib/utils';
-import { motion } from "motion/react";
+import { motion, Variants } from "motion/react";
 
 type ServiceCardProps = {
   title: string;
@@ -13,7 +13,7 @@ type ServiceCardProps = {
   className?: string;
 };
 
-const variants = {
+const variants: Variants = {
   hover: {
     height: 200,
     transition: {

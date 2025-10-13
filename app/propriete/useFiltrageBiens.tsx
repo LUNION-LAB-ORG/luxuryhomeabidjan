@@ -13,11 +13,11 @@ export interface BienImmobilier {
   description: string;
   statut: "vente" | "location";
   datePublication: string;
-  images:string[],
+  images: string[],
 }
 
 
-export const biensImmobiliers:BienImmobilier[] = [
+export const biensImmobiliers: BienImmobilier[] = [
   {
     id: 201,
     titre: "Appartement moderne à Cocody",
@@ -30,10 +30,10 @@ export const biensImmobiliers:BienImmobilier[] = [
     statut: "location",
     datePublication: "2025-04-21",
     images: [
-              "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80&w=2075&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-              "https://images.unsplash.com/photo-1588880331179-bc9b93a8cb5e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-              "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-            ]
+      "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80&w=2075&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1588880331179-bc9b93a8cb5e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    ]
   },
   {
     id: 202,
@@ -167,7 +167,7 @@ const useFiltrageBiens = (): BienImmobilier[] => {
       const dateBien = new Date(bien.datePublication);
 
       return (
-        bien.statut === (status === "achat" ? "vente" : "location") 
+        bien.statut === (status === "achat" ? "vente" : "location")
         // (types.length === 0 || types.includes(bien.type)) &&
         // (!pieces || bien.chambres >= pieces) &&
         // (!emplacement || bien.ville.toLowerCase() === emplacement.toLowerCase()) 

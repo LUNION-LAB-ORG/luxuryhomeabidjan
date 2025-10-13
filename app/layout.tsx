@@ -37,14 +37,14 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${inter.variable} antialiased`}
       >
-      <NuqsAdapter>
-        <div className="font-inter max-w-screen-2xl mx-auto">
-          <Navbar />
-          {children}
-          <Footer />
-        </div>
-        <Toaster />
-      </NuqsAdapter>
+        <NuqsAdapter>
+          <div className="font-inter max-w-screen-2xl mx-auto">
+            <Navbar />
+            {children}
+            <Footer />
+          </div>
+          <Toaster />
+        </NuqsAdapter>
       </body>
     </html>
   );

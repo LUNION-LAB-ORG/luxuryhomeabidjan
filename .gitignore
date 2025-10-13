@@ -33,6 +33,9 @@ yarn-error.log*
 # env files (can opt-in for committing if needed)
 .env*
 
+# Prendre .env.example comme modèle pour les variables d'environnement
+!.env.example
+
 # vercel
 .vercel
 

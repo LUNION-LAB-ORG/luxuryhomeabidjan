@@ -6,19 +6,22 @@ import { PropertyCarousel } from "@/components/home/property/property";
 import { ServicesSection } from "@/components/home/services-section/services-section";
 import { ValuesContactSection } from "@/components/home/values-contact/values-contact-section";
 import { WhyChooseUs } from "@/components/home/why-choose-us/why-choose-us";
+import { Suspense } from "react";
 
 export default function Home() {
-	return (
-		<>
-			<HeroSection/>
-			<FilterForm/>
-			<ExclusiveListings/>
-			<WhyChooseUs/>
-			<ServicesSection/>
-			<PropertyCarousel/>
-			<ValuesContactSection/>
-			<LogoShowcase/>
-			{/* <MrLHA/> */}
-		</>
-	);
+  return (
+    <>
+      <HeroSection />
+      <Suspense fallback={<div>Loading...</div>}>
+        <FilterForm />
+      </Suspense>
+      <ExclusiveListings />
+      <WhyChooseUs />
+      <ServicesSection />
+      <PropertyCarousel />
+      <ValuesContactSection />
+      <LogoShowcase />
+      {/* <MrLHA/> */}
+    </>
+  );
 }
