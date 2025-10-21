@@ -97,7 +97,7 @@ export function Navbar() {
           size="lg"
           className=""
         >
-          <Link target="_blank" href={`https://wa.me/${company.whatsapp}`} className="hidden border bg-white border-gray-200 rounded-xl shadow-md py-1 px-4 lg:flex justify-center items-center gap-2 hover:opacity-80 transition">
+          <Link target="_blank" href={`https://wa.me/${company.contacts.whatsapp}`} className="hidden border bg-white border-gray-200 rounded-xl shadow-md py-1 px-4 lg:flex justify-center items-center gap-2 hover:opacity-80 transition">
             <WhatsappIcon className="size-7" />
             <span className="text-sm font-bold text-blue-500">Assistance M. LHA</span>
           </Link>
@@ -111,7 +111,7 @@ export function Navbar() {
               size="icon"
               className="lg:hidden rounded-full hover:bg-gray-100 transition-colors duration-200"
             >
-              <Menu className="size-2" />
+              <Menu className="size-5" />
               <span className="sr-only">Toggle menu</span>
             </Button>
           </SheetTrigger>
@@ -130,7 +130,7 @@ export function Navbar() {
                     href="/assistance"
                     className="flex items-center gap-3 p-1 border border-gray-200 rounded-xl shadow-md hover:shadow-lg transition-all duration-200 bg-white"
                   >
-                    <div className="rounded-full p-1">
+                    <span className="rounded-full p-1">
                       <Image
                         src="/assets/images/user.png"
                         alt="Avatar"
@@ -138,7 +138,7 @@ export function Navbar() {
                         height={24}
                         className="size-10"
                       />
-                    </div>
+                    </span>
                     <span className="text-sm font-bold text-blue-600">
                       Assistance M. LHA
                     </span>
