@@ -1,6 +1,5 @@
-import { Mobilier } from "@/app/propriete/content";
 import CardImage from "./card-image";
-import { BienImmobilier } from "@/app/propriete/useFiltrageBiens";
+import {BienImmobilier} from "@/app/(public)/propriete/useFiltrageBiens";
 
 interface Props {
   data: BienImmobilier[];
