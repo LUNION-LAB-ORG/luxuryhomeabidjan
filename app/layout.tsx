@@ -38,11 +38,10 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} ${inter.variable} antialiased`}
       >
         <NuqsAdapter>
-          <div className="font-inter max-w-screen-2xl mx-auto">
-            <Navbar />
+          <main className="font-inter max-w-screen-2xl mx-auto">
             {children}
             <Footer />
-          </div>
+          </main>
           <Toaster />
         </NuqsAdapter>
       </body>

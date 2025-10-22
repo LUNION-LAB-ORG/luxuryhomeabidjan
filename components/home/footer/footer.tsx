@@ -1,15 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import {
-	Phone,
-	Mail,
-	MapPin,
-	Facebook,
-	Twitter,
-	Instagram,
-	Linkedin,
-	Music,
-} from "lucide-react";
+import {Facebook, Instagram, Linkedin, Youtube,} from "lucide-react";
 import {Input} from "@/components/ui/input";
 import {Button} from "@/components/ui/button";
 import ContactItem from "@/components/home/footer/contact-item";
@@ -54,7 +45,7 @@ export default function Footer() {
 								icon="phone"
 							/>
 							<ContactItem
-								url="https://goo.gl/maps/example"
+								url="https://maps.app.goo.gl/QE2HF4JLrHTKNsfk9?g_st=aw"
 								info={company.contacts.address}
 								icon="map-pin"
 							/>
@@ -110,20 +101,17 @@ export default function Footer() {
 
 					{/* Social icons */}
 					<div className="flex gap-6">
-						<Link href="#" className="hover:text-gray-300 transition-colors">
+						<Link href={company.socials.facebook} className="hover:text-gray-300 transition-colors">
 							<Facebook size={20}/>
 						</Link>
-						<Link href="#" className="hover:text-gray-300 transition-colors">
-							<Twitter size={20}/>
-						</Link>
-						<Link href="#" className="hover:text-gray-300 transition-colors">
+						<Link href={company.socials.instagram} className="hover:text-gray-300 transition-colors">
 							<Instagram size={20}/>
 						</Link>
-						<Link href="#" className="hover:text-gray-300 transition-colors">
+						<Link href={company.socials.linkedin} className="hover:text-gray-300 transition-colors">
 							<Linkedin size={20}/>
 						</Link>
-						<Link href="#" className="hover:text-gray-300 transition-colors">
-							<Music size={20}/>
+						<Link href={company.socials.youtube} className="hover:text-gray-300 transition-colors">
+							<Youtube size={20}/>
 						</Link>
 					</div>
 				</div>

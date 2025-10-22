@@ -1,5 +1,6 @@
 import HeroCarousel from "@/components/home/carousel/HeroCarousel";
 import HeroCarouselFade from "@/components/home/carousel/HeroCarouselFade";
+import {Navbar} from "@/components/home/navbar/navbar";
 
 const heroSlides = [
 	{
@@ -59,7 +60,12 @@ const heroSlides = [
 ];
 export default function HeroSection() {
 	return (
-		<HeroCarouselFade slides={heroSlides} autoplayDelay={5000}
-		                  className="max-w-full w-full mx-auto min-h-[calc(100vh-var(--nav-height))]"/>
+		<section className="flex flex-col min-h-screen">
+			<Navbar/>
+			<HeroCarouselFade
+				slides={heroSlides} autoplayDelay={5000}
+				className="max-w-full w-full mx-auto flex-1"
+			/>
+		</section>
 	);
 }
