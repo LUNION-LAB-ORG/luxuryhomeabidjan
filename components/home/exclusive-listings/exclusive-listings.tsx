@@ -165,10 +165,10 @@ export function ExclusiveListings() {
 							))}
 						</CarouselContent>
 						<CarouselPrevious
-							className="hidden group-hover:flex z-50 w-10 lg:w-16 h-10 lg:h-16 ml-14 transition-all duration-300"
+							className=""
 						/>
 						<CarouselNext
-							className="hidden group-hover:flex z-50 w-10 lg:w-16 h-10 lg:h-16 mr-14 transition-all duration-300"
+							className=""
 						/>
 					</Carousel>
 				</div>
