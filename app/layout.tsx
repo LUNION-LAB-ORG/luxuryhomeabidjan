@@ -43,11 +43,10 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} ${montserrat.variable} antialiased`}
       >
         <NuqsAdapter>
-          <div className="font-montserrat max-w-screen-2xl mx-auto">
-            <Navbar />
+          <main className="font-montserrat max-w-screen-2xl mx-auto">
             {children}
             <Footer />
-          </div>
+          </main>
           <Toaster />
         </NuqsAdapter>
       </body>
