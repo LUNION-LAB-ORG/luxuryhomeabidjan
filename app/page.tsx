@@ -17,7 +17,7 @@ export default function Home() {
       <Suspense fallback={<div>Loading...</div>}>
         <FilterForm />  
       </Suspense>
-      <ExclusiveListings />
+      {/*<ExclusiveListings />*/}
       <CoupDeCoeur/>
       {/* <WhyChooseUs /> */}
       <WhyChooseUsSection/>

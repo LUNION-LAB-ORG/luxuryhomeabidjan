@@ -24,7 +24,7 @@ function FilterForm() {
   } = useSearchbarForm();
 
   return (
-    <div className="container-8xl">
+    <div className="container-8xl py-2">
       <motion.form
         className={cn("w-full shadow md:shadow-[0px_2px_20px_0px_#0000001A] rounded-lg md:rounded-[60px]",
           "max-md:py-4 px-8 mt-12",
