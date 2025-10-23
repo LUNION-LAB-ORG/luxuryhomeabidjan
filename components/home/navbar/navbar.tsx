@@ -47,7 +47,7 @@ export function Navbar() {
 	return (
 		<header
 			className={cn(
-				"fixed top-0 z-50 w-full transition-all duration-200 h-[var(--nav-height)] flex items-center",
+				"fixed top-0 z-50 left-0 right-0 transition-all duration-200 h-[var(--nav-height)] flex items-center",
 				isScrolled ? "backdrop-blur-md bg-white/80 shadow-sm" : "bg-transparent"
 			)}
 		>

@@ -72,7 +72,7 @@ export default function CoupDeCoeur() {
   ];
 
   return (
-    <div className="min-h-screen px-0 py-12  w-full">
+    <div className="min-h-screen px-2 py-12  w-full">
       {/* Header */}
       <div className="mb-8 px-6">
         <h1 className="text-2xl font-bold text-gray-800">
