@@ -10,7 +10,7 @@ import Link from "next/link";
 export default function CoupDeCoeur() {
 
 
- 
+
 
   return (
     <div className="min-h-screen px-2 py-12  w-full">
@@ -53,7 +53,7 @@ export default function CoupDeCoeur() {
                 asChild
                 className="bg-white text-gray-900 font-semibold px-6 py-3 rounded-full shadow-lg hover:bg-gray-900 hover:text-white transition-colors duration-300"
               >
-                <Link href={`coups-de-coeur/${product.id}`}>En savoir plus</Link>
+                <Link href={`coups-de-coeur/${product.id}`}>Savourez chaque details</Link>
               </Button>
             </div>
           </div>
