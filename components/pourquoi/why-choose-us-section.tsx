@@ -1,7 +1,7 @@
-'use client';
+"use client";
 
-import Image from 'next/image';
-import { useEffect, useState } from 'react';
+import Image from "next/image";
+import { useEffect, useState } from "react";
 
 // Composant principal
 export default function WhyChooseUsSection() {
@@ -13,8 +13,8 @@ export default function WhyChooseUsSection() {
 
   return (
     <div
-      className="relative bg-no-repeat bg-cover bg-center overflow-hidden min-h-screen bg-white shadow-lg"
-      style={{ backgroundImage: 'url(/assets/images/coup-de-coeur/nous.jpg)' }}
+      className="relative bg-no-repeat bg-cover bg-center  overflow-hidden min-h-screen bg-white shadow-lg"
+      style={{ backgroundImage: "url(/assets/images/coup-de-coeur/nous.jpg)" }}
     >
       {/* Image principale */}
       <div className="relative w-full overflow-hidden">
@@ -24,45 +24,44 @@ export default function WhyChooseUsSection() {
           fill
           priority
           className={`object-cover transition-opacity duration-700 ${
-            isLoaded ? 'opacity-100' : 'opacity-0'
+            isLoaded ? "opacity-100" : "opacity-0"
           }`}
         />
       </div>
 
       {/* Overlay textuel semi-transparent */}
       <div className="absolute bottom-0 left-0 right-0 bg-black/60  text-white p-8 pb-12">
-        <h2 className="text-4xl font-bold text-center mb-6">Pourquoi nous choisir ?</h2>
+        <h2 className="text-4xl font-bold text-center mb-6">
+          Pourquoi nous choisir ?
+        </h2>
 
-        <p className="text-sm leading-relaxed mb-4 max-w-4xl mx-auto">
-         Luxury Home Abidjan, fondé par des passionnés de l’immobilier,
-incarne une vision nouvelle et ambitieuse du secteur premium en Afrique.
-
+        <p className="text-sm lg:text-xl md:text-md  leading-relaxed mb-4 max-w-4xl mx-auto">
+          Luxury Home Abidjan, fondé par des passionnés de l’immobilier, incarne
+          une vision nouvelle et ambitieuse du secteur immobilier en Afrique.
         </p>
 
-        <p className="text-sm leading-relaxed mb-4 max-w-4xl mx-auto">
-         LHA, c’est la fusion entre la passion et l’excellence.
-
+        <p className="text-sm lg:text-xl md:text-md  leading-relaxed mb-4 max-w-4xl mx-auto">
+          LHA, c’est la fusion entre la passion et l’excellence.
         </p>
 
-        <p className="text-sm leading-relaxed mb-4 max-w-4xl mx-auto">
-          Notre équipe de développement réinvente l’immobilier africain
-en plaçant le client au cœur de chaque projet.
-
+        <p className="text-sm lg:text-xl md:text-md  leading-relaxed mb-4 max-w-4xl mx-auto">
+          Notre équipe diversifier réinvente l’immobilier africain en plaçant le
+          client au cœur de chaque projet.
         </p>
 
         <p className="text-sm lg:text-xl md:text-md leading-relaxed mb-6 max-w-4xl mx-auto">
-         
-Plus qu’une transaction, nous créons des projets de vie,
-vous serez guidés par une écoute, un conseil immobilier
-et un accompa...
-
+          Plus qu’une transaction, nous créons des projets de vie, vous serez
+          guidés par une écoute, un conseil immobilier et un accompagnement
         </p>
 
         {/* Philosophie & fierté */}
-        <div className="text-center text-xs uppercase tracking-wider">
-          <p className="font-semibold">NOTRE PHILOSOPHIE S’APPLIQUE À TOUS NOS CLIENTS.</p>
-          <p className="font-bold mt-1">NOTRE FIERTÉ : VOTRE SATISFACTION</p>
-        </div>
+       <div className="text-center">
+         <span className="font-bold text-lg">
+          LHA,
+        </span>
+        <br />
+        l'immobilier en Afrique autrement.
+       </div>
       </div>
     </div>
   );

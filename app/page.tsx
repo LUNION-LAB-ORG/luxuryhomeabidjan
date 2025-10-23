@@ -9,6 +9,7 @@ import { ServicesSection } from "@/components/home/services-section/services-sec
 import { ValuesContactSection } from "@/components/home/values-contact/values-contact-section";
 import { WhyChooseUs } from "@/components/home/why-choose-us/why-choose-us";
 import WhyChooseUsSection from "@/components/pourquoi/why-choose-us-section";
+import { TeamSection } from "@/components/team/team-section";
 import { Suspense } from "react";
 
 export default function Home() {
@@ -18,15 +19,16 @@ export default function Home() {
       <Suspense fallback={<div>Loading...</div>}>
         <FilterForm />  
       </Suspense>
-      {/*<ExclusiveListings />*/}
       <CoupDeCoeur/>
       {/* <WhyChooseUs /> */}
       <WhyChooseUsSection/>
       <ServicesSection />
-      <PropertyCarousel />
+      <ExclusiveListings />
+      {/*<PropertyCarousel />*/}
       <ValuesContactSection />
       {/* <Details/> */}
-      <LogoShowcase />
+      {/*<LogoShowcase />*/}
+      <TeamSection/>
       {/* <MrLHA/> */}
     </div>
   );

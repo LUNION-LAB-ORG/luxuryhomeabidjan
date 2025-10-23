@@ -142,7 +142,7 @@ export function ExclusiveListings() {
 		<section className="py-12 md:py-16 fullwidth-right">
 			<div>
 				<h2 className="font-bold text-[24px] md:text-[30px] lg:text-[36px] mb-6">
-					Découvrez nos coups de cœur
+					Nos disponibilités
 				</h2>
 
 				<div className="relative group">
