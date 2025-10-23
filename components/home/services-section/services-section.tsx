@@ -7,6 +7,7 @@ import {
 	Lightbulb,
 	PaintBucket,
 } from "lucide-react";
+import ServicesCarousel from "@/components/home/services-section/services-carousel";
 const variants = {
 	hover: {
 		y: 20,
@@ -170,24 +171,26 @@ export function ServicesSection() {
 				Explorez nos services
 			</h2>
 
-			<div className="grid md:grid-cols-2 gap-8">
-				{services.map((service) => (
-					<ServiceCard
-						key={service.title}
-						title={service.title}
-						imageSrc={service.imageSrc}
-						icon={service.icon}
-						navLink={service.navLink}
-					/>
-				))}
-				<ServiceCard
-					title="Expertise & Conseils"
-					imageSrc="/assets/images/illustrations/page-accueil/expert.jpg"
-					icon={<Briefcase size={32} />}
-					navLink="/services#expertise"
-					className="md:col-span-2 md:aspect-[1785/580]"
-				/>
-			</div>
+			<ServicesCarousel/>
+
+			{/*<div className="grid md:grid-cols-2 gap-8">*/}
+			{/*	{services.map((service) => (*/}
+			{/*		<ServiceCard*/}
+			{/*			key={service.title}*/}
+			{/*			title={service.title}*/}
+			{/*			imageSrc={service.imageSrc}*/}
+			{/*			icon={service.icon}*/}
+			{/*			navLink={service.navLink}*/}
+			{/*		/>*/}
+			{/*	))}*/}
+			{/*	<ServiceCard*/}
+			{/*		title="Expertise & Conseils"*/}
+			{/*		imageSrc="/assets/images/illustrations/page-accueil/expert.jpg"*/}
+			{/*		icon={<Briefcase size={32} />}*/}
+			{/*		navLink="/services#expertise"*/}
+			{/*		className="md:col-span-2 md:aspect-[1785/580]"*/}
+			{/*	/>*/}
+			{/*</div>*/}
 		</section>
 	);
 }
