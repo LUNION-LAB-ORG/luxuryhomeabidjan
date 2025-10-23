@@ -62,10 +62,24 @@ export default function HeroSection() {
 	return (
 		<section className="flex flex-col min-h-screen">
 			<Navbar/>
-			<HeroCarouselFade
-				slides={heroSlides} autoplayDelay={5000}
-				className="max-w-full w-full mx-auto flex-1"
-			/>
+			{/*<HeroCarouselFade*/}
+			{/*	slides={heroSlides} autoplayDelay={5000}*/}
+			{/*	className="max-w-full w-full mx-auto flex-1"*/}
+			{/*/>*/}
+			<div className="relative flex-1 overflow-hidden">
+				<video
+					autoPlay
+					loop
+					muted
+					playsInline
+					className="absolute inset-0 w-full h-full object-cover"
+				>
+					<source src="/assets/videos/1-wha.mp4" type="video/webm" />
+					<source src="/assets/videos/1-opt-vp9.webm" type="video/webm" />
+					<source src="/assets/videos/1-opt-low.mp4" type="video/mp4" />
+				</video>
+				<div className="absolute inset-0 bg-black/20 bg-opacity-50" />
+			</div>
 		</section>
 	);
 }
