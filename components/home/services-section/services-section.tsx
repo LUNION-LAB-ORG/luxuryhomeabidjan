@@ -171,7 +171,9 @@ export function ServicesSection() {
 				Explorez nos services
 			</h2>
 
-			<ServicesCarousel/>
+			<ServicesCarousel
+				images={[""]}
+			/>
 
 			{/*<div className="grid md:grid-cols-2 gap-8">*/}
 			{/*	{services.map((service) => (*/}
