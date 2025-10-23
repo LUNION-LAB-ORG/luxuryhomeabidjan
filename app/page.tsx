@@ -14,7 +14,7 @@ import { Suspense } from "react";
 
 export default function Home() {
   return (
-    <>
+    <div className="max-w-[2550px] mx-auto">
       <HeroSection />
       <Suspense fallback={<div>Loading...</div>}>
         <FilterForm />  
@@ -30,6 +30,6 @@ export default function Home() {
       <LogoShowcase />
       <TeamSection/>
       {/* <MrLHA/> */}
-    </>
+    </div>
   );
 }

@@ -13,7 +13,7 @@ export default function WhyChooseUsSection() {
 
   return (
     <div
-      className="relative bg-no-repeat bg-cover bg-center  overflow-hidden min-h-screen rounded-b-3xl bg-white shadow-lg"
+      className="relative bg-no-repeat bg-cover bg-center  overflow-hidden min-h-screen bg-white shadow-lg"
       style={{ backgroundImage: "url(/assets/images/coup-de-coeur/nous.jpg)" }}
     >
       {/* Image principale */}
@@ -30,7 +30,7 @@ export default function WhyChooseUsSection() {
       </div>
 
       {/* Overlay textuel semi-transparent */}
-      <div className="absolute bottom-0 left-0 right-0 bg-black/60  text-white p-8 pb-12 rounded-b-3xl">
+      <div className="absolute bottom-0 left-0 right-0 bg-black/60  text-white p-8 pb-12">
         <h2 className="text-4xl font-bold text-center mb-6">
           Pourquoi nous choisir ?
         </h2>
