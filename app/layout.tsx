@@ -12,8 +12,8 @@ const geistSans = Geist({
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const noto = Noto_Serif({
+  variable: "--font-noto",
   subsets: ["latin"],
 });
 const montserrat =Montserrat({
@@ -40,7 +40,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${montserrat.variable} antialiased`}
+        className={`${geistSans.variable} ${noto.variable} ${montserrat.variable} antialiased`}
       >
         <NuqsAdapter>
           <main className="font-montserrat max-w-screen- mx-auto">

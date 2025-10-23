@@ -1,75 +1,16 @@
 
 import { Button } from "@/components/ui/button";
+import { products } from "@/data/coups-de-coeur.type";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
 
-interface Iproduct {
-  id: number;
-  title: string;
-  price: string;
-  rating: number;
-  image: string;
-  surface: number;
-  chambre: number;
-  salleDeBain: number;
-  localisation: string;
-  type: string;
-}
+
 
 export default function CoupDeCoeur() {
 
 
-  const products: Iproduct[] = [
-    {
-      id: 1,
-      title: "VILLA LA CASA",
-      price: "650 000 FCFA/nuitée",
-      rating: 4.7,
-      image: "/assets/images/coup-de-coeur/coup1.jpg",
-      surface: 600,
-      chambre: 3,
-      salleDeBain: 4,
-      localisation: "Cocody",
-      type: "Location",
-    },
-    {
-      id: 2,
-      title: "VILLA PRESTIGE",
-      price: "650 000 FCFA/nuitée",
-      rating: 4.8,
-      image: "/assets/images/coup-de-coeur/coup2.jpg",
-      surface: 700,
-      chambre: 4,
-      salleDeBain: 5,
-      localisation: "Bingerville",
-      type: "Vente",
-    },
-    {
-      id: 3,
-      title: "VILLA PRESTIGE",
-      price: "650 000 FCFA/nuitée",
-      rating: 4.8,
-      image: "/assets/images/coup-de-coeur/coup4.png",
-      surface: 700,
-      chambre: 4,
-      salleDeBain: 5,
-      localisation: "Bingerville",
-      type: "Vente",
-    },
-    {
-      id: 4,
-      title: "Moana",
-      price: "650 000 FCFA/nuitée",
-      rating: 4.7,
-      image: "/assets/images/coup-de-coeur/coup3.png",
-      surface: 600,
-      chambre: 3,
-      salleDeBain: 4,
-      localisation: "Cocody",
-      type: "Location",
-    },
-  ];
+ 
 
   return (
     <div className="min-h-screen px-0 py-12  w-full">
@@ -112,7 +53,7 @@ export default function CoupDeCoeur() {
                 asChild
                 className="bg-white text-gray-900 font-semibold px-6 py-3 rounded-full shadow-lg hover:bg-gray-900 hover:text-white transition-colors duration-300"
               >
-                <Link href={`coup-de-coeur/${product.id}`}>En savoir plus</Link>
+                <Link href={`coups-de-coeur/${product.id}`}>En savoir plus</Link>
               </Button>
             </div>
           </div>
