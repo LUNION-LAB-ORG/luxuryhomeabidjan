@@ -18,12 +18,12 @@ export default function Home() {
       <Suspense fallback={<div>Loading...</div>}>
         <FilterForm />  
       </Suspense>
-      {/*<ExclusiveListings />*/}
       <CoupDeCoeur/>
       {/* <WhyChooseUs /> */}
       <WhyChooseUsSection/>
       <ServicesSection />
-      <PropertyCarousel />
+      <ExclusiveListings />
+      {/*<PropertyCarousel />*/}
       <ValuesContactSection />
       {/* <Details/> */}
       <LogoShowcase />
