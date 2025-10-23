@@ -26,12 +26,12 @@ export const company: ICompany = {
 			icon: "building",
 		},
 		{
-			title: "transaction",
+			title: "transactions immobilières",
 			imageSrc: "/assets/images/services/transaction.png",
 			icon: "hand-coins",
 		},
 		{
-			title: "promotion immobilière",
+			title: "programmes immobiliers",
 			imageSrc: "/assets/images/services/promotion.png",
 			icon: "home",
 		},

@@ -74,9 +74,10 @@ export default function HeroSection() {
 					playsInline
 					className="absolute inset-0 w-full h-full object-cover"
 				>
-					<source src="/assets/videos/1-wha.mp4" type="video/webm" />
-					<source src="/assets/videos/1-opt-vp9.webm" type="video/webm" />
-					<source src="/assets/videos/1-opt-low.mp4" type="video/mp4" />
+					{/*<source src="/assets/videos/1-wha.mp4" type="video/webm" />*/}
+					{/*<source src="/assets/videos/1-opt-vp9.webm" type="video/webm" />*/}
+					{/*<source src="/assets/videos/1-opt-low.mp4" type="video/mp4" />*/}
+					<source src="/assets/videos/bg-video.mov" />
 				</video>
 				<div className="absolute inset-0 bg-black/20 bg-opacity-50" />
 			</div>
