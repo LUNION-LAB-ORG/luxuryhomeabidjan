@@ -27,7 +27,7 @@ export default function Home() {
       {/*<PropertyCarousel />*/}
       <ValuesContactSection />
       {/* <Details/> */}
-      <LogoShowcase />
+      {/*<LogoShowcase />*/}
       <TeamSection/>
       {/* <MrLHA/> */}
     </div>
