@@ -48,7 +48,7 @@ export function WhyChooseUs() {
           <div className="hidden lg:block lg:absolute  w-full hh-full h-[85%]  rounded-3xl iinset-0 left-[-30px] z-0">
             <Image
               className="rounded-3xl"
-              src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              src="/assets/images/coup-de-coeur/nous.jpg"
               alt="Image de fond"
               fill
               style={{ objectFit: 'cover' }}

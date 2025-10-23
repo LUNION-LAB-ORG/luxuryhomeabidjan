@@ -1,7 +1,8 @@
-"use client";
-import { Bath, Bed } from "lucide-react";
-import { useState } from "react";
-import { IconMeterSquare } from "@tabler/icons-react";
+
+import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
+import Image from "next/image";
+import Link from "next/link";
 
 interface Iproduct {
   id: number;
@@ -17,15 +18,15 @@ interface Iproduct {
 }
 
 export default function CoupDeCoeur() {
-  const [selectedImage, setSelectedImage] = useState("");
+
 
   const products: Iproduct[] = [
     {
       id: 1,
       title: "VILLA LA CASA",
-    price: "650 000 FCFA/nuitée",
+      price: "650 000 FCFA/nuitée",
       rating: 4.7,
-      image: "/assets/images/illustrations/page-accueil/villa1.png",
+      image: "/assets/images/coup-de-coeur/coup1.jpg",
       surface: 600,
       chambre: 3,
       salleDeBain: 4,
@@ -35,21 +36,21 @@ export default function CoupDeCoeur() {
     {
       id: 2,
       title: "VILLA PRESTIGE",
-     price: "650 000 FCFA/nuitée",
+      price: "650 000 FCFA/nuitée",
       rating: 4.8,
-      image: "/assets/images/illustrations/page-accueil/villa2.png",
+      image: "/assets/images/coup-de-coeur/coup2.jpg",
       surface: 700,
       chambre: 4,
       salleDeBain: 5,
       localisation: "Bingerville",
       type: "Vente",
     },
-     {
+    {
       id: 3,
       title: "VILLA PRESTIGE",
-    price: "650 000 FCFA/nuitée",
+      price: "650 000 FCFA/nuitée",
       rating: 4.8,
-      image: "/assets/images/illustrations/page-accueil/villa2.png",
+      image: "/assets/images/coup-de-coeur/coup4.png",
       surface: 700,
       chambre: 4,
       salleDeBain: 5,
@@ -61,7 +62,7 @@ export default function CoupDeCoeur() {
       title: "Moana",
       price: "650 000 FCFA/nuitée",
       rating: 4.7,
-      image: "/assets/images/illustrations/page-accueil/villa1.png",
+      image: "/assets/images/coup-de-coeur/coup3.png",
       surface: 600,
       chambre: 3,
       salleDeBain: 4,
@@ -71,69 +72,48 @@ export default function CoupDeCoeur() {
   ];
 
   return (
-    <div className="min-h-screen px-6 py-12 container-8xl">
+    <div className="min-h-screen px-0 py-12  w-full">
       {/* Header */}
-      <div className="mb-8">
+      <div className="mb-8 px-6">
         <h1 className="text-2xl font-bold text-gray-800">
           Découvrez nos coups de cœur
         </h1>
       </div>
 
       {/* Product Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+      <div className="grid grid-cols-1  md:grid-cols-2 gap-3">
         {products.map((product) => (
           <div
             key={product.id}
-            className="relative overflow-hidden rounded-xl shadow-md cursor-pointer hover:shadow-2xl transition-shadow duration-300"
-            onClick={() => setSelectedImage(product.image)}
+            className={cn(
+              "relative ring-1 ring-slate-200 overflow-hidden group cursor-pointer hover:shadow-2xl transition-all duration-500 w-full",
+              product.id == 3 && "max-md:order-4"
+            )}
           >
-            {/* Image */}
-            <img
-              src={product.image}
-              alt={product.title}
-              className="w-full h-[400px] object-cover transition-transform duration-500 hover:scale-105"
-            />
+            {/* Image container — fond différent selon id */}
+            <div
+              className={cn(
+                `w-full lg:h-[600px] md:h-[480px] h-[500px] flex items-center justify-center`,
+                product.id === 1 || product.id === 4 ? "bg-white" : "bg-black"
+              )}
+            >
+              <Image
+                src={product.image}
+                alt={product.title}
+                width={500}
+                height={500}
+                className="max-h-[400px] w-auto object-contain transition-transform duration-500 group-hover:scale-105"
+              />
+            </div>
 
-            {/* Overlay (dégradé noir pour lisibilité du texte) */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/10 via-black/10 to-transparent" />
-
-            {/* Contenu positionné proprement */}
-            <div className="absolute top-0 left-0 w-full h-full flex flex-col justify-between p-4">
-              {/* Haut : titre + prix */}
-              <div className="flex justify-between items-start">
-                <div>
-                  <span className="text-xs bg-white/20 backdrop-blur-sm px-3 py-1 rounded-full text-white border border-white/30">
-                    {product.type}
-                  </span>
-                  <h3 className="mt-2 text-lg font-bold text-white drop-shadow">
-                    {product.title}
-                  </h3>
-                </div>
-                <div className="bg-gold-500 text-black text-sm font-semibold px-3 py-2 rounded-md bg-white shadow-md">
-                  {product.price}
-                </div>
-              </div>
-
-              {/* Bas : infos + localisation */}
-              <div className="space-y-3">
-                <div className="flex justify-center gap-6 text-white text-sm">
-                  <div className="flex items-center gap-1">
-                    <Bed size={18} /> <span>{product.chambre} chambres</span>
-                  </div>
-                  <div className="flex items-center gap-1">
-                    <Bath size={18} /> <span>{product.salleDeBain} salles de bains</span>
-                  </div>
-                  <div className="flex items-center gap-1">
-                   surface
-                    <span>{product.surface} m²</span>
-                  </div>
-                </div>
-                <div className="text-center">
-                  <p className="text-white text-sm font-medium">
-                    📍 {product.localisation}
-                  </p>
-                </div>
-              </div>
+            {/* Bouton "En savoir plus" — apparaît au survol */}
+            <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+              <Button
+                asChild
+                className="bg-white text-gray-900 font-semibold px-6 py-3 rounded-full shadow-lg hover:bg-gray-900 hover:text-white transition-colors duration-300"
+              >
+                <Link href={`coup-de-coeur/${product.id}`}>En savoir plus</Link>
+              </Button>
             </div>
           </div>
         ))}

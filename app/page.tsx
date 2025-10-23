@@ -1,3 +1,4 @@
+import Details from "@/components/detail/detail";
 import CoupDeCoeur from "@/components/home/coup-de-coeur/coup-de-coeur";
 import { ExclusiveListings } from "@/components/home/exclusive-listings/exclusive-listings";
 import FilterForm from "@/components/home/filter-form";
@@ -24,6 +25,7 @@ export default function Home() {
       <ServicesSection />
       <PropertyCarousel />
       <ValuesContactSection />
+      {/* <Details/> */}
       <LogoShowcase />
       {/* <MrLHA/> */}
     </>
