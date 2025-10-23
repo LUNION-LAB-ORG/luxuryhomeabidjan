@@ -1,4 +1,6 @@
-export const company = {
+import {IconName} from "lucide-react/dynamic";
+
+export const company: ICompany = {
 	contacts: {
 		whatsapp: "+2250749871713",
 		phone: "(+225) 07 49 87 17 13",
@@ -6,10 +8,53 @@ export const company = {
 		fixe: "(+225) 27 22 23 83 80",
 		address: "Cocody Abidjan, Côte d'Ivoire"
 	},
-	socials:{
+	socials: {
 		facebook: "https://www.facebook.com/share/1Jkn1tZrZA",
 		instagram: "https://www.instagram.com/luxury.home.abidjan",
 		linkedin: "https://www.linkedin.com/company/luxuryhomeabidjan/",
 		youtube: "https://www.youtube.com/@Luxuryhome_abidjan",
-	}
+	},
+	services: [
+		{
+			title: "expertise & conseils",
+			imageSrc: "/assets/images/services/expertise.png",
+			icon: "lightbulb",
+		},
+		{
+			title: "gestion & syndic",
+			imageSrc: "/assets/images/services/gestion.png",
+			icon: "building",
+		},
+		{
+			title: "transaction",
+			imageSrc: "/assets/images/services/transaction.png",
+			icon: "hand-coins",
+		},
+		{
+			title: "promotion immobilière",
+			imageSrc: "/assets/images/services/promotion.png",
+			icon: "home",
+		},
+		{
+			title: "Home staging",
+			imageSrc: "/assets/images/services/home-staging.png",
+			icon: "paint-bucket",
+		}
+	]
+}
+
+export interface ICompany {
+	contacts: {
+		[key: string]: string;
+	};
+	socials: {
+		[key: string]: string;
+	};
+	services: IService[];
+}
+
+export interface IService {
+	title: string;
+	imageSrc: string;
+	icon: IconName;
 }
