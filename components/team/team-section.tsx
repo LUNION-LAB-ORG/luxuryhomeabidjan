@@ -70,7 +70,7 @@ export const TeamSection = () => {
       name: "Aïcha Coulibaly",
       role: "Luxury Realtor",
       bio: "Experte en accompagnement de clients haut de gamme dans leurs acquisitions.",
-      image: "/assets/images/team/AISHA _5.jpg",
+      image: "/assets/images/team/aicha.jpg",
       email: "aicha.coulibaly@luxuryhomeabidjan.com",
       phone: "+2250749876609",
       socials: { linkedin: "#" },
@@ -142,16 +142,15 @@ export const TeamSection = () => {
 
 // 🧑‍💼 Composant carte membre
 const TeamCard = ({ member }: { member: TeamMember }) => (
-  <div className="group relative bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+  <div className="group relative rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 flex flex-col">
     {/* Image */}
-    <div className="relative h-80 md:h-96 w-full overflow-hidden">
-   
+    <div className="relative w-full overflow-hidden flex-1">
       <Image
         src={member.image}
         alt={member.name}
         width={2000}
         height={2000}
-        className="object-cover transition-transform duration-500 group-hover:scale-105"
+        className="object-cover h-full w-full transition-transform duration-500 group-hover:scale-105"
       />
 
       {/* Icônes LinkedIn + Mail (mail s'affiche uniquement si présent) */}
@@ -181,19 +180,19 @@ const TeamCard = ({ member }: { member: TeamMember }) => (
     </div>
 
     {/* Infos texte */}
-    <div className="p-5 text-center">
-      <h3 className="font-semibold text-lg text-gray-900 uppercase">
+    <div className="p-5 text-center text-white bg-black">
+      <h3 className="font-semibold text-lg text-white uppercase">
         {member.name}
       </h3>
-      <p className="text-sm text-gray-500 mt-1">{member.role}</p>
-      <p className="text-xs text-gray-600 mt-3 font-light">{member.bio}</p>
+      <p className="text-sm text-gray-400 mt-1">{member.role}</p>
+      <p className="text-xs text-gray-300 mt-3 font-light">{member.bio}</p>
 
       {/* Téléphone cliquable (si présent) */}
       {member.phone && (
-        <div className="mt-4 text-xs font-bold text-gray-500 opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 ease-out">
+        <div className="hidden group-hover:block mt-4 text-xs font-bold text-white opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 ease-out">
           <a
             href={`tel:${member.phone}`}
-            className="block text-gray-500 mt-1 hover:text-gray-800 transition"
+            className="block mt-1 transition"
           >
             {member.phone}
           </a>

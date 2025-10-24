@@ -12,7 +12,7 @@ export function ValuesContactSection() {
 				</h2>
 
 				<h3 className="text-center font-bold mb-8 lg:mb-10 text-[20px] md:text-[24px] lg:text-[28px] ">
-					L'immobilier en Afrique autrement.
+          L'immobilier en Afrique autrement.
 				</h3>
 				<p className="font-bold mb-8 lg:mb-10 text-[20px] md:text-[24px] lg:text-[28px] ">
 					Mettez-nous en relation avec votre projet immobilier
