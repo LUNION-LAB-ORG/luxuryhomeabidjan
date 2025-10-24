@@ -6,6 +6,7 @@ import {Navbar} from "@/components/home/navbar/navbar";
 import {Button} from "@/components/ui/button";
 import {motion} from "motion/react";
 import {fontNarnia, fontBubble} from "@/config/fonts";
+// import {} from "next/font"
 
 export default function HeroSection() {
 	const [videoReady, setVideoReady] = useState(false);
@@ -57,6 +58,31 @@ export default function HeroSection() {
 					transition={{duration: 0.8, delay: 0.5}}
 					className="absolute inset-0 flex flex-col items-center justify-end text-center px-4 pb-20"
 				>
+					{/* Texte principal et sous-texte au-dessus du bouton */}
+					<motion.div
+						initial={{opacity: 0, y: 12}}
+						animate={{opacity: 1, y: 0}}
+						transition={{duration: 0.7, delay: 0.7}}
+						className="mb-6 max-w-4xl"
+					>
+						<motion.h1
+							initial={{opacity: 0, scale: 0.98}}
+							animate={{opacity: 1, scale: 1}}
+							transition={{duration: 0.6, delay: 0.8, type: "spring", stiffness: 120}}
+							className="text-white text-3xl md:text-5xl font-extrabold leading-tight drop-shadow-lg font-bubble"
+						>
+							Les <span className="uppercase">Residences Mangroves</span>
+						</motion.h1>
+						<motion.p
+							initial={{opacity: 0}}
+							animate={{opacity: 1}}
+							transition={{duration: 0.6, delay: 0.95}}
+							className="mt-3 text-white/90 text-sm md:text-lg drop-shadow-sm"
+						>
+							Une invitation a vivre à Assinie autrement.
+						</motion.p>
+					</motion.div>
+
 					<motion.div
 						initial={{opacity: 0, scale: 0.9}}
 						animate={{opacity: 1, scale: 1}}
@@ -81,7 +107,7 @@ export default function HeroSection() {
 							}}
 						/>
 						<Button
-							className="relative shadow-2xl text-2xl px-4 py-6 font-sans"
+							className="relative font-semibold shadow-2xl text-2xl px-4 py-6"
 						>
 							Explorer
 						</Button>
