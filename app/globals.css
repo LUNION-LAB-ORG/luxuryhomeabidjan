@@ -9,6 +9,8 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-montserrat);
   --font-serif: var(--font-noto);
+  --font-narnia: var(--font-narnia);
+  --font-bubble: var(--font-bubble);
   --font-inter: var(--font-inter);
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
