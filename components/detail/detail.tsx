@@ -166,7 +166,7 @@ export default function Details({ home }: { home: Iproduct }) {
           <div className="relative">
             <button
               onClick={() => scrollCarousel("left")}
-              className="absolute left-0 top-1/2 bg-white/70 hover:bg-white -translate-y-1/2 z-10 p-3 rounded-full shadow-lg"
+              className="absolute left-0 top-1/2 bg-white/70 hover:bg-white -translate-y-1/2 z-10 p-3 rounded-full "
             >
               <ChevronLeft className="w-6 h-6 text-gray-800" />
             </button>
@@ -178,7 +178,7 @@ export default function Details({ home }: { home: Iproduct }) {
               {home.gallery.map((img, idx) => (
                 <div
                   key={idx}
-                  className="flex-shrink-0 w-full  h-[660px] relative snap-start overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 ease-out"
+                  className="flex-shrink-0 w-full  h-[660px] relative snap-start overflow-hidden transition-all duration-500 ease-out"
                 >
                   <Image
                     src={img.url}
