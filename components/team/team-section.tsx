@@ -25,7 +25,7 @@ export const TeamSection = () => {
       name: "Morane Boudabes",
       role: "Administrateur Général",
       bio: "Expert en immobilier de luxe avec plus de 15 ans d’expérience à Abidjan.",
-      image: "/team/amina.jpg",
+      image: "/assets/images/team/boss.png",
       email: "morane.boudabes@luxuryhomeabidjan.com",
       phone: "",
       socials: { linkedin: "#" },
@@ -36,16 +36,16 @@ export const TeamSection = () => {
       bio: "Spécialiste des transactions haut de gamme et relations clients premium.",
       image: "/team/jean-marc.jpg",
       email: "christelle.kipré@luxuryhomeabidjan.com",
-      phone: "0749876501",
+      phone: "+2250749876501",
       socials: { linkedin: "#" },
     },
     {
       name: "Thibault Gouré",
       role: "Luxury Realtor",
       bio: "Créateur d’expériences raffinées alliant modernité et élégance africaine.",
-      image: "/team/fatoumata.jpg",
+      image: "/assets/images/team/thibau.PNG",
       email: "thibault.goure@luxuryhomeabidjan.com",
-      phone: "0103489404",
+      phone: "+2250103489404",
       socials: { linkedin: "#" },
     },
     {
@@ -54,7 +54,7 @@ export const TeamSection = () => {
       bio: "Ingénieur en gestion de projets immobiliers complexes et durables.",
       image: "/assets/images/team/YASSINE.jpg",
       email: "yassine.gueye@luxuryhomeabidjan.com",
-      phone: "0749871713",
+      phone: "+2250749871713",
       socials: { linkedin: "#" },
     },
     {
@@ -70,7 +70,7 @@ export const TeamSection = () => {
       name: "Aïcha Coulibaly",
       role: "Luxury Realtor",
       bio: "Experte en accompagnement de clients haut de gamme dans leurs acquisitions.",
-      image: "/team/issa.jpg",
+      image: "/assets/images/team/aicha.jpg",
       email: "aicha.coulibaly@luxuryhomeabidjan.com",
       phone: "+2250749876609",
       socials: { linkedin: "#" },
@@ -79,7 +79,7 @@ export const TeamSection = () => {
       name: "Nomel Lasme",
       role: "Juriste",
       bio: "Garant des aspects légaux et contractuels de nos transactions immobilières.",
-      image: "/assets/images/team/nomel.jpg",
+      image: "/assets/images/team/NOL.JPG",
       socials: { linkedin: "#" },
     },
     {
@@ -142,15 +142,15 @@ export const TeamSection = () => {
 
 // 🧑‍💼 Composant carte membre
 const TeamCard = ({ member }: { member: TeamMember }) => (
-  <div className="group relative bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+  <div className="group relative rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 flex flex-col">
     {/* Image */}
-    <div className="relative h-72 w-full overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent z-10"></div>
+    <div className="relative w-full overflow-hidden flex-1">
       <Image
         src={member.image}
         alt={member.name}
-        fill
-        className="object-cover transition-transform duration-500 group-hover:scale-105"
+        width={2000}
+        height={2000}
+        className="object-cover h-full w-full transition-transform duration-500 group-hover:scale-105"
       />
 
       {/* Icônes LinkedIn + Mail (mail s'affiche uniquement si présent) */}
@@ -180,19 +180,19 @@ const TeamCard = ({ member }: { member: TeamMember }) => (
     </div>
 
     {/* Infos texte */}
-    <div className="p-5 text-center">
-      <h3 className="font-semibold text-lg text-gray-900 uppercase">
+    <div className="p-5 text-center text-white bg-black">
+      <h3 className="font-semibold text-lg text-white uppercase">
         {member.name}
       </h3>
-      <p className="text-sm text-gray-500 mt-1">{member.role}</p>
-      <p className="text-xs text-gray-600 mt-3 font-light">{member.bio}</p>
+      <p className="text-sm text-gray-400 mt-1">{member.role}</p>
+      <p className="text-xs text-gray-300 mt-3 font-light">{member.bio}</p>
 
       {/* Téléphone cliquable (si présent) */}
       {member.phone && (
-        <div className="mt-4 text-xs font-bold text-gray-500 opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 ease-out">
+        <div className="hidden group-hover:block mt-4 text-xs font-bold text-white opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 ease-out">
           <a
             href={`tel:${member.phone}`}
-            className="block text-gray-500 mt-1 hover:text-gray-800 transition"
+            className="block mt-1 transition"
           >
             {member.phone}
           </a>
