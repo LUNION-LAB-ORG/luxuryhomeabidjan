@@ -23,8 +23,8 @@ export default async function CoupCoeurDetailsPage({
 
   // Affichage du composant de détails
   return (
-    <div>
+    <>
       <Details home={element} />
-    </div>
+    </>
   );
 }
