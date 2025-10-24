@@ -91,6 +91,7 @@ export default function Details({ home }: { home: Iproduct }) {
           </video>
         </div>
 
+
         {/* Galerie du bien */}
         <div className="mt-12 relative">
           <div className="px-6 md:px-12 flex justify-between items-center mb-6">
