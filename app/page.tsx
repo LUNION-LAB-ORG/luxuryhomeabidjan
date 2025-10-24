@@ -16,9 +16,9 @@ export default function Home() {
   return (
     <div className="max-w-[2550px] mx-auto">
       <HeroSection />
-      <Suspense fallback={<div>Loading...</div>}>
-        <FilterForm />  
-      </Suspense>
+      {/*<Suspense fallback={<div>Loading...</div>}>*/}
+      {/*  <FilterForm />  */}
+      {/*</Suspense>*/}
       <CoupDeCoeur/>
       <WhyChooseUsSection/>
       <ServicesSection/>

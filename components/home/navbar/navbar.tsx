@@ -62,10 +62,11 @@ export function Navbar() {
 			variants={headerVariants}
 			initial="top"
 			animate={isScrolled ? "scrolled" : "top"}
-			transition={{ duration: 0.35, ease: "easeOut" }}
+			transition={{duration: 0.35, ease: "easeOut"}}
 			className={cn(
-				"fixed top-0 z-50 left-0 right-0 h-[var(--nav-height)] flex items-center",
-				isScrolled ? "shadow-sm" : ""
+				"top-0 z-50 left-0 right-0 h-[var(--nav-height)] flex items-center",
+				isScrolled ? "shadow-sm" : "",
+				pathname === "/" ? "fixed" : "sticky top-0"
 			)}
 		>
 			<nav className="container-8xl flex items-center justify-between px-4 lg:px-6">
