@@ -27,7 +27,7 @@ export const products: Iproduct[] = [
   {
     id: 1,
     title: "VICENNIA",
-    video: "/assets/videos/coups-de-coeur/vicennia-video.mp4",
+    video: "/assets/videos/coups-de-coeur/vice-video .mp4",
     price: "650 000 FCFA/nuitée",
     rating: 4.7,
     image: "/assets/images/coup-de-coeur/coup1.jpg",
@@ -96,7 +96,7 @@ export const products: Iproduct[] = [
   {
     id: 2,
     title: "CANDEL",
-    video: "/assets/videos/coups-de-coeur/candel1-video.mp4",
+    video: "/assets/videos/coups-de-coeur/cande.mp4",
     price: "850 000 FCFA", // prix de vente, sans nuitée
     rating: 4.8,
     image: "/assets/images/coup-de-coeur/coup2.jpg",
