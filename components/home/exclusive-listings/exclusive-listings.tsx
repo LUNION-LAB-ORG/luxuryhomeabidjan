@@ -83,7 +83,7 @@ export function ExclusiveListings() {
 				<SectionTitle
 					className=""
 					title="Nos sélections exclusives"
-					subtitle="Savourez chaque details"
+					subtitle="Le prestige réservé à une clientèle d'exception"
 				/>
 
 				<div className="relative">
