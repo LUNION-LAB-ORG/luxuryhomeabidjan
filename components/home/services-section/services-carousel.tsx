@@ -117,7 +117,7 @@ function ServicesCarousel() {
 											name={service.icon}
 										/>
 									</div>
-									<h3 className="text-5xl font-bold first-letter:capitalize">
+									<h3 className="text-5xl font-bold">
 										{service.title}
 									</h3>
 								</div>
