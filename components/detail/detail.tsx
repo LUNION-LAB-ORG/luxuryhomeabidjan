@@ -56,7 +56,7 @@ export default function Details({ home }: { home: Iproduct }) {
   ];
 
   return (
-    <div className="min-h-screen mt-10 text-gray-900">
+    <div className="min-h-screen text-gray-900">
       {/* Titre principal */}
       <section className="py-10">
         <div className="flex flex-col md:flex-row justify-between items-center mb-6">
@@ -78,7 +78,7 @@ export default function Details({ home }: { home: Iproduct }) {
         </div>
 
         {/* Vidéo */}
-        <div className="relative w-full h-[680px] overflow-hidden shadow-2xl">
+        <div className="relative w-full h-[680px] overflow-hidden shadow-2xl aspect-video">
           <video
             autoPlay
             loop
