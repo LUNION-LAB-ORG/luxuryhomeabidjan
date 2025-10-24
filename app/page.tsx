@@ -20,12 +20,11 @@ export default function Home() {
         <FilterForm />  
       </Suspense>
       <CoupDeCoeur/>
-      {/* <WhyChooseUs /> */}
       <WhyChooseUsSection/>
-      <ServicesSection />
+      <ServicesSection/>
+      <ValuesContactSection/>
       <ExclusiveListings />
       {/*<PropertyCarousel />*/}
-      <ValuesContactSection />
       {/* <Details/> */}
       {/*<LogoShowcase />*/}
       <TeamSection/>

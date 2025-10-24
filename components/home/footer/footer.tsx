@@ -8,7 +8,7 @@ import {company} from "@/config";
 
 export default function Footer() {
 	return (
-		<footer className="bg-[#090909] text-[#F5F5F5] py-12 px-4 md:px-8">
+		<footer className="bg-[#090909] text-[#F5F5F5] pt-12 pb-4 px-4 md:px-8">
 			<div className="max-w-7xl mx-auto">
 				{/* Top section */}
 				<div className="grid grid-cols-1 lg:grid-cols-2 text-xs">
@@ -17,14 +17,11 @@ export default function Footer() {
 						{/* Logo and brand */}
 						<div className="flex items-center gap-2">
 							<Image
-								src="/assets/images/icone.png"
+								src="/assets/logos/logo-blanc.png"
 								alt="Luxury Home Abidjan Logo"
-								width={40}
-								height={40}
+								width={60}
+								height={60}
 							/>
-							<span className="text-[16px] font-semibold">
-                LUXURY HOME ABIDJAN
-              </span>
 						</div>
 
 						{/* Contact info */}
@@ -76,7 +73,7 @@ export default function Footer() {
 
 				{/* Navigation and social links */}
 				<div
-					className="flex flex-col md:flex-row justify-between items-center border-t border-b border-white/10 py-6 my-6">
+					className="flex flex-col md:flex-row justify-between items-center border-white/10 py-6">
 					{/* Navigation */}
 					<div className="flex gap-8 mb-6 md:mb-0">
 						<Link

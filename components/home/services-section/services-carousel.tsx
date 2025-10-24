@@ -8,6 +8,7 @@ import Link from "next/link";
 import {company} from "@/config";
 import {DynamicIcon} from "lucide-react/dynamic";
 import Autoplay from 'embla-carousel-autoplay'
+import {slugify} from "@/utils/slug";
 
 const TWEEN_FACTOR_BASE = 0.84;
 
@@ -81,13 +82,6 @@ function ServicesCarousel() {
 			.on('scroll', tweenOpacity)
 			.on('slideFocus', tweenOpacity)
 	}, [emblaApi, tweenOpacity])
-
-	function slugify(title: string): string {
-		return title
-			.toLowerCase()
-			.replace(/ /g, '-')
-			.replace(/[^\w-]+/g, '');
-	}
 
 	return (
 		<div>

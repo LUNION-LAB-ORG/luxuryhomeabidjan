@@ -12,6 +12,7 @@ import { Bath, Bed, Square } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useRef } from "react";
+import SectionTitle from "@/components/SectionTitle";
 
 type ExclusivePropertyProps = {
 	name: string;
@@ -141,9 +142,11 @@ export function ExclusiveListings() {
 	return (
 		<section className="py-12 md:py-16 fullwidth-right">
 			<div>
-				<h2 className="font-bold text-[24px] md:text-[30px] lg:text-[36px] mb-6">
-					Nos disponibilités
-				</h2>
+				<SectionTitle
+					className=""
+					title="Nos disponibilités"
+					subtitle="Savourez chaque details"
+				/>
 
 				<div className="relative group">
 					<Carousel

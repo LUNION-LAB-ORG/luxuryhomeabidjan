@@ -1,4 +1,7 @@
 import {IconName} from "lucide-react/dynamic";
+import {Briefcase, Building, Home, Phone, Users} from "lucide-react";
+import * as React from "react";
+import {slugify} from "@/utils/slug";
 
 export const company: ICompany = {
 	contacts: {
@@ -41,6 +44,27 @@ export const company: ICompany = {
 			icon: "paint-bucket",
 		}
 	]
+}
+
+export const navItems: IMenuItem[] = [
+	{title: "Accueil", url: "/"},
+	{title: "Qui sommes-nous", url: "/qui-sommes-nous"},
+	{title: "Programmes", url: "/programmes"},
+	{
+		title: "Services",
+		url: "#",
+		items: company.services.map((service) => ({
+			title: service.title,
+			url: `/services/${slugify(service.title)}`,
+		})),
+	},
+	{title: "Contacts", url: "/contacter"},
+];
+
+export interface IMenuItem {
+	title: string;
+	url: string;
+	items?: IMenuItem[];
 }
 
 export interface ICompany {

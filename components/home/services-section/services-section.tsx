@@ -1,12 +1,15 @@
 "use client";
 import ServicesCarousel from "@/components/home/services-section/services-carousel";
+import SectionTitle from "@/components/SectionTitle";
 
 export function ServicesSection() {
 	return (
-		<section className="mt-16">
-			<h2 className="container-8xl mb-6 lg:mb-10 font-bold text-[24px] md:text-[30px] lg:text-[36px]">
-				Explorez nos services
-			</h2>
+		<section className="my-16">
+			<SectionTitle
+				className="container-8xl mb-8"
+				title="Nos services"
+				subtitle="Sous titre des services"
+			/>
 			<ServicesCarousel/>
 		</section>
 	);

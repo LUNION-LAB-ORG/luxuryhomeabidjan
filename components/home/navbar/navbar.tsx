@@ -1,6 +1,6 @@
 "use client";
 
-import {Briefcase, Building, Home, Menu, Phone, Users,} from "lucide-react";
+import {Menu,} from "lucide-react";
 import Link from "next/link";
 import * as React from "react";
 
@@ -18,19 +18,10 @@ import {cn} from "@/lib/utils";
 import Image from "next/image";
 import {usePathname} from "next/navigation";
 import WhatsappIcon from "@/components/whatsapp-icon";
-import {company} from "@/config";
-
-const navItems = [
-	{name: "Accueil", href: "/", icon: <Home size={18}/>},
-	{
-		name: "Qui sommes-nous",
-		href: "/qui-sommes-nous",
-		icon: <Users size={18}/>,
-	},
-	{name: "Programmes", href: "/programmes", icon: <Building size={18}/>},
-	{name: "Services", href: "/services", icon: <Briefcase size={18}/>},
-	{name: "Contacts", href: "/contacter", icon: <Phone size={18}/>},
-];
+import {company, navItems} from "@/config";
+import SubMenuItems from "@/components/navbar/sub-menu-item";
+import NavLink from "@/components/navbar/nav-link";
+import {motion} from "motion/react"
 
 export function Navbar() {
 	const [isScrolled, setIsScrolled] = React.useState(false);
@@ -38,20 +29,46 @@ export function Navbar() {
 
 	React.useEffect(() => {
 		const handleScroll = () => {
+			if (pathname !== "/") {
+				setIsScrolled(true);
+				return;
+			}
 			setIsScrolled(window.scrollY > 10);
 		};
+		handleScroll();
 		window.addEventListener("scroll", handleScroll);
 		return () => window.removeEventListener("scroll", handleScroll);
 	}, []);
 
+	const headerVariants = {
+		top: {
+			backgroundColor: "rgba(255,255,255,0)",
+			boxShadow: "none",
+			backdropFilter: "none",
+		},
+		scrolled: {
+			backgroundColor: "rgba(255,255,255,0.85)",
+			boxShadow: "0 6px 18px rgba(15,23,42,0.06)",
+			backdropFilter: "blur(8px)",
+		},
+		hidden: {
+			y: -80,
+			opacity: 0,
+		},
+	};
+
 	return (
-		<header
+		<motion.header
+			variants={headerVariants}
+			initial="top"
+			animate={isScrolled ? "scrolled" : "top"}
+			transition={{ duration: 0.35, ease: "easeOut" }}
 			className={cn(
-				"fixed top-0 z-50 left-0 right-0 transition-all duration-200 h-[var(--nav-height)] flex items-center",
-				isScrolled ? "backdrop-blur-md bg-white/80 shadow-sm" : "bg-transparent"
+				"fixed top-0 z-50 left-0 right-0 h-[var(--nav-height)] flex items-center",
+				isScrolled ? "shadow-sm" : ""
 			)}
 		>
-			<div className="container-8xl flex items-center justify-between px-4 lg:px-6">
+			<nav className="container-8xl flex items-center justify-between px-4 lg:px-6">
 				{/* Logo */}
 				<div className="flex items-center">
 					<Link href="/" className="flex items-center gap-2">
@@ -65,21 +82,21 @@ export function Navbar() {
 				</div>
 
 				{/* Desktop Navigation */}
-				<nav className="hidden lg:flex md:items-center md:gap-6">
+				<ul className="hidden lg:flex md:items-center md:gap-6">
 					{navItems.map((item) => (
-						<Link
-							key={item.name}
-							href={item.href}
-							className={cn(
-								"text-base font-semibold transition-colors",
-								isScrolled ? "text-muted-foreground hover:text-primary" : "text-[#F5F5F5] hover:text-white",
-								pathname === item.href && `${isScrolled ? "text-primary" : "text-white"}`,
-							)}
-						>
-							{item.name}
-						</Link>
+						<li key={item.title}>
+							{item.items?.length ?
+								<SubMenuItems
+									item={item}
+								/> :
+								<NavLink
+									item={item}
+									isScrolled={isScrolled}
+									pathname={pathname}
+								/>}
+						</li>
 					))}
-				</nav>
+				</ul>
 
 				{/* Assistance Button */}
 				<Button
@@ -88,8 +105,10 @@ export function Navbar() {
 					size="lg"
 					className=""
 				>
-					<Link target="_blank" href={`https://wa.me/${company.contacts.whatsapp}`}
-					      className="hidden border bg-white border-gray-200 rounded-xl shadow-md py-1 px-4 lg:flex justify-center items-center gap-2 hover:opacity-80 transition">
+					<Link
+						target="_blank" href={`https://wa.me/${company.contacts.whatsapp}`}
+						className="hidden border bg-white border-gray-200 rounded-xl shadow-md py-1 px-4 lg:flex justify-center items-center gap-2 hover:opacity-80 transition"
+					>
 						<WhatsappIcon className="size-7"/>
 						<span className="text-sm font-bold text-black">Assistance</span>
 					</Link>
@@ -142,18 +161,18 @@ export function Navbar() {
 						<nav className="mt-6 px-2">
 							<div className="space-y-2">
 								{navItems.map((item) => (
-									<SheetClose asChild key={item.name}>
+									<SheetClose asChild key={item.title}>
 										<Link
-											href={item.href}
+											href={item.url}
 											className={cn(
 												"flex items-center px-4 py-3 rounded-lg font-medium transition-all duration-200 text-muted-foreground hover:bg-black/10 hover:text-black hover:pl-5",
-												pathname === item.href && "text-primary"
+												pathname === item.url && "text-primary"
 											)}
 										>
-											{item.icon && (
-												<span className="mr-3 text-gray-500">{item.icon}</span>
-											)}
-											{item.name}
+											{/*{item.icon && (*/}
+											{/*	<span className="mr-3 text-gray-500">{item.icon}</span>*/}
+											{/*)}*/}
+											{item.title}
 										</Link>
 									</SheetClose>
 								))}
@@ -161,7 +180,7 @@ export function Navbar() {
 						</nav>
 					</SheetContent>
 				</Sheet>
-			</div>
-		</header>
+			</nav>
+		</motion.header>
 	);
 }
