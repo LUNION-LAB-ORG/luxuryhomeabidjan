@@ -8,7 +8,7 @@ export function ServicesSection() {
 			<SectionTitle
 				className="container-8xl mb-8"
 				title="Nos services"
-				subtitle="Sous titre des services"
+				subtitle="Sur mesure"
 			/>
 			<ServicesCarousel/>
 		</section>

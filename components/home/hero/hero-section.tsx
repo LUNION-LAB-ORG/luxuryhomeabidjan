@@ -81,7 +81,8 @@ export default function HeroSection() {
 							}}
 						/>
 						<Button
-							className="relative shadow-2xl text-2xl px-4 py-6 font-sans"
+							variant="secondary"
+							className="relative shadow-2xl text-xl font-sans"
 						>
 							Explorer
 						</Button>

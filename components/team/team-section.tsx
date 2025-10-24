@@ -25,7 +25,7 @@ export const TeamSection = () => {
       name: "Morane Boudabes",
       role: "Administrateur Général",
       bio: "Expert en immobilier de luxe avec plus de 15 ans d’expérience à Abidjan.",
-      image: "/team/amina.jpg",
+      image: "/assets/images/team/boss.png",
       email: "morane.boudabes@luxuryhomeabidjan.com",
       phone: "",
       socials: { linkedin: "#" },
