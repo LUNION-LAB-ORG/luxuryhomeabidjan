@@ -1,7 +1,10 @@
 import {IconName} from "lucide-react/dynamic";
-import {Briefcase, Building, Home, Phone, Users} from "lucide-react";
-import * as React from "react";
 import {slugify} from "@/utils/slug";
+
+export const siteConfig = {
+	name: "Luxury Home Abidjan",
+	description: "Luxury Home Abidjan",
+}
 
 export const company: ICompany = {
 	contacts: {
@@ -19,22 +22,22 @@ export const company: ICompany = {
 	},
 	services: [
 		{
-			title: "expertise & conseils",
+			title: "Expertise & Conseils",
 			imageSrc: "/assets/images/services/expertise.png",
 			icon: "lightbulb",
 		},
 		{
-			title: "gestion & syndic",
+			title: "Gestion & Syndic",
 			imageSrc: "/assets/images/services/gestion.png",
 			icon: "building",
 		},
 		{
-			title: "transactions immobilières",
+			title: "Transactions immobilières",
 			imageSrc: "/assets/images/services/transaction.png",
 			icon: "hand-coins",
 		},
 		{
-			title: "programmes immobiliers",
+			title: "Programmes immobiliers",
 			imageSrc: "/assets/images/services/promotion.png",
 			icon: "home",
 		},
@@ -60,6 +63,70 @@ export const navItems: IMenuItem[] = [
 	},
 	{title: "Contacts", url: "/contacter"},
 ];
+
+export const exclusiveProperties: Iproduct[] = [
+	{
+		id: 1,
+		title: "VILLA LA CASA",
+		price: "650 000 FCFA/nuitée",
+		rating: 4.7,
+		image: "/assets/images/coup-de-coeur/coup1.jpg",
+		surface: 600,
+		chambre: 3,
+		salleDeBain: 4,
+		localisation: "Cocody",
+		type: "Location",
+	},
+	{
+		id: 2,
+		title: "VILLA PRESTIGE",
+		price: "650 000 FCFA/nuitée",
+		rating: 4.8,
+		image: "/assets/images/coup-de-coeur/coup2.jpg",
+		surface: 700,
+		chambre: 4,
+		salleDeBain: 5,
+		localisation: "Bingerville",
+		type: "Vente",
+	},
+	{
+		id: 3,
+		title: "VILLA PRESTIGE",
+		price: "650 000 FCFA/nuitée",
+		rating: 4.8,
+		image: "/assets/images/coup-de-coeur/coup4.png",
+		surface: 700,
+		chambre: 4,
+		salleDeBain: 5,
+		localisation: "Bingerville",
+		type: "Vente",
+	},
+	{
+		id: 4,
+		title: "Moana",
+		price: "650 000 FCFA/nuitée",
+		rating: 4.7,
+		image: "/assets/images/coup-de-coeur/coup3.png",
+		surface: 600,
+		chambre: 3,
+		salleDeBain: 4,
+		localisation: "Cocody",
+		type: "Location",
+	},
+];
+
+interface Iproduct {
+	id: number;
+	title: string;
+	price: string;
+	rating: number;
+	image: string;
+	surface: number;
+	chambre: number;
+	salleDeBain: number;
+	localisation: string;
+	type: string;
+}
 
 export interface IMenuItem {
 	title: string;
