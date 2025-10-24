@@ -19,7 +19,8 @@ export default function CoupDeCoeur() {
 			{/* Product Grid */}
 			<div className="grid grid-cols-1  md:grid-cols-2 gap-3">
 				{products.map((product) => (
-					<div
+					<Link
+						href={`coups-de-coeur/${product.id}`}
 						key={product.id}
 						className={cn(
 							"relative ring-1 ring-slate-200 overflow-hidden group cursor-pointer hover:shadow-2xl transition-all duration-500 w-full",
@@ -41,18 +42,7 @@ export default function CoupDeCoeur() {
 								className="max-h-[400px] w-auto object-contain transition-transform duration-500 group-hover:scale-105"
 							/>
 						</div>
-
-						{/* Bouton "En savoir plus" — apparaît au survol */}
-						<div
-							className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-							<Button
-								asChild
-								className="bg-white text-gray-900 font-semibold px-6 py-3 rounded-full shadow-lg hover:bg-gray-900 hover:text-white transition-colors duration-300"
-							>
-								<Link href={`coups-de-coeur/${product.id}`}>Savourez chaque details</Link>
-							</Button>
-						</div>
-					</div>
+					</Link>
 				))}
 			</div>
 		</div>
