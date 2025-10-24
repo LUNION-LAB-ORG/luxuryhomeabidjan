@@ -1,9 +1,17 @@
-'use client';
+"use client";
 
-import { Iproduct } from '@/data/coups-de-coeur.type';
-import Image from 'next/image';
-import { useRef, useState } from 'react';
-import { ChevronLeft, ChevronRight, Ruler, Bed, Bath, MapPin, X } from 'lucide-react';
+import { Iproduct } from "@/data/coups-de-coeur.type";
+import Image from "next/image";
+import { useRef, useState } from "react";
+import {
+  ChevronLeft,
+  ChevronRight,
+  Ruler,
+  Bed,
+  Bath,
+  MapPin,
+  X,
+} from "lucide-react";
 import {
   Dialog,
   DialogContent,
@@ -11,28 +19,40 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from '@/components/ui/dialog';
+} from "@/components/ui/dialog";
 
 export default function Details({ home }: { home: Iproduct }) {
   const carouselRef = useRef<HTMLDivElement>(null);
   const [open, setOpen] = useState(false);
   const [zoomImage, setZoomImage] = useState<string | null>(null); // 🔹 image cliquée
 
-  const scrollCarousel = (direction: 'left' | 'right') => {
+  const scrollCarousel = (direction: "left" | "right") => {
     const carousel = carouselRef.current;
     if (!carousel) return;
     const scrollAmount = 350;
     carousel.scrollBy({
-      left: direction === 'left' ? -scrollAmount : scrollAmount,
-      behavior: 'smooth',
+      left: direction === "left" ? -scrollAmount : scrollAmount,
+      behavior: "smooth",
     });
   };
 
   const features = [
-    { icon: <Ruler className="w-6 h-6 text-black" />, label: `${home.surface} m²` },
-    { icon: <Bed className="w-6 h-6 text-black" />, label: `${home.chambre} Chambres` },
-    { icon: <Bath className="w-6 h-6 text-black" />, label: `${home.salleDeBain} Salles de bain` },
-    { icon: <MapPin className="w-6 h-6 text-black" />, label: home.localisation },
+    {
+      icon: <Ruler className="w-6 h-6 text-black" />,
+      label: `${home.surface} m²`,
+    },
+    {
+      icon: <Bed className="w-6 h-6 text-black" />,
+      label: `${home.chambre} Chambres`,
+    },
+    {
+      icon: <Bath className="w-6 h-6 text-black" />,
+      label: `${home.salleDeBain} Salles de bain`,
+    },
+    {
+      icon: <MapPin className="w-6 h-6 text-black" />,
+      label: home.localisation,
+    },
   ];
 
   return (
@@ -51,16 +71,23 @@ export default function Details({ home }: { home: Iproduct }) {
           </div>
 
           <div className="text-2xl px-6 md:px-12 font-semibold text-black mt-4 md:mt-0">
-            {home.type === 'Vente' ? home.price.replace('/nuitée', '') : home.price}
+            {home.type === "Vente"
+              ? home.price.replace("/nuitée", "")
+              : home.price}
           </div>
         </div>
 
         {/* Vidéo */}
         <div className="relative w-full h-[680px] overflow-hidden shadow-2xl">
-          <video autoPlay loop muted playsInline className="absolute inset-0 w-full h-full object-cover">
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="absolute inset-0 w-full h-full object-cover"
+          >
             <source src={home.video} type="video/mp4" />
           </video>
-          <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
         </div>
 
         {/* Galerie du bien */}
@@ -90,7 +117,10 @@ export default function Details({ home }: { home: Iproduct }) {
                 </DialogHeader>
 
                 {/* 🔹 Deuxième Dialog : Zoom plein écran */}
-                <Dialog open={!!zoomImage} onOpenChange={(val) => !val && setZoomImage(null)}>
+                <Dialog
+                  open={!!zoomImage}
+                  onOpenChange={(val) => !val && setZoomImage(null)}
+                >
                   <DialogContent className="w-screen  h-screen max-w-none p-0 bg-black flex items-center justify-center">
                     {zoomImage && (
                       <div className="relative w-full h-full">
@@ -135,7 +165,7 @@ export default function Details({ home }: { home: Iproduct }) {
           {/* Carousel horizontal */}
           <div className="relative">
             <button
-              onClick={() => scrollCarousel('left')}
+              onClick={() => scrollCarousel("left")}
               className="absolute left-0 top-1/2 bg-white/70 hover:bg-white -translate-y-1/2 z-10 p-3 rounded-full shadow-lg"
             >
               <ChevronLeft className="w-6 h-6 text-gray-800" />
@@ -162,7 +192,7 @@ export default function Details({ home }: { home: Iproduct }) {
             </div>
 
             <button
-              onClick={() => scrollCarousel('right')}
+              onClick={() => scrollCarousel("right")}
               className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white/70 hover:bg-white p-3 rounded-full shadow-lg backdrop-blur-md"
             >
               <ChevronRight className="w-6 h-6 text-gray-800" />
@@ -182,7 +212,10 @@ export default function Details({ home }: { home: Iproduct }) {
 
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 mb-6">
             {features.map((feat, idx) => (
-              <div key={idx} className="flex items-center gap-3 text-black text-base">
+              <div
+                key={idx}
+                className="flex items-center gap-3 text-black text-base"
+              >
                 {feat.icon}
                 <span>{feat.label}</span>
               </div>
@@ -190,10 +223,10 @@ export default function Details({ home }: { home: Iproduct }) {
           </div>
 
           <p className="text-gray-700 leading-relaxed text-[15px]">
-            Découvrez la <strong>{home.title}</strong>, un bien d’exception situé à{' '}
-            <strong>{home.localisation}</strong>. Cet espace allie design moderne,
-            matériaux nobles et confort absolu. Chaque détail a été pensé pour offrir
-            une expérience résidentielle haut de gamme.
+            Découvrez la <strong>{home.title}</strong>, un bien d’exception
+            situé à <strong>{home.localisation}</strong>. Cet espace allie
+            design moderne, matériaux nobles et confort absolu. Chaque détail a
+            été pensé pour offrir une expérience résidentielle haut de gamme.
           </p>
         </div>
 
@@ -208,7 +241,11 @@ export default function Details({ home }: { home: Iproduct }) {
             <DetailList title="Outdoor Details" items={home.outdoorDetails} />
             <DetailList title="Utilities" items={home.utilities} />
             <div className="sm:col-span-2 lg:col-span-3">
-              <DetailList title="Other Features" items={home.otherFeatures} grid />
+              <DetailList
+                title="Other Features"
+                items={home.otherFeatures}
+                grid
+              />
             </div>
           </div>
         </div>
@@ -234,7 +271,11 @@ function DetailList({
   return (
     <div>
       <h4 className="text-base font-medium text-black mb-3">{title}</h4>
-      <ul className={`${grid ? 'grid grid-cols-2 sm:grid-cols-3 gap-3' : 'space-y-2'}`}>
+      <ul
+        className={`${
+          grid ? "grid grid-cols-2 sm:grid-cols-3 gap-3" : "space-y-2"
+        }`}
+      >
         {items.map((item, i) => (
           <li
             key={i}
