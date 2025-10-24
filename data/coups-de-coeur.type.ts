@@ -150,7 +150,7 @@ export const products: Iproduct[] = [
       { id: 20, url: "/assets/images/coup-de-coeur/candel1/candel20.jpg" },
       { id: 21, url: "/assets/images/coup-de-coeur/candel1/candel21.jpg" },
       { id: 22, url: "/assets/images/coup-de-coeur/candel1/candel22.jpg" },
-      { id: 23, url: "/assets/images/coup-de-coeur/candel1/candeL23.jpg" },
+      { id: 23, url: "/assets/images/coup-de-coeur/candel1/candel23.jpg" },
       { id: 24, url: "/assets/images/coup-de-coeur/candel1/candel24.jpg" },
       { id: 25, url: "/assets/images/coup-de-coeur/candel1/candel25.jpg" },
       { id: 26, url: "/assets/images/coup-de-coeur/candel1/candel26.jpg" },
@@ -168,8 +168,8 @@ export const products: Iproduct[] = [
   },
   {
     id: 3,
-    title: "VILLA PRESTIGE II",
-    video: "/assets/videos/video1.mp4",
+    title: "NERINA",
+    video: "/assets/videos/coups-de-coeur/merina-video.mp4",
     price: "950 000 FCFA", // prix de vente
     rating: 4.8,
     image: "/assets/images/coup-de-coeur/coup4.png",

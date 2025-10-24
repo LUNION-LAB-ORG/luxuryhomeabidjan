@@ -6,6 +6,7 @@ import Header from "@/components/qui-sommes-nous/header";
 import AboutSection2 from "@/components/qui-sommes-nous/about-section2";
 import Conseil from "@/components/qui-sommes-nous/conseil";
 import Equipe from "@/components/qui-sommes-nous/equipe";
+import { TeamSection } from "@/components/team/team-section";
 
 
 export default function QuiSommesNous(){
@@ -14,7 +15,7 @@ export default function QuiSommesNous(){
             <Header/>
             <AboutSection2/>
             <Conseil/>
-            <Equipe/>
+            <TeamSection/>
             <PhilosophySection/>
             <LogoShowcase/>
             <TestimonialsSection/>

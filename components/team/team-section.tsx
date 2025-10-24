@@ -36,16 +36,16 @@ export const TeamSection = () => {
       bio: "Spécialiste des transactions haut de gamme et relations clients premium.",
       image: "/team/jean-marc.jpg",
       email: "christelle.kipré@luxuryhomeabidjan.com",
-      phone: "0749876501",
+      phone: "+2250749876501",
       socials: { linkedin: "#" },
     },
     {
       name: "Thibault Gouré",
       role: "Luxury Realtor",
       bio: "Créateur d’expériences raffinées alliant modernité et élégance africaine.",
-      image: "/team/fatoumata.jpg",
+      image: "/assets/images/team/thibau.PNG",
       email: "thibault.goure@luxuryhomeabidjan.com",
-      phone: "0103489404",
+      phone: "+2250103489404",
       socials: { linkedin: "#" },
     },
     {
@@ -54,7 +54,7 @@ export const TeamSection = () => {
       bio: "Ingénieur en gestion de projets immobiliers complexes et durables.",
       image: "/assets/images/team/YASSINE.jpg",
       email: "yassine.gueye@luxuryhomeabidjan.com",
-      phone: "0749871713",
+      phone: "+2250749871713",
       socials: { linkedin: "#" },
     },
     {
@@ -70,7 +70,7 @@ export const TeamSection = () => {
       name: "Aïcha Coulibaly",
       role: "Luxury Realtor",
       bio: "Experte en accompagnement de clients haut de gamme dans leurs acquisitions.",
-      image: "/team/issa.jpg",
+      image: "/assets/images/team/AISHA _5.jpg",
       email: "aicha.coulibaly@luxuryhomeabidjan.com",
       phone: "+2250749876609",
       socials: { linkedin: "#" },
@@ -79,7 +79,7 @@ export const TeamSection = () => {
       name: "Nomel Lasme",
       role: "Juriste",
       bio: "Garant des aspects légaux et contractuels de nos transactions immobilières.",
-      image: "/assets/images/team/nomel.jpg",
+      image: "/assets/images/team/NOL.JPG",
       socials: { linkedin: "#" },
     },
     {
@@ -144,12 +144,13 @@ export const TeamSection = () => {
 const TeamCard = ({ member }: { member: TeamMember }) => (
   <div className="group relative bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
     {/* Image */}
-    <div className="relative h-72 w-full overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent z-10"></div>
+    <div className="relative h-80 md:h-96 w-full overflow-hidden">
+   
       <Image
         src={member.image}
         alt={member.name}
-        fill
+        width={2000}
+        height={2000}
         className="object-cover transition-transform duration-500 group-hover:scale-105"
       />
 

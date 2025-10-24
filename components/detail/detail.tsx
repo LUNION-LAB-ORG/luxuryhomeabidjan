@@ -20,6 +20,7 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
+import SectionTitle from "../SectionTitle";
 
 export default function Details({ home }: { home: Iproduct }) {
   const carouselRef = useRef<HTMLDivElement>(null);
@@ -93,9 +94,9 @@ export default function Details({ home }: { home: Iproduct }) {
         {/* Galerie du bien */}
         <div className="mt-12 relative">
           <div className="px-6 md:px-12 flex justify-between items-center mb-6">
-            <h3 className="text-2xl font-semibold text-gray-800 border-l-4 border-black pl-3">
-              Galerie du bien
-            </h3>
+            <SectionTitle title=" Galerie du bien" className="text-black text-2xl"  />
+             
+        
 
             {/* Bouton pour ouvrir le modal */}
             <Dialog open={open} onOpenChange={setOpen}>
