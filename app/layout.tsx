@@ -5,7 +5,7 @@ import { Navbar } from "@/components/home/navbar/navbar";
 import Footer from "../components/home/footer/footer";
 import { Toaster } from "@/components/ui/sonner";
 import { NuqsAdapter } from 'nuqs/adapters/next/app';
-import { Montserrat,Noto_Serif } from "next/font/google";
+import { Montserrat,Noto_Serif, } from "next/font/google";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
