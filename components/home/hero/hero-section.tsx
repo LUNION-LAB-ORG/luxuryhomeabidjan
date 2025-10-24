@@ -6,7 +6,6 @@ import {Navbar} from "@/components/home/navbar/navbar";
 import {Button} from "@/components/ui/button";
 import {motion} from "motion/react";
 import {fontNarnia, fontBubble} from "@/config/fonts";
-// import {} from "next/font"
 
 export default function HeroSection() {
 	const [videoReady, setVideoReady] = useState(false);
@@ -77,7 +76,7 @@ export default function HeroSection() {
 							initial={{opacity: 0}}
 							animate={{opacity: 1}}
 							transition={{duration: 0.6, delay: 0.95}}
-							className="mt-3 text-white/90 text-sm md:text-lg drop-shadow-sm"
+							className="mt-3 text-white/90 text-sm md:text-lg drop-shadow-sm font-bubble"
 						>
 							Une invitation a vivre à Assinie autrement.
 						</motion.p>
@@ -107,7 +106,7 @@ export default function HeroSection() {
 							}}
 						/>
 						<Button
-							className="relative font-semibold shadow-2xl text-2xl px-4 py-6"
+							className="relative shadow-2xl text-2xl px-4 py-6 font-sans"
 						>
 							Explorer
 						</Button>
