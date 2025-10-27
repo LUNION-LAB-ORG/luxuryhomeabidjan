@@ -1,9 +1,11 @@
+import {CDN_URL} from "@/config";
+
 export interface IGalleryImage {
   id: number;
   url: string;
 }
 
-export interface Iproduct {
+export interface IBien {
   id: number;
   title: string;
   price: string;
@@ -14,16 +16,17 @@ export interface Iproduct {
   salleDeBain: number;
   localisation: string;
   type: string;
-  video: string;
+  video?: string;
+  description?: string;
 
-  interiorDetails: string[];
-  outdoorDetails: string[];
-  utilities: string[];
-  otherFeatures: string[];
-  gallery: IGalleryImage[];
+  interiorDetails?: string[];
+  outdoorDetails?: string[];
+  utilities?: string[];
+  otherFeatures?: string[];
+  gallery?: IGalleryImage[];
 }
 
-export const products: Iproduct[] = [
+export const biens: IBien[] = [
   {
     id: 1,
     title: "VICENNIA",
@@ -96,7 +99,7 @@ export const products: Iproduct[] = [
   {
     id: 2,
     title: "CANDEL",
-    video: "/assets/videos/coups-de-coeur/candel1-video.mp4",
+    video: `${CDN_URL}/assets/videos/coups-de-coeur/candel1-video.mp4`,
     price: "850 000 FCFA", // prix de vente, sans nuitée
     rating: 4.8,
     image: "/assets/images/coup-de-coeur/coup2.jpg",

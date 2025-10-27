@@ -1,10 +1,13 @@
 import {IconName} from "lucide-react/dynamic";
 import {slugify} from "@/utils/slug";
+import {IBien} from "@/data/coups-de-coeur.type";
 
 export const siteConfig = {
 	name: "Luxury Home Abidjan",
 	description: "Luxury Home Abidjan",
 }
+
+export const CDN_URL = process.env.NEXT_PUBLIC_CDN_URL;
 
 export const company: ICompany = {
 	contacts: {
@@ -50,7 +53,7 @@ export const company: ICompany = {
 }
 
 export const navItems: IMenuItem[] = [
-	{title: "Accueil", url: "/"},
+	// {title: "Accueil", url: "/"},
 	{title: "Qui sommes-nous", url: "/qui-sommes-nous"},
 	{title: "Programmes", url: "/programmes"},
 	{
@@ -64,13 +67,13 @@ export const navItems: IMenuItem[] = [
 	{title: "Contacts", url: "/contacter"},
 ];
 
-export const exclusiveProperties: Iproduct[] = [
+export const exclusiveProperties: IBien[] = [
 	{
 		id: 1,
 		title: "VILLA LA CASA",
 		price: "650 000 FCFA/nuitée",
 		rating: 4.7,
-		image: "/assets/images/coup-de-coeur/coup1.jpg",
+		image: `${CDN_URL}/biens/alexandre/1.jpeg`,
 		surface: 600,
 		chambre: 3,
 		salleDeBain: 4,
@@ -82,7 +85,7 @@ export const exclusiveProperties: Iproduct[] = [
 		title: "VILLA PRESTIGE",
 		price: "650 000 FCFA/nuitée",
 		rating: 4.8,
-		image: "/assets/images/coup-de-coeur/coup2.jpg",
+		image: `${CDN_URL}/biens/alexandre/2.jpeg`,
 		surface: 700,
 		chambre: 4,
 		salleDeBain: 5,
@@ -114,19 +117,6 @@ export const exclusiveProperties: Iproduct[] = [
 		type: "Location",
 	},
 ];
-
-interface Iproduct {
-	id: number;
-	title: string;
-	price: string;
-	rating: number;
-	image: string;
-	surface: number;
-	chambre: number;
-	salleDeBain: number;
-	localisation: string;
-	type: string;
-}
 
 export interface IMenuItem {
 	title: string;
