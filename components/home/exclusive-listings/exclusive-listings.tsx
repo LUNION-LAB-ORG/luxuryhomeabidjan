@@ -75,7 +75,6 @@ function ExclusiveProperty({product}: { product: Iproduct }) {
 }
 
 export function ExclusiveListings() {
-	const plugin = useRef(Autoplay({delay: 5000, stopOnInteraction: true}));
 
 	return (
 		<section className="py-12 md:py-16 fullwidth-right">
@@ -88,10 +87,7 @@ export function ExclusiveListings() {
 
 				<div className="relative">
 					<Carousel
-						plugins={[plugin.current]}
 						className="overflow-x-hidden rounded-xl w-full"
-						onMouseEnter={plugin.current.stop}
-						onMouseLeave={() => plugin.current.play()}
 					>
 						<CarouselContent className="">
 							{exclusiveProperties.map((property, index) => (

@@ -1,11 +1,13 @@
 "use client";
-import {useState, useRef, useEffect} from "react";
+import {useEffect, useRef, useState} from "react";
 // import HeroCarousel from "@/components/home/carousel/HeroCarousel";
 // import HeroCarouselFade from "@/components/home/carousel/HeroCarouselFade";
 import {Navbar} from "@/components/home/navbar/navbar";
 import {Button} from "@/components/ui/button";
 import {motion} from "motion/react";
-import {fontNarnia, fontBubble} from "@/config/fonts";
+import {fontBubble, fontNarnia} from "@/config/fonts";
+import {CDN_URL} from "@/config";
+import Link from "next/link";
 
 export default function HeroSection() {
 	const [videoReady, setVideoReady] = useState(false);
@@ -26,7 +28,7 @@ export default function HeroSection() {
 			<div className="relative flex-1 overflow-hidden">
 				{!videoReady && (
 					<img
-						src="/assets/videos/video-thumbnail.png"
+						src={`${CDN_URL}/assets/videos/video-thumbnail.png`}
 						alt="hero placeholder"
 						className="absolute inset-0 w-full h-full object-cover"
 					/>
@@ -35,7 +37,7 @@ export default function HeroSection() {
 				<video
 					ref={videoRef}
 					preload="auto"
-					poster="/assets/videos/video-thumbnail.png"
+					poster={`${CDN_URL}/assets/videos/video-thumbnail.png`}
 					autoPlay
 					loop
 					muted
@@ -46,7 +48,7 @@ export default function HeroSection() {
 						videoReady ? "opacity-100" : "opacity-0"
 					}`}
 				>
-					<source src="/assets/videos/bg-video.mp4"/>
+					<source src={`${CDN_URL}/assets/videos/bg-video.mp4`}/>
 				</video>
 
 				<div className="absolute inset-0 bg-black/20 bg-opacity-50"/>
@@ -81,10 +83,15 @@ export default function HeroSection() {
 							}}
 						/>
 						<Button
+							asChild
 							variant="secondary"
 							className="relative shadow-2xl text-xl font-sans"
 						>
-							Explorer
+							<Link
+								href="/programmes/1"
+							>
+								Explorer
+							</Link>
 						</Button>
 					</motion.div>
 				</motion.div>
