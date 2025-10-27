@@ -72,7 +72,7 @@ export default function Details({home}: { home: IBien }) {
 				</div>
 
 				{/* Vidéo */}
-				<VideoViewer videoSrc={home.video}/>
+				{home.video && <VideoViewer videoSrc={home.video}/>}
 
 				{/* Galerie du bien */}
 				<div className="mt-12 relative">
@@ -127,7 +127,7 @@ export default function Details({home}: { home: IBien }) {
 
 								{/* Grille d’images */}
 								<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-6">
-									{home.gallery.map((img, idx) => (
+									{home.gallery?.map((img, idx) => (
 										<div
 											key={idx}
 											className="relative w-full h-64 rounded-lg overflow-hidden hover:scale-[1.02] transition-transform duration-300 cursor-pointer"
@@ -159,7 +159,7 @@ export default function Details({home}: { home: IBien }) {
 							ref={carouselRef}
 							className="flex space-x-6 overflow-x-auto  w-full scrollbar-hide snap-x snap-mandatory scroll-smooth"
 						>
-							{home.gallery.map((img, idx) => (
+							{home.gallery?.map((img, idx) => (
 								<div
 									key={idx}
 									className="flex-shrink-0 w-full h-[660px] relative snap-start overflow-hidden transition-all duration-500 ease-out"
@@ -221,16 +221,16 @@ export default function Details({home}: { home: IBien }) {
 					</h3>
 
 					<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
-						<DetailList title="Interior Details" items={home.interiorDetails}/>
-						<DetailList title="Outdoor Details" items={home.outdoorDetails}/>
-						<DetailList title="Utilities" items={home.utilities}/>
-						<div className="sm:col-span-2 lg:col-span-3">
+						{home.interiorDetails && <DetailList title="Interior Details" items={home.interiorDetails}/>}
+						{home.outdoorDetails && <DetailList title="Outdoor Details" items={home.outdoorDetails}/>}
+						{home.utilities && <DetailList title="Utilities" items={home.utilities}/>}
+						{home.otherFeatures && <div className="sm:col-span-2 lg:col-span-3">
 							<DetailList
 								title="Other Features"
 								items={home.otherFeatures}
 								grid
 							/>
-						</div>
+						</div>}
 					</div>
 				</div>
 			</section>
