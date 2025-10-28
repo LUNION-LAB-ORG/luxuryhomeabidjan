@@ -1,47 +1,40 @@
 "use client";
 import React, {useRef} from 'react';
-import {motion, useMotionValueEvent, useScroll, useTransform, type Variants} from "motion/react";
+import {useGSAP} from "@gsap/react";
+import gsap from "gsap";
 
-const videoVariants: Variants = {
-	topScroll: {}
-};
-
-function VideoViewer({videoSrc}: { videoSrc: string }) {
+function VideoViewer({videoSrc, animate=false}: { videoSrc: string, animate?: boolean }) {
 	const containerRef = useRef(null);
 
-	const {scrollYProgress} = useScroll({
-		container: containerRef,
-	});
+	useGSAP(() => {
+		if (!animate) return;
+		gsap.to(containerRef.current, {
+			clipPath:"inset(5.25% round 44px)",
+			scrollTrigger: {
+				trigger: containerRef.current,
+				start: "top 33%",
+				end: "bottom top",
+				scrub: true,
+				markers: false
+			},
+			ease: "none",
+		});
+	}, {scope: containerRef});
 
-	useMotionValueEvent(scrollYProgress, "change", (latest) => {
-		console.log("Scroll Y Progress:", latest);
-	})
-
-	const scale = useTransform(scrollYProgress, [0, 1], [0, 1]);
-	const borderRadius = useTransform(scrollYProgress, [0, 1], ["0%", "24px"])
-	const y = useTransform(scrollYProgress, [0, 1], ["0vh", "-20vh"]);
-	console.log(scale)
 	return (
-		<div ref={containerRef}>
-			<motion.div
-				className="relative w-full h-[calc(100vh-var(--nav-height))] aspect-video"
-				variants={videoVariants}
-				initial="hidden"
-				animate="visible"
-				style={{
-					scale
-				}}
+		<div
+			ref={containerRef}
+			className="relative w-full h-[calc(100vh-var(--nav-height))] aspect-video overflow-hidden"
+		>
+			<video
+				autoPlay
+				loop
+				muted
+				playsInline
+				className="absolute inset-0 w-full h-full object-cover"
 			>
-				<motion.video
-					autoPlay
-					loop
-					muted
-					playsInline
-					className="absolute inset-0 w-full h-full object-cover"
-				>
-					<source src={videoSrc} type="video/mp4"/>
-				</motion.video>
-			</motion.div>
+				<source src={videoSrc} type="video/mp4"/>
+			</video>
 		</div>
 	);
 }

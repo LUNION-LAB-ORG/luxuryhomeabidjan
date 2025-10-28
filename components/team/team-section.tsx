@@ -4,6 +4,7 @@ import { Linkedin, Mail } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import SectionTitle from "../SectionTitle";
+import {CDN_URL} from "@/config";
 
 // 🧩 Interface TypeScript
 interface TeamMember {
@@ -61,7 +62,7 @@ export const TeamSection = () => {
       name: "Angela Komenan",
       role: "Luxury Realtor",
       bio: "Passionnée de communication et d’image de marque dans l’immobilier de prestige.",
-      image: "/team/issa.jpg",
+      image: `${CDN_URL}/assets/team/angela_komenan.jpg`,
       email: "karine.komenan@luxuryhomeabidjan.com",
       phone: "+2250749876611",
       socials: { linkedin: "#" },

@@ -14,18 +14,18 @@ function CoupsDeCoeurList({biens}: { biens: IBien[] }) {
 		const cards = gsap.utils.toArray("[data-coup-card]") as HTMLElement[];
 
 		cards.forEach((card, index) => {
-			const fromDirection = index % 2 === 0 ? -100 : 100; // gauche / droite
+			const fromDirection = index % 2 === 0 ? -30 : 30; // gauche / droite
 
 			gsap.from(card, {
 				x: fromDirection,
 				opacity: 0,
-				duration: 1,
-				ease: "power3.in",
+				duration: 0.5,
+				ease: "power1.out",
 				scrollTrigger: {
 					trigger: card,
-					start: "top 85%",
+					start: "top 90%",
 					// toggleActions: "play none none reverse",
-					markers: false
+					// markers: true
 				},
 			});
 		});

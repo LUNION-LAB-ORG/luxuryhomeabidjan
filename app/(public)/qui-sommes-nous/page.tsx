@@ -1,12 +1,7 @@
-import PhilosophySection from "@/components/qui-sommes-nous/philosophy/philosophy-section";
-import LogoShowcase from "@/components/home/logo-showcase/logo-showcase";
-import TestimonialsSection from '@/components/qui-sommes-nous/testimonials/testimonials-section';
-import BlogSection from '@/components/qui-sommes-nous/blog/blog-section';
 import Header from "@/components/qui-sommes-nous/header";
 import AboutSection2 from "@/components/qui-sommes-nous/about-section2";
 import Conseil from "@/components/qui-sommes-nous/conseil";
-import Equipe from "@/components/qui-sommes-nous/equipe";
-import { TeamSection } from "@/components/team/team-section";
+import {TeamSection} from "@/components/team/team-section";
 
 
 export default function QuiSommesNous(){
@@ -16,10 +11,10 @@ export default function QuiSommesNous(){
             <AboutSection2/>
             <Conseil/>
             <TeamSection/>
-            <PhilosophySection/>
-            <LogoShowcase/>
-            <TestimonialsSection/>
-            <BlogSection/>
+            {/*<PhilosophySection/>*/}
+            {/*<LogoShowcase/>*/}
+            {/*<TestimonialsSection/>*/}
+            {/*<BlogSection/>*/}
         </div>
     );
 }

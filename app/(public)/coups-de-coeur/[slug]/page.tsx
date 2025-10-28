@@ -1,4 +1,4 @@
-import Details from "@/components/detail/detail";
+import BienDetails from "@/components/biens/bien-details";
 import { IBien, biens } from "@/data/coups-de-coeur.type";
 
 export default async function CoupCoeurDetailsPage({
@@ -14,7 +14,7 @@ export default async function CoupCoeurDetailsPage({
   if (!element) {
     return (
       <div className="text-center py-20 text-red-600 font-semibold text-lg">
-        Produit non trouvé
+        Bien non trouvé
       </div>
     );
   }
@@ -22,7 +22,9 @@ export default async function CoupCoeurDetailsPage({
   // Affichage du composant de détails
   return (
     <>
-      <Details home={element} />
+      <BienDetails
+        home={element}
+      />
     </>
   );
 }

@@ -14,8 +14,9 @@ import {
 	SelectValue
 } from "@/components/ui/select";
 import {motion} from "motion/react";
+import {cn} from "@/lib/utils";
 
-function ContactFixedButton({defaultMessage, subject}: { defaultMessage?: string; subject?: string }) {
+function ContactFixedButton({defaultMessage, className}: { defaultMessage?: string;   className?: string }) {
 	const {isOpen, onOpen, onOpenChange} = useDisclosure();
 
 	return (
@@ -26,7 +27,7 @@ function ContactFixedButton({defaultMessage, subject}: { defaultMessage?: string
 				transition={{duration: 0.5, delay:2}}
 			>
 				<Button
-					className="fixed bottom-8 right-8 z-50"
+					className={cn("fixed bottom-8 right-8 z-50", className)}
 					color="primary"
 					onClick={onOpen}
 				>

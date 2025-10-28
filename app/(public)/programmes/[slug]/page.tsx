@@ -21,16 +21,24 @@ async function ProgrammeDetailsPage({params}: Props) {
 		<div className="min-h-screen">
 			<VideoViewer videoSrc={`${CDN_URL}/assets/videos/bg-video.mp4`}/>
 			<ContactFixedButton
-				subject={`Demande de contact pour le programme: ${slug}`}
 				defaultMessage={`Bonjour, Je suis intéressé(e) par ${slug}`}
 			/>
 			<section className="full-screen-section mt-0">
-				<Image
-					src={`${CDN_URL}/programmes/mangrove/wallpaper.png`}
-					alt={`Programme ${slug}`}
-					width={1920}
-					height={1080}
-				/>
+				<picture>
+					<source
+						media="(min-width:1280px)"
+						srcSet={`${CDN_URL}/programmes/mangrove/hero/vous_meritez_un_heritage_1920X1080px.jpg`}
+					/>
+					<source
+						media="(min-width:768px)"
+						srcSet={`${CDN_URL}/programmes/mangrove/hero/vous_meritez_un_heritage_1024X768px.png`}
+					/>
+					<img
+						src={`${CDN_URL}/programmes/mangrove/hero/vous_meritez_un_heritage_600X800px.png`}
+						alt={`Programme ${slug}`}
+						className="w-full h-full object-cover"
+					/>
+				</picture>
 			</section>
 			<section className="min-h-screen py-20 lg:px-8 bg-black flex flex-col space-y-20 -mt-0.5">
 				{exclusiveProperties.slice(0, 2).map((bien, index) => (
