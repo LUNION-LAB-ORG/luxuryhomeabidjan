@@ -117,7 +117,7 @@ function ServicesCarousel() {
 											name={service.icon}
 										/>
 									</div>
-									<h3 className="text-5xl font-bold">
+									<h3 className="text-3xl md:text-5xl font-bold text-center md:text-left">
 										{service.title}
 									</h3>
 								</div>

@@ -13,7 +13,7 @@ export default function WhyChooseUsSection() {
 
 	return (
 		<div
-			className="relative bg-no-repeat bg-cover bg-center  overflow-hidden min-h-screen bg-white shadow-lg"
+			className="relative bg-no-repeat bg-cover bg-center  overflow-hidden viewport-minus-nav bg-white shadow-lg"
 			style={{backgroundImage: "url(/assets/images/coup-de-coeur/nous.jpg)"}}
 		>
 			{/* Image principale */}
@@ -22,7 +22,7 @@ export default function WhyChooseUsSection() {
 					src="/assets/images/coup-de-coeur/nous.jpg"
 					alt="Salon moderne et élégant"
 					fill
-					priority
+					loading="lazy"
 					className={`object-cover transition-opacity duration-700 ${
 						isLoaded ? "opacity-100" : "opacity-0"
 					}`}

@@ -48,7 +48,7 @@ export function Navbar() {
 		},
 		scrolled: {
 			backgroundColor: "rgba(255,255,255,0.85)",
-			boxShadow: "0 6px 18px rgba(15,23,42,0.06)",
+			border: "1px solid rgba(229, 231, 235, 1)",
 			backdropFilter: "blur(8px)",
 		},
 		hidden: {
@@ -65,7 +65,6 @@ export function Navbar() {
 			transition={{duration: 0.35, ease: "easeOut"}}
 			className={cn(
 				"top-0 z-50 left-0 right-0 h-[var(--nav-height)] flex items-center",
-				isScrolled ? "shadow-sm" : "",
 				pathname === "/" ? "fixed" : "sticky top-0"
 			)}
 		>
@@ -108,7 +107,7 @@ export function Navbar() {
 				>
 					<Link
 						target="_blank" href={`https://wa.me/${company.contacts.whatsapp}`}
-						className="hidden border bg-white border-gray-200 rounded-xl shadow-md py-1 px-4 lg:flex justify-center items-center gap-2 hover:opacity-80 transition"
+						className="hidden border bg-white border-gray-200 rounded-xl py-1 px-4 lg:flex justify-center items-center gap-2 hover:opacity-80 transition"
 					>
 						<WhatsappIcon className="size-7"/>
 						<span className="text-sm font-bold text-black">Assistance</span>

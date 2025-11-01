@@ -157,4 +157,8 @@
   .full-screen-section {
     @apply min-h-[calc(100vh-var(--nav-height))]
   }
+
+  .viewport-minus-nav {
+    @apply h-[calc(100vh-var(--nav-height))]
+  }
 }
