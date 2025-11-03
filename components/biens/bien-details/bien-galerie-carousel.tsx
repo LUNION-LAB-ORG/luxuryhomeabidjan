@@ -9,8 +9,9 @@ import {cn} from "@/lib/utils";
 import useCarouselButton from "@/hooks/use-carousel-button";
 import {useFullscreenImageModal} from "@/hooks/use-fullscreen-image-modal";
 import FullscreenImageModal from "@/components/biens/bien-details/fullscreen-image-modal";
+import { IProperty } from '@/features/properties/types/property.type';
 
-function BienGalerieCarousel({home}: { home: IBien }) {
+function BienGalerieCarousel({home}: { home: IProperty }) {
 	const [api, setApi] = React.useState<CarouselApi>()
 	const {
 		canScrollNext,
@@ -41,7 +42,9 @@ function BienGalerieCarousel({home}: { home: IBien }) {
 				]}
 			>
 				<CarouselContent>
-					{home.gallery
+					{home
+						.medias
+						?.filter((img) => img.kind === 'IMAGE')
 						?.slice(0, 5)
 						.map((img, idx) => (
 							<CarouselItem

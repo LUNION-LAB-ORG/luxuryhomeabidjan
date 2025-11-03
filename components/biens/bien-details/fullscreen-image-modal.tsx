@@ -7,9 +7,10 @@ import {Modal, ModalBody, ModalContent,} from "@heroui/react";
 import ContactFixedButton from "@/components/contact-fixed-button";
 import {Button} from "@/components/ui/button";
 import {X} from "lucide-react";
+import { IProperty } from '@/features/properties/types/property.type';
 
 type FullscreenImageModalProps = {
-	home: IBien;
+	home: IProperty;
 	open: boolean;
 	selectedIndex: number | null;
 	setSelectedIndex: (index: number | null) => void;
@@ -50,6 +51,7 @@ function FullscreenImageModal({home, open, selectedIndex, setSelectedIndex, setO
 			className="bg-white/70"
 			backdrop="blur"
 			hideCloseButton
+			isDismissable={false}
 		>
 			<ModalContent className="min-w-screen h-screen max-w-none rounded-none p-0 overflow-hidden">
 				<Button
@@ -63,7 +65,9 @@ function FullscreenImageModal({home, open, selectedIndex, setSelectedIndex, setO
 				<ModalBody className="p-0 h-full relative">
 					<Carousel setApi={setApi} className="w-full h-full">
 						<CarouselContent className="h-full">
-							{home.gallery?.map((img, idx) => (
+							{home.medias
+								?.filter((img) => img.kind === 'IMAGE')
+								?.map((img, idx) => (
 								<CarouselItem key={idx} className="h-screen w-full flex items-center justify-center">
 									<div className="relative w-full h-full">
 										<Image
@@ -93,7 +97,10 @@ function FullscreenImageModal({home, open, selectedIndex, setSelectedIndex, setO
 							}}
 						>
 							<CarouselContent className="gap-2">
-								{home.gallery?.map((img, idx) => (
+								{home
+									.medias
+									?.filter((img) => img.kind === 'IMAGE') // TODO: Trouver une meilleure gestion de la liste des images
+									?.map((img, idx) => (
 									<CarouselItem key={idx} className="basis-1/4 md:basis-1/6 lg:basis-1/8 xl:basis-1/12 cursor-pointer">
 										<div
 											onClick={() => onThumbClick(idx)}

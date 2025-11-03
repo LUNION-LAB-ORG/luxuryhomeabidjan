@@ -1,8 +1,27 @@
 import React from 'react';
-import {Check} from "lucide-react";
+import { Bath, Bed, Check, MapPin, Ruler } from 'lucide-react';
 import SectionTitle from "@/components/SectionTitle";
+import { IProperty } from '@/features/properties/types/property.type';
 
-function CaracteristiquesBien({features, home}: {features: Array<{icon: React.ReactNode; label: string}>; home: any}) {
+function CaracteristiquesBien({property}: { property: IProperty}) {
+	const features = [
+		{
+			icon: <Ruler className="w-6 h-6 text-black" />,
+			label: `${property?.area} m²`,
+		},
+		{
+			icon: <Bed className="w-6 h-6 text-black" />,
+			label: `${property?.bedrooms} Chambres`,
+		},
+		{
+			icon: <Bath className="w-6 h-6 text-black" />,
+			label: `${property?.bathrooms} Salles de bain`,
+		},
+		{
+			icon: <MapPin className="w-6 h-6 text-black" />,
+			label: property?.city.name,
+		},
+	];
 	return (
 		<section className="px-6 md:px-12 py-16 bg-white rounded-t-3xl">
 			<SectionTitle
@@ -25,8 +44,8 @@ function CaracteristiquesBien({features, home}: {features: Array<{icon: React.Re
 				</div>
 
 				<p className="text-gray-700 leading-relaxed text-[15px]">
-					Découvrez la <strong>{home.title}</strong>, un bien d’exception
-					situé à <strong>{home.localisation}</strong>. Cet espace allie
+					Découvrez la <strong>{property.title}</strong>, un bien d’exception
+					situé à <strong>{property.city.name}</strong>. Cet espace allie
 					design moderne, matériaux nobles et confort absolu. Chaque détail a
 					été pensé pour offrir une expérience résidentielle haut de gamme.
 				</p>
@@ -39,16 +58,13 @@ function CaracteristiquesBien({features, home}: {features: Array<{icon: React.Re
 				</h3>
 
 				<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
-					{home.interiorDetails && <DetailList title="Interior Details" items={home.interiorDetails}/>}
-					{home.outdoorDetails && <DetailList title="Outdoor Details" items={home.outdoorDetails}/>}
-					{home.utilities && <DetailList title="Utilities" items={home.utilities}/>}
-					{home.otherFeatures && <div className="sm:col-span-2 lg:col-span-3 gap-10">
+					{property.amenities && (
 						<DetailList
-							title="Other Features"
-							items={home.otherFeatures}
+							title="Commodités"
+							items={property.amenities}
 							grid
 						/>
-					</div>}
+					)}
 				</div>
 			</div>
 		</section>

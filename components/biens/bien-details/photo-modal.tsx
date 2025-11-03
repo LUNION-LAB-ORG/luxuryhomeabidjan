@@ -11,8 +11,9 @@ import Image from "next/image";
 import {IBien} from "@/data/coups-de-coeur.type";
 import {useFullscreenImageModal} from "@/hooks/use-fullscreen-image-modal";
 import FullscreenImageModal from "@/components/biens/bien-details/fullscreen-image-modal";
+import { IProperty } from '@/features/properties/types/property.type';
 
-function PhotoModal({home}: { home: IBien }) {
+function PhotoModal({home}: { home: IProperty }) {
 	const [open, setOpen] = useState(false);
 	const { open: openImagesModal, setOpen:setOpenImagesModal, selectedIndex, setSelectedIndex, openModal } = useFullscreenImageModal();
 
@@ -38,7 +39,8 @@ function PhotoModal({home}: { home: IBien }) {
 
 					<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-6">
 						{home
-							.gallery
+							.medias
+							?.filter((img) => img.kind === 'IMAGE')
 							?.map((img, idx) => (
 								<div
 									key={idx}

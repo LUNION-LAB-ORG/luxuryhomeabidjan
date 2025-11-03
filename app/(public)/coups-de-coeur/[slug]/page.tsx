@@ -23,7 +23,7 @@ export default async function CoupCoeurDetailsPage({
   return (
     <>
       <BienDetails
-        home={element}
+        slug={element}
       />
     </>
   );
