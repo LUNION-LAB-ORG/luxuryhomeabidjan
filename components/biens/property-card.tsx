@@ -1,11 +1,11 @@
 import { Bath, Bed } from 'lucide-react';
 import { IProperty } from '@/features/properties/types/property.type';
 import Image from 'next/image';
-import { getListingTypeLabel, getPricePeriodLabel } from '@/features/properties/utils/enum-to-label';
-import { formatCurrency } from '@/utils/currency';
+import { getListingTypeLabel } from '@/features/properties/utils/enum-to-label';
 import Link from 'next/link';
+import PriceViewer from '@/components/biens/price-viewer';
 
-export default function ExclusivePropertyCard({ property }: { property: IProperty }) {
+export default function PropertyCard({ property }: { property: IProperty }) {
   return (
     <Link
       href={`/biens/${property.slug}`}
@@ -45,7 +45,7 @@ export default function ExclusivePropertyCard({ property }: { property: IPropert
               </address>
             </div>
             <div className="bg-gold-500 text-black text-xs font-semibold px-3 py-2 rounded-md bg-white shadow-md">
-              {`${formatCurrency(property.price,'fr-FR', property.currency)}/${property.pricePeriod ? getPricePeriodLabel(property.pricePeriod) : ''}`}
+              <PriceViewer property={property}/>
             </div>
           </div>
 

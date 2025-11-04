@@ -11,12 +11,12 @@ export enum SortOrder {
 
 export interface PaginatedResponse<T> {
   data: T[];
-  meta: {
-    total: number;
-    page: number;
-    limit: number;
-    pages: number;
-  }
+  pagination: {
+    total: number,
+    page: number,
+    limit: number,
+    pages: number
+  };
 }
 
 export interface ActionResponse<T> {

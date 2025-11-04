@@ -5,14 +5,12 @@ import {formatCurrency} from "@/utils/currency";
 import useSearchbarForm from "@/hooks/use-searchbar-form";
 
 function BudgetFilter() {
-	const [budget, setBudget] = React.useState<number>(0);
-	const maxBudget = 2000000;
-	const minBudget = 1000;
 	const budgetStep = 10000;
 
 	const {
 		filters,
-		changeFilter
+		changeFilter,
+		filtersValues
 	} = useSearchbarForm();
 
 	return (
@@ -22,16 +20,18 @@ function BudgetFilter() {
 				<label className={"text-[#595959] text-sm"}>Budget</label>
 				<div className="flex items-center gap-4">
 					<Slider
-						min={minBudget}
-						max={maxBudget}
+						min={filtersValues?.price.min}
+						max={filtersValues?.price.max}
 						step={budgetStep}
-						defaultValue={[maxBudget]}
-						value={[filters.budget]}
-						onValueChange={(value) => changeFilter('budget',value[0])}
+						value={[filters.minPrice, filters.maxPrice]}
+						onValueChange={(value) => {
+							changeFilter('minPrice',value[0])
+							changeFilter('maxPrice',value[1])
+						}}
 						className="w-[40%]"
 					/>
 					<span className="text-sm text-[#999999]">
-					 De 0 FCFA à {formatCurrency(filters.budget)}
+					 {formatCurrency(filters.minPrice)} - {formatCurrency(filters.maxPrice)}
 					</span>
 				</div>
 			</div>

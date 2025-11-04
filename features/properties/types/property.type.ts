@@ -115,7 +115,7 @@ export interface IProperty {
 }
 
 export interface IPropertySearchParams {
-  // PAGINATION & TRI (hérité de FilterQueryDto)
+  // PAGINATION & TRI
   page?: number;
   limit?: number;
   sort?: 'asc' | 'desc';
@@ -126,23 +126,18 @@ export interface IPropertySearchParams {
   coupDeCoeur?: boolean;
 
   // FILTRES TYPE & STATUT
-  listingType?: 'SALE' | 'RENT';
-  status?: 'DRAFT' | 'IN_PROGRESS' | 'PUBLISHED' | 'ARCHIVED';
+  listingType?: ('SALE' | 'RENT')[];
 
   // FILTRES PRIX
   currency?: 'XOF' | 'USD' | 'EUR';
-  minPrice?: string;
-  maxPrice?: string;
+  minPrice?: number;
+  maxPrice?: number;
   pricePeriod?: 'NONE' | 'MONTH' | 'WEEK' | 'DAY' | 'YEAR';
 
   // FILTRES LOCALISATION
-  cityId?: string;
-  communeId?: string;
-  areaId?: string;
-  minLatitude?: number;
-  maxLatitude?: number;
-  minLongitude?: number;
-  maxLongitude?: number;
+  cityId?: string[];
+  communeId?: string[];
+  areaId?: string[];
 
   // FILTRES DIMENSIONS
   minArea?: number;
@@ -151,36 +146,17 @@ export interface IPropertySearchParams {
   maxLandArea?: number;
 
   // FILTRES PIÈCES
-  minRooms?: number;
-  maxRooms?: number;
+  minRooms?: number[];
+  maxRooms?: number[];
   minBedrooms?: number;
   maxBedrooms?: number;
   minBathrooms?: number;
   maxBathrooms?: number;
-  minGarages?: number;
-  maxGarages?: number;
-  minGarageCapacity?: number;
-  maxGarageCapacity?: number;
-
-  // FILTRES CONSTRUCTION
-  minYearBuilt?: number;
-  maxYearBuilt?: number;
 
   // FILTRES CATÉGORIE & AGENT
-  categoryId?: string;
-  agentId?: string;
-
-  // FILTRES AMÉNITÉS
-  amenityIds?: string[];
-
-  // FILTRES DATES
-  minPublishedAt?: Date;
-  maxPublishedAt?: Date;
-  minCreatedAt?: Date;
-  maxCreatedAt?: Date;
+  categoryId?: string[];
 
   // OPTIONS DE PRÉSENTATION
   includeMedias?: boolean;
-  includePriceHistory?: boolean;
   includeAgent?: boolean;
 }

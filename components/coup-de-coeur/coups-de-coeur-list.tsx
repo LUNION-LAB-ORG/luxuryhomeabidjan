@@ -1,23 +1,16 @@
 'use client';
-import React, { useEffect, useRef } from 'react';
+import React, { useRef } from 'react';
 import CoupDeCoeurCard from '@/components/coup-de-coeur/coup-de-coeur-card';
-import { IBien } from '@/data/coups-de-coeur.type';
 import { useGSAP } from '@gsap/react';
 import { gsap } from 'gsap';
-import { usePropertiesList } from '@/features/properties/hooks/usePropertiesList';
 import { useCoupDeCoeurList } from '@/features/properties/hooks/useCoupDeCoeurList';
-import { Skeleton } from '@heroui/react';
 
-function CoupsDeCoeurList({ biens }: { biens: IBien[] }) {
+function CoupsDeCoeurList() {
   const container = useRef<HTMLDivElement | null>(null);
   const {
     coupDeCoeur,
     coupDeCoeurLoading,
-    coupDeCoeurError,
-    refetchCoupDeCoeur,
   } = useCoupDeCoeurList();
-
-  console.log(coupDeCoeur);
 
   useGSAP(() => {
     if (!container.current) return;

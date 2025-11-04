@@ -1,22 +1,23 @@
-import {useQueryStates} from "nuqs";
-import {searchBarFilterClient} from "@/filters/search-bar-filter";
-import React from "react";
+import { useQueryStates } from 'nuqs';
+import { searchBarFilterClient } from '@/filters/search-bar-filter';
+import React from 'react';
+import { useRouter, useSearchParams } from 'next/navigation';
+import { propertyFiltersClient } from '@/features/properties/filters/property.filters';
+import { useFiltersValuesQuery } from '@/features/properties/queries/filters-values.query';
 
 export default function useSearchbarForm() {
-	const [filters, setFilters] = useQueryStates(searchBarFilterClient.filter, searchBarFilterClient.option);
+	const params = useSearchParams()
+	const router = useRouter();
+	const [filters, setFilters] = useQueryStates(propertyFiltersClient, searchBarFilterClient.option);
+	const {
+		data: filtersValues,
+		isLoading: isLoadingFiltersValues,
+	} = useFiltersValuesQuery();
 	const [filterOpen, setFilterOpen] = React.useState(false);
 	const [openModal, setOpenModal] = React.useState(false);
 
-	const defaultFilters = {
-		keywords: filters.keywords,
-		actions: filters.actions,
-		types: filters.types,
-		piece: filters.piece,
-		zone: filters.zone,
-	};
-
-	const changeFilter = (key: string, value: string | number | string[] | number[]) => {
-		setFilters((prev) => ({
+	const changeFilter = (key: string, value: string | number | string[] | number[] | Date) => {
+		void setFilters((prev) => ({
 			...prev,
 			[key]: value,
 		}));
@@ -30,13 +31,27 @@ export default function useSearchbarForm() {
 		}
 	}
 
+	// useEffect(() => {
+	// 	changeFilter('minPrice', filtersValues?.price?.min || 0);
+	// 	changeFilter('maxPrice', filtersValues?.price?.max || 50000000);
+	// }, [filtersValues])
+
+	const handleSearchBarSubmit = (e: React.FormEvent) => {
+		e.preventDefault();
+
+		router.push(`/search?${new URLSearchParams(params).toString()}`);
+	};
+
 	return {
 		filters,
+		filtersValues,
+		isLoadingFiltersValues,
 		changeFilter,
 		filterOpen,
 		setFilterOpen,
 		openModal,
 		setOpenModal,
-		handleMoreButtonClick
+		handleMoreButtonClick,
+		handleSearchBarSubmit
 	};
 }

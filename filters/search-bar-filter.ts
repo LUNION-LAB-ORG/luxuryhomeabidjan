@@ -1,4 +1,4 @@
-import {parseAsArrayOf, parseAsFloat, parseAsIsoDate, parseAsString} from "nuqs";
+import { parseAsArrayOf, parseAsInteger, parseAsString } from 'nuqs';
 
 export const searchBarFilterClient = {
 	filter: {
@@ -7,8 +7,8 @@ export const searchBarFilterClient = {
 		types: parseAsArrayOf(parseAsString, ';').withDefault([]),
 		piece: parseAsArrayOf(parseAsString, ';').withDefault([]),
 		zone: parseAsArrayOf(parseAsString, ';').withDefault([]),
-		budget: parseAsFloat.withDefault(0),
-		availability: parseAsIsoDate.withDefault(new Date())
+		budget: parseAsArrayOf(parseAsInteger, ';').withDefault([1000, 2000000]),
+		availability: parseAsString.withDefault('')
 	},
 	option: {
 		clearOnDefault: true,

@@ -5,14 +5,16 @@ import {ServicesSection} from "@/components/home/services-section/services-secti
 import {ValuesContactSection} from "@/components/home/values-contact/values-contact-section";
 import WhyChooseUsSection from "@/components/pourquoi/why-choose-us-section";
 import {TeamSection} from "@/components/team/team-section";
+import { Suspense } from 'react';
+import FilterForm from '@/components/home/filter-form';
 
 export default function Home() {
 	return (
 		<div className="max-w-[2550px] mx-auto">
 			<HeroSection/>
-			{/*<Suspense fallback={<div>Loading...</div>}>*/}
-			{/*  <FilterForm />  */}
-			{/*</Suspense>*/}
+			<Suspense fallback={<div>Loading...</div>}>
+			  <FilterForm/>
+			</Suspense>
 			<CoupDeCoeur/>
 			<WhyChooseUsSection/>
 			<ServicesSection/>
