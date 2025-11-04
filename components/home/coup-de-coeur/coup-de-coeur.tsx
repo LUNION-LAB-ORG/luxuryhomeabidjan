@@ -1,4 +1,3 @@
-import { biens } from '@/data/coups-de-coeur.type';
 import SectionTitle from '@/components/SectionTitle';
 import CoupsDeCoeurList from '@/components/coup-de-coeur/coups-de-coeur-list';
 
@@ -13,7 +12,7 @@ export default function CoupDeCoeur() {
 				title="Nos coups de cœur"
 				subtitle="Savourez chaque details"
 			/>
-			<CoupsDeCoeurList biens={biens}/>
+			<CoupsDeCoeurList/>
 		</div>
 	);
 }
