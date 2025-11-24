@@ -53,7 +53,7 @@ export function Navbar() {
   return (
     <header
       className={cn(
-        "sticky top-0 z-50 w-full transition-all duration-200 h-[var(--nav-height)] flex items-center",
+        "sticky top-0 z-[100] w-full transition-all duration-200 h-[var(--nav-height)] flex items-center",
         isScrolled ? "backdrop-blur-md bg-white/80 shadow-sm" : "bg-white"
       )}
     >

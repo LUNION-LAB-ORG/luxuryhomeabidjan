@@ -53,7 +53,7 @@ export default function MyMap({ latitude, longitude }: MyMapProps) {
 
   return (
     <div style={{ height: "400px", width: "100%" }}>
-      <MapContainer center={position} zoom={17} style={{ height: "100%", width: "100%" }} scrollWheelZoom={false}>
+      <MapContainer center={position} zoom={17} style={{ height: "100%", width: "100%" }} scrollWheelZoom={false} className="z-0">
         <TileLayer
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           attribution="© OpenStreetMap contributors"

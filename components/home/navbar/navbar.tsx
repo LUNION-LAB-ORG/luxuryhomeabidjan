@@ -64,7 +64,7 @@ export function Navbar() {
 			animate={isScrolled ? "scrolled" : "top"}
 			transition={{duration: 0.35, ease: "easeOut"}}
 			className={cn(
-				"top-0 z-50 left-0 right-0 h-[var(--nav-height)] flex items-center",
+				"top-0 z-[100] left-0 right-0 h-[var(--nav-height)] flex items-center",
 				pathname === "/" ? "fixed" : "sticky top-0"
 			)}
 		>
