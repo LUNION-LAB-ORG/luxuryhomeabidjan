@@ -83,7 +83,7 @@ export enum propertyStatusEnum {
 export interface IProperty {
   id: string;
   title: string;
-  amenities?: { id: string; label: string }[];
+  amenities?: { id: string; name: string }[];
   coupDeCoeur: boolean;
   slug: string;
   description?: string | null;

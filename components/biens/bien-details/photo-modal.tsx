@@ -12,6 +12,7 @@ import {IBien} from "@/data/coups-de-coeur.type";
 import {useFullscreenImageModal} from "@/hooks/use-fullscreen-image-modal";
 import FullscreenImageModal from "@/components/biens/bien-details/fullscreen-image-modal";
 import { IProperty } from '@/features/properties/types/property.type';
+import { Button } from '@heroui/react';
 
 function PhotoModal({home}: { home: IProperty }) {
 	const [open, setOpen] = useState(false);
@@ -21,10 +22,10 @@ function PhotoModal({home}: { home: IProperty }) {
 		<>
 			<Dialog open={open} onOpenChange={setOpen}>
 				<DialogTrigger asChild>
-					<button
+					<Button
 						className="bg-black cursor-pointer text-white px-6 py-2 rounded-lg hover:bg-gray-800 transition max-md:hidden">
 						Voir toutes les images
-					</button>
+					</Button>
 				</DialogTrigger>
 				<DialogContent
 					className="max-w-5xl max-h-screen min-w-screen h-screen overflow-y-auto bg-white rounded-none p-6">
