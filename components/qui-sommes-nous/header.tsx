@@ -1,3 +1,4 @@
+import { CDN_URL } from "@/config";
 import Image from "next/image";
 
 export default function Header() {
@@ -8,7 +9,7 @@ export default function Header() {
 				alt="image lieux"
 				width={1920}
 				height={1080}
-				src="/assets/images/backgrounds/equipe.jpg"
+				src={`${CDN_URL}/assets/qui-sommes-nous/equipe.jpg`}
 			/>
 			<h1
 				className="absolute bottom-0 text-white font-bold px-4 text-center text-[24px] md:text-[30px] lg:text-[46px] w-full py-6">

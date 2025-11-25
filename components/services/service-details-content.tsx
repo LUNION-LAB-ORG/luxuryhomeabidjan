@@ -7,6 +7,7 @@ import Image from "next/image";
 import ServiceDetailsDescriptionText from "@/components/services/service-details-description-text";
 import ServiceDetailsGallery from "@/components/services/service-details-gallery";
 import ServiceNavButtons from "@/components/services/service-nav-buttons";
+import { CDN_URL } from '@/config';
 
 
 function ServiceDetailsContent() {
@@ -45,7 +46,7 @@ function ServiceDetailsContent() {
 					<div className="will-change-transform absolute -top-[450px] w-full" ref={containerRef}>
 						<figure className="px-10 absolute w-full">
 							<Image
-								src="/assets/images/img/gestion-img1.jpg"
+								src={`${CDN_URL}/assets/services/expertise/gestion.jpg`}
 								alt="Service Details Image"
 								width={1920}
 								height={1080}
