@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import {useEffect, useState} from "react";
+import {CDN_URL} from "@/config";
 
 // Composant principal
 export default function WhyChooseUsSection() {
@@ -14,12 +15,12 @@ export default function WhyChooseUsSection() {
 	return (
 		<div
 			className="relative bg-no-repeat bg-cover bg-center  overflow-hidden viewport-minus-nav bg-white shadow-lg"
-			style={{backgroundImage: "url(/assets/images/coup-de-coeur/nous.jpg)"}}
+			style={{backgroundImage: `url(${CDN_URL}/assets/accueil/nous.jpg)`}}
 		>
 			{/* Image principale */}
 			<div className="relative w-full overflow-hidden">
 				<Image
-					src="/assets/images/coup-de-coeur/nous.jpg"
+					src={`${CDN_URL}/assets/images/coup-de-coeur/nous.jpg`}
 					alt="Salon moderne et élégant"
 					fill
 					loading="lazy"
@@ -48,7 +49,8 @@ export default function WhyChooseUsSection() {
 				</p>
 
 				<p className="text-sm lg:text-xl md:text-md leading-relaxed mb-6 max-w-4xl mx-auto">
-					Notre approche est basée sur une écoute pour <span className="font-bold">comprendre</span>, comprendre pour <span className="font-bold">conseiller</span>, conseiller pour <span className="font-bold">réussir</span>.
+					Notre approche est basée sur une écoute pour <span className="font-bold">comprendre</span>, comprendre
+					pour <span className="font-bold">conseiller</span>, conseiller pour <span className="font-bold">réussir</span>.
 				</p>
 
 				{/* Philosophie & fierté */}

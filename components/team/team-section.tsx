@@ -26,7 +26,7 @@ export const TeamSection = () => {
       name: "Morane Boudabes",
       role: "Administrateur Général",
       bio: "Expert en immobilier de luxe avec plus de 15 ans d’expérience à Abidjan.",
-      image: "/assets/images/team/boss.png",
+      image: `${CDN_URL}/assets/team/boss.png`,
       email: "morane.boudabes@luxuryhomeabidjan.com",
       phone: "",
       socials: { linkedin: "#" },
@@ -35,7 +35,7 @@ export const TeamSection = () => {
       name: "Christelle Kipre épouse Bossé",
       role: "Administratrice des ventes",
       bio: "Spécialiste des transactions haut de gamme et relations clients premium.",
-      image: "/team/jean-marc.jpg",
+      image: `${CDN_URL}/assets/team/jean-marc.jpg`,
       email: "christelle.kipré@luxuryhomeabidjan.com",
       phone: "+2250749876501",
       socials: { linkedin: "#" },
@@ -44,7 +44,7 @@ export const TeamSection = () => {
       name: "Thibault Gouré",
       role: "Luxury Realtor",
       bio: "Créateur d’expériences raffinées alliant modernité et élégance africaine.",
-      image: "/assets/images/team/thibau.PNG",
+      image: `${CDN_URL}/assets/team/thibau.PNG`,
       email: "thibault.goure@luxuryhomeabidjan.com",
       phone: "+2250103489404",
       socials: { linkedin: "#" },
@@ -53,25 +53,25 @@ export const TeamSection = () => {
       name: "Yassine Gueye",
       role: "Luxury Realtor",
       bio: "Ingénieur en gestion de projets immobiliers complexes et durables.",
-      image: "/assets/images/team/YASSINE.jpg",
+      image: `${CDN_URL}/assets/team/yassine.jpg`,
       email: "yassine.gueye@luxuryhomeabidjan.com",
       phone: "+2250749871713",
       socials: { linkedin: "#" },
     },
-    // {
-    //   name: "Angela Komenan",
-    //   role: "Luxury Realtor",
-    //   bio: "Passionnée de communication et d’image de marque dans l’immobilier de prestige.",
-    //   image: `${CDN_URL}/assets/team/angela_komenan.jpg`,
-    //   email: "karine.komenan@luxuryhomeabidjan.com",
-    //   phone: "+2250749876611",
-    //   socials: { linkedin: "#" },
-    // },
+    {
+      name: "Angela Komenan",
+      role: "Luxury Realtor",
+      bio: "Passionnée de communication et d’image de marque dans l’immobilier de prestige.",
+      image: `${CDN_URL}/assets/team/angela_komenan.jpg`,
+      email: "karine.komenan@luxuryhomeabidjan.com",
+      phone: "+2250749876611",
+      socials: { linkedin: "#" },
+    },
     {
       name: "Aïcha Coulibaly",
       role: "Luxury Realtor",
       bio: "Experte en accompagnement de clients haut de gamme dans leurs acquisitions.",
-      image: "/assets/images/team/aicha.jpg",
+      image: `${CDN_URL}/assets/team/aicha.jpg`,
       email: "aicha.coulibaly@luxuryhomeabidjan.com",
       phone: "+2250749876609",
       socials: { linkedin: "#" },
@@ -80,14 +80,14 @@ export const TeamSection = () => {
       name: "Nomel Lasme",
       role: "Juriste",
       bio: "Garant des aspects légaux et contractuels de nos transactions immobilières.",
-      image: "/assets/images/team/NOL.JPG",
+      image: `${CDN_URL}/assets/team/nomell.jpg`,
       socials: { linkedin: "#" },
     },
     {
       name: "Christelle Kra",
       role: "Gestionnaire de biens",
       bio: "Spécialiste de la gestion locative et de l’entretien des propriétés de prestige.",
-      image: "/assets/images/team/christelle.jpg",
+      image: `${CDN_URL}/assets/team/christelle.jpg`,
       email: "kra.christelle@luxuryhomeabidjan.com",
       phone: "+2250749871738",
       socials: { linkedin: "#" },
@@ -96,14 +96,14 @@ export const TeamSection = () => {
       name: "Ghislain Amichia",
       role: "Assistant Communication et Marketing",
       bio: "En charge du développement de l’image et de la visibilité de la marque.",
-      image: "/team/issa.jpg",
+      image: `${CDN_URL}/assets/team/ghislain.jpg`,
       socials: { linkedin: "#" },
     },
     {
       name: "Rokia Sangaré",
       role: "Assistante Marketing",
       bio: "Participe à la création de campagnes digitales innovantes et élégantes.",
-      image: "/team/issa.jpg",
+      image: `${CDN_URL}/assets/team/rokia.jpg`,
       socials: { linkedin: "#" },
     },
   ];
@@ -141,16 +141,15 @@ export const TeamSection = () => {
   );
 };
 
-// 🧑‍💼 Composant carte membre
 const TeamCard = ({ member }: { member: TeamMember }) => (
-  <div className="group relative rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 flex flex-col">
+  <div className="group relative rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 flex flex-col max-h-[600px]">
     {/* Image */}
     <div className="relative w-full overflow-hidden flex-1">
       <Image
         src={member.image}
         alt={member.name}
-        width={2000}
-        height={2000}
+        width={296}
+        height={444}
         className="object-cover h-full w-full transition-transform duration-500 group-hover:scale-105"
       />
 
