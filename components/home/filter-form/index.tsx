@@ -1,7 +1,6 @@
 'use client';
 
 import FilterColumn from '@/components/home/filter-form/filter-column';
-import FilterModalForm from '@/components/home/filter-form/filter-modal-form';
 import FilterSelect from '@/components/home/filter-form/filter-select';
 import BudgetFilter from '@/components/home/filter-form/filters/budget-filter';
 import SearchFilterForm from '@/components/home/filter-form/filters/search-filter-form';
@@ -17,8 +16,6 @@ function FilterForm() {
     filterOpen,
     filters,
     handleMoreButtonClick,
-    setOpenModal,
-    openModal,
     changeFilter,
     handleSearchBarSubmit,
     filtersValues,
@@ -134,7 +131,6 @@ function FilterForm() {
           {/*<AvailabilityFilter />*/}
         </motion.div>
       </motion.form>
-      <FilterModalForm open={openModal} onClose={() => setOpenModal(false)} />
     </div>
   );
 }

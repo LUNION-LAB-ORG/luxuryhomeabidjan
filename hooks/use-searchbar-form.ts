@@ -1,12 +1,11 @@
 import { useQueryStates } from 'nuqs';
 import { searchBarFilterClient } from '@/filters/search-bar-filter';
 import React from 'react';
-import { useRouter, useSearchParams } from 'next/navigation';
+import { useRouter } from 'next/navigation';
 import { propertyFiltersClient } from '@/features/properties/filters/property.filters';
 import { useFiltersValuesQuery } from '@/features/properties/queries/filters-values.query';
 
 export default function useSearchbarForm() {
-	const params = useSearchParams()
 	const router = useRouter();
 	const [filters, setFilters] = useQueryStates(propertyFiltersClient, searchBarFilterClient.option);
 	const {
@@ -31,15 +30,10 @@ export default function useSearchbarForm() {
 		}
 	}
 
-	// useEffect(() => {
-	// 	changeFilter('minPrice', filtersValues?.price?.min || 0);
-	// 	changeFilter('maxPrice', filtersValues?.price?.max || 50000000);
-	// }, [filtersValues])
-
 	const handleSearchBarSubmit = (e: React.FormEvent) => {
 		e.preventDefault();
-
-		router.push(`/search?${new URLSearchParams(params).toString()}`);
+		const queryString = new URLSearchParams(Object.entries(filters).map(([key, value]) => [key, String(value)])).toString();
+		router.push(`/search?${queryString}`);
 	};
 
 	return {

@@ -43,10 +43,10 @@ export const usePropertiesList = () => {
   return {
     properties: propertiesData?.data,
     pagination: {
-      currentPage: propertiesData?.meta?.page,
-      totalPages: propertiesData?.meta?.pages,
-      itemsPerPage: propertiesData?.meta?.limit,
-      totalItems: propertiesData?.meta?.total,
+      currentPage: propertiesData?.pagination?.page,
+      totalPages: propertiesData?.pagination?.pages,
+      itemsPerPage: propertiesData?.pagination?.limit,
+      totalItems: propertiesData?.pagination?.total,
     },
     propertiesLoading,
     propertiesError,

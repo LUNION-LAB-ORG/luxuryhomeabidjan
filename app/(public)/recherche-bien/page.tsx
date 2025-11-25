@@ -10,7 +10,7 @@ export default async function page(){
     return(
         <div>
          <HeaderRechercheBien/>
-         <Suspense fallback={<div>Chargement...</div>}>
+         <Suspense fallback={<div className="container-8xl py-2 h-32 bg-gray-50 rounded-lg mt-4 animate-pulse" />}>
            <PropertyFilter/>
          </Suspense>
          <SectionCard/>
