@@ -19,7 +19,7 @@ export default function QueryProvider({ children }: { children: React.ReactNode 
   }));
 
   return (
-    <Suspense fallback="Loading...">
+    <Suspense fallback="">
       <QueryClientProvider client={queryClient}>
         {children}
         <ReactQueryDevtools initialIsOpen={false} />

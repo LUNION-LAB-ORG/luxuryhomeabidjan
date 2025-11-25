@@ -1,3 +1,5 @@
+"use server";
+
 import { ActionResponse, PaginatedResponse } from '@/types';
 import { IProperty, IPropertySearchParams } from '@/features/properties/types/property.type';
 import { propertyAPI } from '@/features/properties/api/property.api';

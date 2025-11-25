@@ -55,7 +55,7 @@ export const company: ICompany = {
 export const navItems: IMenuItem[] = [
 	// {title: "Accueil", url: "/"},
 	{title: "Qui sommes-nous", url: "/qui-sommes-nous"},
-	{title: "Programmes", url: "/programmes"},
+	{title: "Programmes", url: "/programmes/1"},
 	{
 		title: "Services",
 		url: "#",
