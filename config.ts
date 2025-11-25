@@ -7,7 +7,7 @@ export const siteConfig = {
 	description: "Luxury Home Abidjan",
 }
 
-export const CDN_URL = process.env.NEXT_PUBLIC_CDN_URL;
+export const CDN_URL = "https://dvsxt5681pvqm.cloudfront.net";
 
 export const company: ICompany = {
 	contacts: {
