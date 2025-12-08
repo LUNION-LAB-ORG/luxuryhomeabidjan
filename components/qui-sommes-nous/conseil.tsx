@@ -1,3 +1,4 @@
+import { CDN_URL } from "@/config";
 import Image from "next/image";
 
 export default function Conseil() {
@@ -10,7 +11,7 @@ export default function Conseil() {
 					alt="image lieux "
 					height={500}
 					width={500}
-					src="/assets/images/img/expertise-img1.jpg"
+					src={`${CDN_URL}/assets/qui-sommes-nous/expertise.jpg`}
 				/>
 				<div className="absolute bottom-0 bg-black rounded-b-4xl w-full">
 					<p

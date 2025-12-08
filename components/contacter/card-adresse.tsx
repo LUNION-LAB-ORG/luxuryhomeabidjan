@@ -1,3 +1,4 @@
+import { CDN_URL } from "@/config";
 import Image from "next/image";
 
 export default function CardAdresse() {
@@ -8,7 +9,7 @@ export default function CardAdresse() {
         <div className="absolute top-[-15%] xl:relative bg-gradient-to-br from-black to-zinc-500  bbg-gray-950 rounded-full shrink-0  w-[120px] h-[120px] p-6 lg:w-[210px] lg:h-[210px] lg:p-10">
           <Image
             className="shrink-0  object-cover w-full h-auto sshrink-0 "
-            src="/assets/images/icone.png"
+          src={`${CDN_URL}/assets/contact/icone/icone.png`}
             alt="user"
             height={500}
             width={500}
@@ -25,7 +26,7 @@ export default function CardAdresse() {
               <div className="w-[20px] object-cover sm:w-[25px] ">
                 <Image
                   className="w-full object-cover h-auto"
-                  src="/assets/images/icons/localisation.png"
+                 src={`${CDN_URL}/assets/contact/icone/localisation.png`}
                   width={30}
                   height={30}
                   alt="icon navigation"
@@ -39,9 +40,9 @@ export default function CardAdresse() {
 
             <div className="flex items-center gap-4">
               <div className="w-[20px] object-cover sm:w-[30px]">
-                <Image
+                  <Image
                   className="w-full object-cover h-auto  "
-                  src="/assets/images/icons/forne.png"
+                 src={`${CDN_URL}/assets/contact/icone/forne.png`}
                   width={30}
                   height={30}
                   alt="icon navigation"
@@ -57,7 +58,7 @@ export default function CardAdresse() {
               <div className="w-[20px] object-cover sm:w-[30px]">
                 <Image
                   className="w-full object-cover h-auto  "
-                  src="/assets/images/icons/message.png"
+                src={`${CDN_URL}/assets/contact/icone/message.png`}
                   width={30}
                   height={30}
                   alt="icon navigation"

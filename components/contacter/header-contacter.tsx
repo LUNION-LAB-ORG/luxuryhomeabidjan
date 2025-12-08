@@ -1,3 +1,4 @@
+import { CDN_URL } from "@/config";
 import Image from "next/image";
 
 export default function HeaderPageContacter() {
@@ -6,7 +7,7 @@ export default function HeaderPageContacter() {
       {/* div1 : Image avec hauteur fixe */}
       <div className="w-full h-[350px] lg:h-[500px] relative overflow-hidden">
         <Image
-          src="/assets/images/backgrounds/contact.jpg"
+         src={`${CDN_URL}/assets/contact/contact.jpg`}
           alt="Modern luxury home with swimming pool"
           fill
           className="object-cover"
