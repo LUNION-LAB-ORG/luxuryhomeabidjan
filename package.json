@@ -95,12 +95,5 @@
     "tailwindcss": "^4.1.13",
     "tailwindcss-cli": "^0.1.2",
     "typescript": "^5.9.2"
-  },
-  "pnpm": {
-    "onlyBuiltDependencies": [
-      "@tailwindcss/oxide",
-      "@heroui/shared-utils",
-      "sharp"
-    ]
   }
 }
