@@ -36,7 +36,11 @@ function CoupsDeCoeurList() {
   }, { scope: container });
 
   if (!coupDeCoeur && !coupDeCoeurLoading) {
-    return <div>Aucun coup de cœur disponible.</div>;
+    return (
+      <p className="w-full text-center text-muted-foreground py-8">
+        Aucun coup de cœur disponible pour le moment.
+      </p>
+    );
   }
 
   return (
